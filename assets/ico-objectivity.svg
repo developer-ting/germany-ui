@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Group_142612" data-name="Group 142612" transform="translate(-998 -2743)">
+    <g id="Ellipse_21" data-name="Ellipse 21" transform="translate(998 2743)" fill="none" stroke="#d0e5ec" stroke-width="2" opacity="0">
+      <circle cx="32" cy="32" r="32" stroke="none"/>
+      <circle cx="32" cy="32" r="31" fill="none"/>
+    </g>
+    <g id="Icon_feather-target" data-name="Icon feather-target" transform="translate(1001 2746)">
+      <path id="Path_30791" data-name="Path 30791" d="M55,29A26,26,0,1,1,29,3,26,26,0,0,1,55,29Z" transform="translate(0 0)" fill="none" stroke="#F9C20A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_30792" data-name="Path 30792" d="M39.944,24.472A15.472,15.472,0,1,1,24.472,9,15.472,15.472,0,0,1,39.944,24.472Z" transform="translate(4.528 4.528)" fill="none" stroke="#F9C20A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_30793" data-name="Path 30793" d="M25.528,20.264A5.264,5.264,0,1,1,20.264,15,5.264,5.264,0,0,1,25.528,20.264Z" transform="translate(8.736 8.736)" fill="none" stroke="#F9C20A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg id="_Button" data-name="+ Button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <g id="Ellipse_1" data-name="Ellipse 1" fill="none" stroke="#3e87bc" stroke-width="1.2">
+    <circle cx="12" cy="12" r="12" stroke="none"/>
+    <circle cx="12" cy="12" r="11.4" fill="none"/>
+  </g>
+  <g id="Group_1799" data-name="Group 1799" transform="translate(529 -1418)">
+    <path id="Path_29209" data-name="Path 29209" d="M-512.139,1421.911v12" transform="translate(-4.861 2.089)" fill="none" stroke="#3e87bc" stroke-width="1.5"/>
+    <path id="Path_29210" data-name="Path 29210" d="M0,0V12" transform="translate(-511 1430) rotate(90)" fill="none" stroke="#3e87bc" stroke-width="1.5"/>
+  </g>
+</svg>

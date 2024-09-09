@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 290 450">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.519" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0085ca"/>
+      <stop offset="0.214" stop-color="#0e43e2"/>
+      <stop offset="1" stop-color="#00278e"/>
+    </linearGradient>
+  </defs>
+  <g id="Mask_Group_16" data-name="Mask Group 16" transform="translate(-140 -2028)" clip-path="url(#clip-path)">
+    <path id="Path_30751" data-name="Path 30751" d="M556.255,0,0,937.395H128.62L541.074,474.205l39.973,463.189H681.9V0Z" transform="translate(-251.905 2028)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
