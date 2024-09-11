@@ -405,17 +405,20 @@
             </div>
         </div>
     </div>
-</div><div class="content">
-    <div class="am_spacer"></div>    <div class="am_intro am_intro--left">
+</div>
+<div class="content">
+    <div class="am_spacer"></div>    
+    <div class="am_intro am_intro--left">
         <div class="container">
             <div class="am_intro__content">
-                <h3>A&amp;M Financial Services Leadership</h3>
+                <h3>Our Germany Leadership</h3>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
             </div>
         </div>
-    </div>    <div class="am_leadership">
+    </div>    
+    <div class="am_leadership">
         <div class="container">
-                <div class="search">
+            <div class="search">
                 <input type="text" placeholder="SEARCH" v-model="keyword" @input="handleSearch" />
                 <button @click="showHideFilters" type="button">Filter <span v-if="!toggleFilters && filterCount > 0">{{ filterCount }}</span></button>
             </div>
@@ -455,8 +458,8 @@
                 </div>
             </div>
             <div v-if="!isLoading && leaders.length === 0" class="no-results">No results found</div>
-    </div>
-            <am-modal :state="modalState" @modalclose="handleModalClose" >
+        </div>
+        <am-modal :state="modalState" @modalclose="handleModalClose" >
             <div class="am_leadership-modal">
                 <div class="modal-header">
                     <div class="modal-header-image">
@@ -529,11 +532,12 @@
                 </div>
             </div>
         </am-modal>
-    <div v-if="isLoading" class="am_leadership--loading"><div class="loader"></div></div>
+        <div v-if="isLoading" class="am_leadership--loading"><div class="loader"></div></div>
         <input class="am_leadership-api" type="hidden" value="https://stage.alvarezandmarsal.com/api/fsig/profiles" />
         <input class="am_leadership-regions-api" type="hidden" value="https://stage.alvarezandmarsal.com/api/fsig/regions" />
         <input class="am_leadership-cities-api" type="hidden" value="https://stage.alvarezandmarsal.com/api/fsig/cities" />
-    </div></div>
+    </div>
+</div>
 <div class="am_footer">
     <div class="am_footer-primary">
         <div class="container">

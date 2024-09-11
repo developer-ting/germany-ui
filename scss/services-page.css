@@ -1,0 +1,10 @@
+#services-page .am_image-cards .item-content .btm-row {
+  border-top: 2px solid #ddd;
+  width: 90%;
+  height: 1px;
+  position: absolute;
+  bottom: 5rem;
+}
+#services-page .am_features-highlights {
+  margin-bottom: 5rem;
+}/*# sourceMappingURL=services-page.css.map */
