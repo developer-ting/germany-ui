@@ -12,6 +12,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	
 	<link rel="stylesheet" href="css/am-styles.css">
+	<link rel="stylesheet" href="scss/insights-page.css">
 	
 	<link rel="shortcut icon" href="/assets/favicon.ico">
 	<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
@@ -405,113 +406,126 @@
             </div>
         </div>
     </div>
-</div><div class="content">
-    <div class="am_spacer"></div>    <div class="am_insights">
-        <div class="container">
-            <div class="am_intro am_intro--left">
+</div>
+<main id="insights-page">
+    <div class="content">
+        <div class="am_spacer"></div>    
+        <div class="am_insights">
+            <div class="container">
+                <div class="am_intro am_intro--left">
+                    <div class="container">
+                        <div class="am_intro__content">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisc</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>    
+            </div>
                 <div class="container">
-                    <div class="am_intro__content">
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisc</h3>
-                        <p></p>
+                <div class="search">
+                    <input type="text" placeholder="SEARCH" v-model="keyword" @input="handleSearch" />
+                    <button @click="showHideFilters" type="button">Filter <span v-if="!toggleFilters && filterCount > 0">{{ filterCount }}</span></button>
+                </div>
+                <div class="filters" :class="toggleFilters ? 'filters--show' : ''">
+                    <div class="filters-container">
+                        <h4>Insight Type</h4>
+                        <ul v-if="insightTypes.length > 0">
+                            <li v-for="(item, index) in insightTypes" :key="item.attributes.drupal_internal__tid" @click="toggleInsightTypesFilters(item)" :class="isActiveFilter(item.attributes.drupal_internal__tid)" v-html="item.attributes.name"></li>
+                        </ul>
                     </div>
                 </div>
-            </div>    </div>
-            <div class="container">
-            <div class="search">
-                <input type="text" placeholder="SEARCH" v-model="keyword" @input="handleSearch" />
-                <button @click="showHideFilters" type="button">Filter <span v-if="!toggleFilters && filterCount > 0">{{ filterCount }}</span></button>
-            </div>
-            <div class="filters" :class="toggleFilters ? 'filters--show' : ''">
-                <div class="filters-container">
-                    <h4>Insight Type</h4>
-                    <ul v-if="insightTypes.length > 0">
-                        <li v-for="(item, index) in insightTypes" :key="item.attributes.drupal_internal__tid" @click="toggleInsightTypesFilters(item)" :class="isActiveFilter(item.attributes.drupal_internal__tid)" v-html="item.attributes.name"></li>
+                <div class="filters-cta" :class="toggleFilters ? 'filters-cta--show' : ''">
+                    <a href="#" @click.prevent="applyFilters">Apply Filters</a>
+                </div>
+                <div v-if="!toggleFilters && filterCount > 0" class="filters-tags">
+                    <ul>
+                        <li v-for="(filter, index) in selectedInsightTypes" :key="index" @click="removeInsightTypesFilter(filter)"><span v-html="filter.attributes.name"></span><span class="remove"></span></li>
+                        <li @click="clearFilters"><span>Clear Filters</span> <span class="remove"></span></li>
                     </ul>
                 </div>
             </div>
-            <div class="filters-cta" :class="toggleFilters ? 'filters-cta--show' : ''">
-                <a href="#" @click.prevent="applyFilters">Apply Filters</a>
-            </div>
-            <div v-if="!toggleFilters && filterCount > 0" class="filters-tags">
-                <ul>
-                    <li v-for="(filter, index) in selectedInsightTypes" :key="index" @click="removeInsightTypesFilter(filter)"><span v-html="filter.attributes.name"></span><span class="remove"></span></li>
-                    <li @click="clearFilters"><span>Clear Filters</span> <span class="remove"></span></li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="am_insights-featured">
-            <div class="container">
-                <h2>Featured</h2>
-                <div class="swiper am_insights-featured-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="item">
-                                <a href="#">
-                                    <div class="item-image">
-                                        <img src="assets/insights-featured-image.png" alt="Featured" title="Featured" />
-                                    </div>
-                                    <div class="item-content">
-                                        <div class="caption">Article</div>
-                                        <h3>A&M Supply Chain Viewpoint: Future-Proofing Third-Party Risk Management</h3>
-                                        <div class="timestamp">03 Jan 2024</div>
-                                    </div>
-                                </a>
+            <div class="am_insights-featured">
+                <div class="container">
+                    <h2>Featured</h2>
+                    <div class="swiper am_insights-featured-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <a href="#">
+                                        <div class="item-image">
+                                            <img src="assets/insights-featured-image.png" alt="Featured" title="Featured" />
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="caption">Article</div>
+                                            <h3>A&M Supply Chain Viewpoint: Future-Proofing Third-Party Risk Management</h3>
+                                            <div class="timestamp">03 Jan 2024</div>
+                                            <div class="cta"><span class="am_button"><span>Continue Reading</span></span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <a href="#">
+                                        <div class="item-image">
+                                            <img src="assets/insights-featured-image.png" alt="Featured" title="Featured" />
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="caption">Article</div>
+                                            <h3>A&M Supply Chain Viewpoint: Future-Proofing Third-Party Risk Management</h3>
+                                            <div class="timestamp">03 Jan 2024</div>
+                                            <div class="cta"><span class="am_button"><span>Continue Reading</span></span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <a href="#">
+                                        <div class="item-image">
+                                            <img src="assets/insights-featured-image.png" alt="Featured" title="Featured" />
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="caption">Article</div>
+                                            <h3>A&M Supply Chain Viewpoint: Future-Proofing Third-Party Risk Management</h3>
+                                            <div class="timestamp">03 Jan 2024</div>
+                                            <div class="cta"><span class="am_button"><span>Continue Reading</span></span></div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="item">
-                                <a href="#">
-                                    <div class="item-image">
-                                        <img src="assets/insights-featured-image.png" alt="Featured" title="Featured" />
-                                    </div>
-                                    <div class="item-content">
-                                        <div class="caption">Article</div>
-                                        <h3>A&M Supply Chain Viewpoint: Future-Proofing Third-Party Risk Management</h3>
-                                        <div class="timestamp">03 Jan 2024</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="item">
-                                <a href="#">
-                                    <div class="item-image">
-                                        <img src="assets/insights-featured-image.png" alt="Featured" title="Featured" />
-                                    </div>
-                                    <div class="item-content">
-                                        <div class="caption">Article</div>
-                                        <h3>A&M Supply Chain Viewpoint: Future-Proofing Third-Party Risk Management</h3>
-                                        <div class="timestamp">03 Jan 2024</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-scrollbar"></div>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
-        </div>
-            <div class="container">
-            <div  v-if="insights.length > 0" class="list">
-                <div v-for="(item, index) in insights" :key="item.nid" class="insight-item">
-                    <a :href="item.view_node">
-                        <div class="insight-item-content">
-                            <h4>{{item.type}}</h4>
-                            <p v-html="item.title"></p>
-                            <div class="timestamp">{{timestamp(item.authored_on)}}</div>
-                            <div class="cta"><span class="am_button"><span>Continue Reading</span></span></div>
-                        </div>
-                    </a>
+            <div class="container insights-lists-sec">
+                <div  v-if="insights.length > 0" class="list">
+                    <div v-for="(item, index) in insights" :key="item.nid" class="insight-item">
+                        <a :href="item.view_node">
+                            <div class="item-image">
+                                <img src="assets/case-studies-01.jpg" alt="Article" title="article" />
+                            </div>
+                            <div class="insight-item-content">                                
+                                <h4>{{item.type}}</h4>
+                                <p v-html="item.title"></p>
+                                <div class="btm-row"></div>
+                                <div class="timestamp">{{timestamp(item.authored_on)}}</div>
+                                <div class="cta"><span class="am_button"><span>Continue Reading</span></span></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
+                <div v-if="!isLoading && insights.length === 0" class="no-results">No results found</div>
             </div>
-            <div v-if="!isLoading && insights.length === 0" class="no-results">No results found</div>
+            <input class="am_insights-api" type="hidden" value="https://stage.alvarezandmarsal.com/api/fsig/insights" />
+            <input class="am_insights-type-api" type="hidden" value="https://stage.alvarezandmarsal.com/jsonapi/taxonomy_term/insights" />
         </div>
-    <input class="am_insights-api" type="hidden" value="https://stage.alvarezandmarsal.com/api/fsig/insights" />
-        <input class="am_insights-type-api" type="hidden" value="https://stage.alvarezandmarsal.com/jsonapi/taxonomy_term/insights" />
-    </div></div>
+    </div>
+</main>
 <div class="am_footer">
     <div class="am_footer-primary">
         <div class="container">

@@ -1,0 +1,33 @@
+@import "variables"; //import this on each scss page you create
+
+#insights-page {
+  .am_insights-featured {
+    .item-content {
+      position: relative;
+      .cta {
+        position: absolute;
+        bottom: 5%;
+        width: 90%;
+        border-top: 2px solid #ddd;
+        padding-top: 30px;
+      }
+    }
+  }
+  .insights-lists-sec {
+    .insight-item {
+      overflow: hidden;
+      .btm-row {
+        border-top: 2px solid #ddd;
+        width: 90%;
+        height: 1px;
+        position: absolute;
+        bottom: 5rem;
+      }
+    }
+    .item-image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

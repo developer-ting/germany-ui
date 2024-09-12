@@ -14,5 +14,53 @@
   }
   .am_features-highlights {
     margin-bottom: 5rem;
+    .features-content {
+      width: 65%;
+      .am_image-cards {
+        padding: 5rem 0;
+        .am_image-cards-header {
+          .title {
+            color: #fff;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+      .industries_sec {
+        .swiper-wrapper {
+          .swiper-slide {
+            .item {
+              .row-flex {
+                display: flex;
+                align-items: center;
+                border: 1px solid #68869a;
+                gap: 15px;
+                padding-right: 15px;
+                transition: 0.3s ease-in-out;
+                &:hover {
+                  background-color: #0085ca;
+                  .btn-plus {
+                    img {
+                      filter: brightness(10);
+                    }
+                  }
+                }
+                .item-image {
+                  width: 40%;
+                }
+                .item-title {
+                  color: #fff;
+                  width: 55%;
+                }
+                .btn-plus {
+                  width: 25px;
+                  height: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
