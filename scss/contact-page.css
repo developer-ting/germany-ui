@@ -13,8 +13,62 @@
     border-right: 1px solid #00dbef;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  #contact-page .am_contact-info-item:nth-child(2) {
+    border: 0px;
+  }
+}
 #contact-page .am_contact-info-item {
   width: calc(29% - 66.66px);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0px 20px;
+}
+@media only screen and (max-width: 1200px) {
+  #contact-page .am_contact-info-item {
+    width: calc(48% - 66.66px);
+  }
+}
+@media only screen and (max-width: 767px) {
+  #contact-page .am_contact-info-item {
+    width: 100%;
+    padding-top: 3rem;
+  }
+}
+#contact-page .am_contact-info-item .icon {
+  min-height: 110px;
+}
+#contact-page .am_contact-info-item .contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+#contact-page .am_contact-info-item .contact span {
+  line-height: 0;
+  margin-right: 10px;
+}
+#contact-page .am_contact-info-item .contact a {
+  color: #fff;
+  text-decoration: none;
+}
+#contact-page .am_contact-info-item .hidden {
+  visibility: hidden;
+}
+@media only screen and (max-width: 767px) {
+  #contact-page .am_contact-info-item .hidden {
+    display: none;
+  }
+}
+#contact-page .am_contact-info-item .cta {
+  margin-top: 30px;
+}
+#contact-page textarea {
+  resize: none;
+}
+#contact-page #edit-submit {
+  margin-left: 0 !important;
 }
 #contact-page .user-login-form {
   width: 100% !important;

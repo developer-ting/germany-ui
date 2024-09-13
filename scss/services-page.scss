@@ -16,6 +16,9 @@
     margin-bottom: 5rem;
     .features-content {
       width: 65%;
+      @media (max-width: 992px) {
+        width: 100%;
+      }
       .am_image-cards {
         padding: 5rem 0;
         .am_image-cards-header {
@@ -27,6 +30,7 @@
         }
       }
       .industries_sec {
+        margin: 0px;
         .swiper-wrapper {
           .swiper-slide {
             .item {
@@ -61,6 +65,51 @@
           }
         }
       }
+      .am_featured-experts {
+        .am_featured-experts-header {
+          .title {
+            color: #fff;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+          }
+        }
+        .swiper-wrapper {
+          .swiper-slide {
+            a {
+              p {
+                span {
+                  color: #fff;
+                  &:nth-child(1) {
+                    font-size: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .modal-title {
+          h3,
+          p {
+            color: #002749;
+          }
+        }
+        .modal-location {
+          color: #002749;
+        }
+        .modal-content {
+          p {
+            color: #002749;
+          }
+        }
+      }
+    }
+  }
+
+  .am_contact-form {
+    padding: 0px;
+    .form-container {
+      border-top: 1px solid #d0e5ec;
+      border-bottom: 1px solid #d0e5ec;
     }
   }
 }
