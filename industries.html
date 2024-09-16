@@ -10,6 +10,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css" />
+
 	
 	<link rel="stylesheet" href="css/am-styles.css">
 	<link rel="stylesheet" href="scss/services-page.css">
@@ -18,6 +20,32 @@
 	<link rel="shortcut icon" href="/assets/favicon.ico">
 	<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 	<!-- Place favicon.ico in the root directory -->
+    <style>
+   #swipeSlide   .swiper-container {
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+ #swipeSlide   .swiper-slide {
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+.item a{
+    text-decoration: none;
+}
+    </style>
 </head>
 <body>
 <div class="am_header">
@@ -468,12 +496,6 @@
                         <h4 class="subtitle">Industries</h4>
                     <h3 class="title">Lorem ipsum dolor sit amet, consetetur</h3>
                 </div>
-                <!-- <div class="features-navigation">
-                    <ul>
-                            <li><a href="preAquesition">Pre-Acquisition</a></li>
-                            <li><a href="postAquesition">Post-Acquisition</a></li>
-                    </ul>
-                </div> -->
                 <div class="features-container">
                     <div class="features" id="preAquesition">
                         <div class="features-list">
@@ -500,209 +522,192 @@
 
                                         <div class="am_image-cards industries_sec">
                                             <div class="am_image-cards-header">
-                                                <h2 class="title">Industries We Work In</h2>
+                                                <h2 class="title">Industries We Work In 1</h2>
                                             </div>
-                                            <div class="am_image-cards-content">
-                                                <div class="swiper am_image-cards-swiper mySwiper">
+                                            <div class="am_image-cards-content" id="swipeSlide">
+                                                 <!-- Swiper -->
+  <div class="swiper-container swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="item">
+            <a href="#" class="row-flex">
+                <div class="item-image">
+                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                </div>
+                <div class="item-title">
+                    <h4>Financial Services & Insurance</h4>
+                </div>
+                <!-- <div class="btn-plus">
+                    <img src="assets/ico-plus.svg" alt="arrow">
+                </div> -->
+            </a>
+        </div>
+      </div>
+      <div class="swiper-slide"><div class="item">
+        <a href="#" class="row-flex">
+            <div class="item-image">
+                <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+            </div>
+            <div class="item-title">
+                <h4>Financial Services & Insurance</h4>
+            </div>
+            <!-- <div class="btn-plus">
+                <img src="assets/ico-plus.svg" alt="arrow">
+            </div> -->
+        </a>
+    </div></div>
+      <div class="swiper-slide">
+        <div class="item">
+        <a href="#" class="row-flex">
+            <div class="item-image">
+                <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+            </div>
+            <div class="item-title">
+                <h4>Financial Services & Insurance</h4>
+            </div>
+            <!-- <div class="btn-plus">
+                <img src="assets/ico-plus.svg" alt="arrow">
+            </div> -->
+        </a>
+    </div>
+</div>
+      <div class="swiper-slide">
+        <div class="item">
+            <a href="#" class="row-flex">
+                <div class="item-image">
+                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                </div>
+                <div class="item-title">
+                    <h4>Financial Services & Insurance</h4>
+                </div>
+                <!-- <div class="btn-plus">
+                    <img src="assets/ico-plus.svg" alt="arrow">
+                </div> -->
+            </a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="item">
+            <a href="#" class="row-flex">
+                <div class="item-image">
+                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                </div>
+                <div class="item-title">
+                    <h4>Financial Services & Insurance</h4>
+                </div>
+                <!-- <div class="btn-plus">
+                    <img src="assets/ico-plus.svg" alt="arrow">
+                </div> -->
+            </a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="item">
+            <a href="#" class="row-flex">
+                <div class="item-image">
+                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                </div>
+                <div class="item-title">
+                    <h4>Financial Services & Insurance</h4>
+                </div>
+                <!-- <div class="btn-plus">
+                    <img src="assets/ico-plus.svg" alt="arrow">
+                </div> -->
+            </a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="item">
+            <a href="#" class="row-flex">
+                <div class="item-image">
+                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                </div>
+                <div class="item-title">
+                    <h4>Financial Services & Insurance</h4>
+                </div>
+                <!-- <div class="btn-plus">
+                    <img src="assets/ico-plus.svg" alt="arrow">
+                </div> -->
+            </a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="item">
+            <a href="#" class="row-flex">
+                <div class="item-image">
+                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                </div>
+                <div class="item-title">
+                    <h4>Financial Services & Insurance</h4>
+                </div>
+                <!-- <div class="btn-plus">
+                    <img src="assets/ico-plus.svg" alt="arrow">
+                </div> -->
+            </a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="item">
+            <a href="#" class="row-flex">
+                <div class="item-image">
+                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                </div>
+                <div class="item-title">
+                    <h4>Financial Services & Insurance</h4>
+                </div>
+                <!-- <div class="btn-plus">
+                    <img src="assets/ico-plus.svg" alt="arrow">
+                </div> -->
+            </a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="item">
+            <a href="#" class="row-flex">
+                <div class="item-image">
+                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                </div>
+                <div class="item-title">
+                    <h4>Financial Services & Insurance</h4>
+                </div>
+                <!-- <div class="btn-plus">
+                    <img src="assets/ico-plus.svg" alt="arrow">
+                </div> -->
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-scrollbar"></div>
+  </div>
+                                               
+                                                <!-- <div class="swiper am_image-cards-swiper mySwiperNew">
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
-                                                            <div class="item">
-                                                                <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/energy.jpg" alt="energy" title="energy" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Energy & Infrastructure</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a>
-                                                                <!-- <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Financial Services & Insurance</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a>
-                                                                <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/healthcare.jpg" alt="healthcare" title="healthcare" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Healthcare & Life Sciences</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a>
-                                                                <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/software.jpg" alt="software" title="software" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Software & Technology Transaction Advisory</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a> -->
-                                                            </div>
+                                                            <h1>Rupesh 1</h1>
                                                         </div>
                                                         <div class="swiper-slide">
-                                                            <div class="item">
-                                                                <!-- <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/energy.jpg" alt="energy" title="energy" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Energy & Infrastructure</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a> -->
-                                                                <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Financial Services & Insurance</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a>
-                                                                <!-- <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/healthcare.jpg" alt="healthcare" title="healthcare" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Healthcare & Life Sciences</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a>
-                                                                <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/software.jpg" alt="software" title="software" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Software & Technology Transaction Advisory</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a> -->
-                                                            </div>
+                                                            <h1>Rupesh 2</h1>
                                                         </div>
                                                         <div class="swiper-slide">
-                                                            <div class="item">
-                                                                <!-- <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/energy.jpg" alt="energy" title="energy" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Energy & Infrastructure</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a>
-                                                                <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Financial Services & Insurance</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a> -->
-                                                                <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/healthcare.jpg" alt="healthcare" title="healthcare" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Healthcare & Life Sciences</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a>
-                                                                <!-- <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/software.jpg" alt="software" title="software" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Software & Technology Transaction Advisory</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a> -->
-                                                            </div>
+                                                            <h1>Rupesh 3</h1>
                                                         </div>
                                                         <div class="swiper-slide">
-                                                            <div class="item">
-                                                                <!-- <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/energy.jpg" alt="energy" title="energy" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Energy & Infrastructure</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a>
-                                                                <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Financial Services & Insurance</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a>
-                                                                <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/healthcare.jpg" alt="healthcare" title="healthcare" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Healthcare & Life Sciences</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a> -->
-                                                                <a href="#" class="row-flex">
-                                                                    <div class="item-image">
-                                                                        <img src="assets/services/software.jpg" alt="software" title="software" />
-                                                                    </div>
-                                                                    <div class="item-title">
-                                                                        <h4>Software & Technology Transaction Advisory</h4>
-                                                                    </div>
-                                                                    <div class="btn-plus">
-                                                                        <img src="assets/ico-plus.svg" alt="arrow">
-                                                                    </div>
-                                                                </a>
-                                                            </div>
+                                                            <h1>Rupesh 4</h1>
                                                         </div>
-                                                        
+                                                        <div class="swiper-slide">
+                                                            <h1>Rupesh 5</h1>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <h1>Rupesh 6</h1>
+                                                        </div>
                                                     </div>
                                                     <div class="swiper-button-prev"></div>
                                                     <div class="swiper-button-next"></div>
                                                     <div class="swiper-scrollbar"></div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
 
@@ -5500,75 +5505,6 @@
                                 </div>
                         </div>
                     </div>
-                    <!-- <div class="features" id="postAquesition">
-                        <div class="features-list">
-                            <ul>
-                                    <li><a href="#">Cash Management</a></li>
-                                    <li><a href="#">Turnaround Management</a></li>
-                                    <li><a href="#">Real Estate advisory</a></li>
-                                    <li><a href="#">Distressed M&amp;A</a></li>
-                                    <li><a href="#">CoC Advisory</a></li>
-                                    <li><a href="#">Debt Restructuring Advisory</a></li>
-                            </ul>
-                            <span class="indicator"></span>
-                        </div>
-                        <div class="features-content">
-                            <div class="features-content-item">
-                                <div class="feature-image">
-                                    <img src="assets/restructuring-feature-visual.jpg" alt="Cash Management" title="Cash Management" />
-                                </div>
-                                <div class="feature-info">
-                                    <p>We assist in creating and executing 100-day plan focused on working capital efficiency, revenue enhancement and cost optimization. We collaborate with management to identify key focus areas for long term performance improvement. A&amp;M also helps in identifying client teams to run the initiatives developed.. implementation of performance improvement.</p>
-                                    <a href="#" class="am_button am_button--invert"><span>Discover more</span></a>
-                                </div>
-                            </div>
-                            <div class="features-content-item">
-                                <div class="feature-image">
-                                    <img src="assets/restructuring-feature-visual.jpg" alt="Turnaround Management" title="Turnaround Management" />
-                                </div>
-                                <div class="feature-info">
-                                    <p>We assist in creating and executing 100-day plan focused on working capital efficiency, revenue enhancement and cost optimization. We collaborate with management to identify key focus areas for long term performance improvement. A&amp;M also helps in identifying client teams to run the initiatives developed.. implementation of performance improvement.</p>
-                                    <a href="#" class="am_button am_button--invert"><span>Discover more</span></a>
-                                </div>
-                            </div>
-                            <div class="features-content-item">
-                                <div class="feature-image">
-                                    <img src="assets/restructuring-feature-visual.jpg" alt="Real Estate advisory" title="Real Estate advisory" />
-                                </div>
-                                <div class="feature-info">
-                                    <p>We assist in creating and executing 100-day plan focused on working capital efficiency, revenue enhancement and cost optimization. We collaborate with management to identify key focus areas for long term performance improvement. A&amp;M also helps in identifying client teams to run the initiatives developed.. implementation of performance improvement.</p>
-                                    <a href="#" class="am_button am_button--invert"><span>Discover more</span></a>
-                                </div>
-                            </div>
-                            <div class="features-content-item">
-                                <div class="feature-image">
-                                    <img src="assets/restructuring-feature-visual.jpg" alt="Distressed M&amp;A" title="Distressed M&amp;A" />
-                                </div>
-                                <div class="feature-info">
-                                    <p>We assist in creating and executing 100-day plan focused on working capital efficiency, revenue enhancement and cost optimization. We collaborate with management to identify key focus areas for long term performance improvement. A&amp;M also helps in identifying client teams to run the initiatives developed.. implementation of performance improvement.</p>
-                                    <a href="#" class="am_button am_button--invert"><span>Discover more</span></a>
-                                </div>
-                            </div>
-                            <div class="features-content-item">
-                                <div class="feature-image">
-                                    <img src="assets/restructuring-feature-visual.jpg" alt="CoC Advisory" title="CoC Advisory" />
-                                </div>
-                                <div class="feature-info">
-                                    <p>We assist in creating and executing 100-day plan focused on working capital efficiency, revenue enhancement and cost optimization. We collaborate with management to identify key focus areas for long term performance improvement. A&amp;M also helps in identifying client teams to run the initiatives developed.. implementation of performance improvement.</p>
-                                    <a href="#" class="am_button am_button--invert"><span>Discover more</span></a>
-                                </div>
-                            </div>
-                            <div class="features-content-item">
-                                <div class="feature-image">
-                                    <img src="assets/restructuring-feature-visual.jpg" alt="Debt Restructuring Advisory" title="Debt Restructuring Advisory" />
-                                </div>
-                                <div class="feature-info">
-                                    <p>We assist in creating and executing 100-day plan focused on working capital efficiency, revenue enhancement and cost optimization. We collaborate with management to identify key focus areas for long term performance improvement. A&amp;M also helps in identifying client teams to run the initiatives developed.. implementation of performance improvement.</p>
-                                    <a href="#" class="am_button am_button--invert"><span>Discover more</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -6795,18 +6731,20 @@
     </div>
 </div>
 <script src="js/am.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
 <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      grid: {
-        rows: 2,
-      },
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+   //slidesPerColumnFill: "row",
+   slidesPerGroup: 6,
       spaceBetween: 30,
       pagination: {
-        el: ".swiper-pagination",
+        el: '.swiper-pagination',
         clickable: true,
       },
     });
+ 
   </script>
 </body>
 </html>
