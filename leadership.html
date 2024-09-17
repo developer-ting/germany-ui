@@ -12,6 +12,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	
 	<link rel="stylesheet" href="css/am-styles.css">
+	<link rel="stylesheet" href="scss/leadership-page.css">
 	
 	<link rel="shortcut icon" href="/assets/favicon.ico">
 	<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
@@ -406,138 +407,140 @@
         </div>
     </div>
 </div>
-<div class="content">
-    <div class="am_spacer"></div>    
-    <div class="am_intro am_intro--left">
-        <div class="container">
-            <div class="am_intro__content">
-                <h3>Our Germany Leadership</h3>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
-            </div>
-        </div>
-    </div>    
-    <div class="am_leadership">
-        <div class="container">
-            <div class="search">
-                <input type="text" placeholder="SEARCH" v-model="keyword" @input="handleSearch" />
-                <button @click="showHideFilters" type="button">Filter <span v-if="!toggleFilters && filterCount > 0">{{ filterCount }}</span></button>
-            </div>
-            <div class="filters" :class="toggleFilters ? 'filters--show' : ''">
-                <div class="filters-container">
-                    <h4>Region</h4>
-                    <ul v-if="regions.length > 0">
-                        <li v-for="(item, index) in regions" :key="item.tid" @click="toggleRegionFilters(item)" :class="isActiveFilter(item.tid)" v-html="item.name"></li>
-                    </ul>
+<main id="leadership-page">
+    <div class="content">
+        <div class="am_spacer"></div>    
+        <div class="am_intro am_intro--left">
+            <div class="container">
+                <div class="am_intro__content">
+                    <h3>Our Germany Leadership</h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
                 </div>
-                <div class="filters-container">
-                    <h4>City</h4>
+            </div>
+        </div>    
+        <div class="am_leadership">
+            <div class="container">
+                <div class="search">
+                    <input type="text" placeholder="SEARCH" v-model="keyword" @input="handleSearch" />
+                    <button @click="showHideFilters" type="button">Filter <span v-if="!toggleFilters && filterCount > 0">{{ filterCount }}</span></button>
+                </div>
+                <div class="filters" :class="toggleFilters ? 'filters--show' : ''">
+                    <div class="filters-container">
+                        <h4>Region</h4>
+                        <ul v-if="regions.length > 0">
+                            <li v-for="(item, index) in regions" :key="item.tid" @click="toggleRegionFilters(item)" :class="isActiveFilter(item.tid)" v-html="item.name"></li>
+                        </ul>
+                    </div>
+                    <div class="filters-container">
+                        <h4>City</h4>
+                        <ul>
+                            <li v-for="(item, index) in cities" :key="item.tid" @click="toggleCitiesFilters(item)" :class="isActiveFilter(item.tid)" v-html="item.name"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filters-cta" :class="toggleFilters ? 'filters-cta--show' : ''">
+                    <a href="#" @click.prevent="applyFilters">Apply Filters</a>
+                </div>
+                <div v-if="!toggleFilters && filterCount > 0" class="filters-tags">
                     <ul>
-                        <li v-for="(item, index) in cities" :key="item.tid" @click="toggleCitiesFilters(item)" :class="isActiveFilter(item.tid)" v-html="item.name"></li>
+                        <li v-for="(filter, index) in selectedCities" :key="index" @click="removeCitiesFilter(filter)"><span v-html="filter.name"></span><span class="remove"></span></li>
+                        <li v-for="(filter, index) in selectedRegions" :key="index" @click="removeRegionFilter(filter)"><span v-html="filter.name"></span><span class="remove"></span></li>
+                        <li @click="clearFilters"><span>Clear Filters</span> <span class="remove"></span></li>
                     </ul>
                 </div>
-            </div>
-            <div class="filters-cta" :class="toggleFilters ? 'filters-cta--show' : ''">
-                <a href="#" @click.prevent="applyFilters">Apply Filters</a>
-            </div>
-            <div v-if="!toggleFilters && filterCount > 0" class="filters-tags">
-                <ul>
-                    <li v-for="(filter, index) in selectedCities" :key="index" @click="removeCitiesFilter(filter)"><span v-html="filter.name"></span><span class="remove"></span></li>
-                    <li v-for="(filter, index) in selectedRegions" :key="index" @click="removeRegionFilter(filter)"><span v-html="filter.name"></span><span class="remove"></span></li>
-                    <li @click="clearFilters"><span>Clear Filters</span> <span class="remove"></span></li>
-                </ul>
-            </div>
-            <div  v-if="leaders.length > 0" class="list">
-                <div v-for="(item, index) in leaders" :key="item.id" class="leaders-item">
-                    <a href="#" @click.prevent="handleProfile(item.id)">
-                        <img :src="`https://stage.alvarezandmarsal.com${item.image_background}`" :alt="item.name" />
-                        <p>
-                            <span>{{item.name}}</span>
-                            <span>{{item.professional_title}}, {{item.region}}</span>
-                        </p>
-                    </a>
-                </div>
-            </div>
-            <div v-if="!isLoading && leaders.length === 0" class="no-results">No results found</div>
-        </div>
-        <am-modal :state="modalState" @modalclose="handleModalClose" >
-            <div class="am_leadership-modal">
-                <div class="modal-header">
-                    <div class="modal-header-image">
-                        <img :src="`https://stage.alvarezandmarsal.com${modalData.image_background}`" :alt="modalData.name" />
-                    </div>
-                    <div class="modal-header-info">
-                        <div class="modal-title">
-                            <h3>{{modalData.name}}</h3>
-                            <p>{{modalData.professional_title}} {{modalData.region}}</p>
-                        </div>
-                        <div class="modal-location">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                    <g id="Group_142909" data-name="Group 142909" transform="translate(-600 -280)">
-                                        <rect id="Rectangle_1857" data-name="Rectangle 1857" width="16" height="16" transform="translate(600 280)" fill="none"/>
-                                        <path id="Icon_material-location-on" data-name="Icon material-location-on" d="M12.313,3A4.853,4.853,0,0,0,7.5,7.9c0,3.675,4.813,9.1,4.813,9.1s4.813-5.425,4.813-9.1A4.853,4.853,0,0,0,12.313,3Zm0,6.65A1.75,1.75,0,1,1,14.031,7.9,1.735,1.735,0,0,1,12.313,9.65Z" transform="translate(595.688 278)" fill="#0085ca"/>
-                                    </g>
-                                </svg>
-                                {{modalData.city}}
-                            </span>
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                    <g id="Group_142911" data-name="Group 142911" transform="translate(-621 -278)">
-                                        <g id="Group_142910" data-name="Group 142910" transform="translate(21 -2)">
-                                        <rect id="Rectangle_1857" data-name="Rectangle 1857" width="16" height="16" transform="translate(600 280)" fill="none"/>
-                                        </g>
-                                        <path id="Icon_awesome-phone" data-name="Icon awesome-phone" d="M13.491.672,10.647.016A.66.66,0,0,0,9.9.4L8.583,3.458a.655.655,0,0,0,.189.766L10.428,5.58a10.134,10.134,0,0,1-4.845,4.845L4.227,8.768a.656.656,0,0,0-.766-.189L.4,9.892a.664.664,0,0,0-.383.755l.656,2.844a.656.656,0,0,0,.64.509A12.686,12.686,0,0,0,14,1.312.655.655,0,0,0,13.491.672Z" transform="translate(622 279.001)" fill="#0085ca"/>
-                                    </g>
-                                </svg>
-
-                                {{modalData.telephone}}
-                            </span>
-                        </div>
-                        <div class="modal-social">
-                            <a :href="modalData.mail">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24.431" height="19.989" viewBox="0 0 24.431 19.989">
-                                    <path id="Icon_material-email" data-name="Icon material-email" d="M24.988,6H5.443A2.468,2.468,0,0,0,3.012,8.5L3,23.49a2.479,2.479,0,0,0,2.443,2.5H24.988a2.479,2.479,0,0,0,2.443-2.5V8.5A2.479,2.479,0,0,0,24.988,6Zm0,5-9.772,6.246L5.443,11V8.5l9.772,6.246L24.988,8.5Z" transform="translate(-3 -6)" fill="#0085ca"/>
-                                </svg>
-                            </a>
-                            <a :href="modalData.linkedin">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25.171" height="19.989" viewBox="0 0 25.171 19.989">
-                                    <path id="Icon_awesome-address-card" data-name="Icon awesome-address-card" d="M23.074,2.25H2.1A2.121,2.121,0,0,0,0,4.392V20.1a2.121,2.121,0,0,0,2.1,2.142H23.074a2.121,2.121,0,0,0,2.1-2.142V4.392A2.121,2.121,0,0,0,23.074,2.25ZM7.691,6.533a2.856,2.856,0,1,1-2.8,2.856A2.829,2.829,0,0,1,7.691,6.533ZM12.586,17.1a.923.923,0,0,1-.979.857H3.776A.923.923,0,0,1,2.8,17.1v-.857a2.772,2.772,0,0,1,2.937-2.57h.218a4.416,4.416,0,0,0,3.479,0h.218a2.772,2.772,0,0,1,2.937,2.57Zm9.789-2.356a.354.354,0,0,1-.35.357H15.732a.354.354,0,0,1-.35-.357v-.714a.354.354,0,0,1,.35-.357h6.293a.354.354,0,0,1,.35.357Zm0-2.856a.354.354,0,0,1-.35.357H15.732a.354.354,0,0,1-.35-.357v-.714a.354.354,0,0,1,.35-.357h6.293a.354.354,0,0,1,.35.357Zm0-2.856a.354.354,0,0,1-.35.357H15.732a.354.354,0,0,1-.35-.357V8.318a.354.354,0,0,1,.35-.357h6.293a.354.354,0,0,1,.35.357Z" transform="translate(0 -2.25)" fill="#0085ca"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="modal-expertise">
-                            {{modalData.primary_expertise}}
-                        </div>
+                <div  v-if="leaders.length > 0" class="list">
+                    <div v-for="(item, index) in leaders" :key="item.id" class="leaders-item">
+                        <a href="#" @click.prevent="handleProfile(item.id)">
+                            <img :src="`https://stage.alvarezandmarsal.com${item.image_background}`" :alt="item.name" />
+                            <p>
+                                <span>{{item.name}}</span>
+                                <span>{{item.professional_title}}, {{item.region}}</span>
+                            </p>
+                        </a>
                     </div>
                 </div>
-                <div class="modal-content" v-html="modalData.body"></div>
-                <div v-if="modalData.insights && modalData.insights.length > 0" class="modal-footer">
-                    <div class="modal-articles">
-                        <h3>Latest article from {{ modalData.name }}</h3>
-                        <a :href="modalData.global_path" class="am_button"><span>View all</span></a>
-                    </div>
-                    <div class="modal-insights">
-                        <div class="swiper am_modal-swiper">
-                            <div class="swiper-wrapper">
-                                <div v-for="(insights, index) in modalData.insights" :key="`insights-${index}`" class="item swiper-slide">
-                                    <h3>{{insights.title}}</h3>
-                                    <a :href="insights.view_node" class="am_button"><span>Read more</span></a>
-                                </div>
+                <div v-if="!isLoading && leaders.length === 0" class="no-results">No results found</div>
+            </div>
+            <am-modal :state="modalState" @modalclose="handleModalClose" >
+                <div class="am_leadership-modal">
+                    <div class="modal-header">
+                        <div class="modal-header-image">
+                            <img :src="`https://stage.alvarezandmarsal.com${modalData.image_background}`" :alt="modalData.name" />
+                        </div>
+                        <div class="modal-header-info">
+                            <div class="modal-title">
+                                <h3>{{modalData.name}}</h3>
+                                <p>{{modalData.professional_title}} {{modalData.region}}</p>
                             </div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-scrollbar"></div>
+                            <div class="modal-location">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <g id="Group_142909" data-name="Group 142909" transform="translate(-600 -280)">
+                                            <rect id="Rectangle_1857" data-name="Rectangle 1857" width="16" height="16" transform="translate(600 280)" fill="none"/>
+                                            <path id="Icon_material-location-on" data-name="Icon material-location-on" d="M12.313,3A4.853,4.853,0,0,0,7.5,7.9c0,3.675,4.813,9.1,4.813,9.1s4.813-5.425,4.813-9.1A4.853,4.853,0,0,0,12.313,3Zm0,6.65A1.75,1.75,0,1,1,14.031,7.9,1.735,1.735,0,0,1,12.313,9.65Z" transform="translate(595.688 278)" fill="#0085ca"/>
+                                        </g>
+                                    </svg>
+                                    {{modalData.city}}
+                                </span>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <g id="Group_142911" data-name="Group 142911" transform="translate(-621 -278)">
+                                            <g id="Group_142910" data-name="Group 142910" transform="translate(21 -2)">
+                                            <rect id="Rectangle_1857" data-name="Rectangle 1857" width="16" height="16" transform="translate(600 280)" fill="none"/>
+                                            </g>
+                                            <path id="Icon_awesome-phone" data-name="Icon awesome-phone" d="M13.491.672,10.647.016A.66.66,0,0,0,9.9.4L8.583,3.458a.655.655,0,0,0,.189.766L10.428,5.58a10.134,10.134,0,0,1-4.845,4.845L4.227,8.768a.656.656,0,0,0-.766-.189L.4,9.892a.664.664,0,0,0-.383.755l.656,2.844a.656.656,0,0,0,.64.509A12.686,12.686,0,0,0,14,1.312.655.655,0,0,0,13.491.672Z" transform="translate(622 279.001)" fill="#0085ca"/>
+                                        </g>
+                                    </svg>
+
+                                    {{modalData.telephone}}
+                                </span>
+                            </div>
+                            <div class="modal-social">
+                                <a :href="modalData.mail">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24.431" height="19.989" viewBox="0 0 24.431 19.989">
+                                        <path id="Icon_material-email" data-name="Icon material-email" d="M24.988,6H5.443A2.468,2.468,0,0,0,3.012,8.5L3,23.49a2.479,2.479,0,0,0,2.443,2.5H24.988a2.479,2.479,0,0,0,2.443-2.5V8.5A2.479,2.479,0,0,0,24.988,6Zm0,5-9.772,6.246L5.443,11V8.5l9.772,6.246L24.988,8.5Z" transform="translate(-3 -6)" fill="#0085ca"/>
+                                    </svg>
+                                </a>
+                                <a :href="modalData.linkedin">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25.171" height="19.989" viewBox="0 0 25.171 19.989">
+                                        <path id="Icon_awesome-address-card" data-name="Icon awesome-address-card" d="M23.074,2.25H2.1A2.121,2.121,0,0,0,0,4.392V20.1a2.121,2.121,0,0,0,2.1,2.142H23.074a2.121,2.121,0,0,0,2.1-2.142V4.392A2.121,2.121,0,0,0,23.074,2.25ZM7.691,6.533a2.856,2.856,0,1,1-2.8,2.856A2.829,2.829,0,0,1,7.691,6.533ZM12.586,17.1a.923.923,0,0,1-.979.857H3.776A.923.923,0,0,1,2.8,17.1v-.857a2.772,2.772,0,0,1,2.937-2.57h.218a4.416,4.416,0,0,0,3.479,0h.218a2.772,2.772,0,0,1,2.937,2.57Zm9.789-2.356a.354.354,0,0,1-.35.357H15.732a.354.354,0,0,1-.35-.357v-.714a.354.354,0,0,1,.35-.357h6.293a.354.354,0,0,1,.35.357Zm0-2.856a.354.354,0,0,1-.35.357H15.732a.354.354,0,0,1-.35-.357v-.714a.354.354,0,0,1,.35-.357h6.293a.354.354,0,0,1,.35.357Zm0-2.856a.354.354,0,0,1-.35.357H15.732a.354.354,0,0,1-.35-.357V8.318a.354.354,0,0,1,.35-.357h6.293a.354.354,0,0,1,.35.357Z" transform="translate(0 -2.25)" fill="#0085ca"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="modal-expertise">
+                                {{modalData.primary_expertise}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-content" v-html="modalData.body"></div>
+                    <div v-if="modalData.insights && modalData.insights.length > 0" class="modal-footer">
+                        <div class="modal-articles">
+                            <h3>Latest article from {{ modalData.name }}</h3>
+                            <a :href="modalData.global_path" class="am_button"><span>View all</span></a>
+                        </div>
+                        <div class="modal-insights">
+                            <div class="swiper am_modal-swiper">
+                                <div class="swiper-wrapper">
+                                    <div v-for="(insights, index) in modalData.insights" :key="`insights-${index}`" class="item swiper-slide">
+                                        <h3>{{insights.title}}</h3>
+                                        <a :href="insights.view_node" class="am_button"><span>Read more</span></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-scrollbar"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </am-modal>
-        <div v-if="isLoading" class="am_leadership--loading"><div class="loader"></div></div>
-        <input class="am_leadership-api" type="hidden" value="https://stage.alvarezandmarsal.com/api/fsig/profiles" />
-        <input class="am_leadership-regions-api" type="hidden" value="https://stage.alvarezandmarsal.com/api/fsig/regions" />
-        <input class="am_leadership-cities-api" type="hidden" value="https://stage.alvarezandmarsal.com/api/fsig/cities" />
+            </am-modal>
+            <div v-if="isLoading" class="am_leadership--loading"><div class="loader"></div></div>
+            <input class="am_leadership-api" type="hidden" value="https://stage.alvarezandmarsal.com/api/fsig/profiles" />
+            <input class="am_leadership-regions-api" type="hidden" value="https://stage.alvarezandmarsal.com/api/fsig/regions" />
+            <input class="am_leadership-cities-api" type="hidden" value="https://stage.alvarezandmarsal.com/api/fsig/cities" />
+        </div>
     </div>
-</div>
+</main>
 <div class="am_footer">
     <div class="am_footer-primary">
         <div class="container">

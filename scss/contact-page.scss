@@ -1,6 +1,16 @@
 @import "variables"; //import this on each scss page you create
 
 #contact-page {
+  padding: 0 0 5rem;
+  .form-container {
+    border: 1px solid #d0e5ec;
+    @media (max-width: 993px) {
+      padding: 2.25rem;
+    }
+    @media (max-width: 767px) {
+      padding: 1rem;
+    }
+  }
   @media only screen and (min-width: 768px) {
     .am_contact-info-item {
       border: 0px;
@@ -283,9 +293,9 @@
 
   .js-form-type-textarea {
     padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .webform-submission-contact-form textarea {
@@ -393,8 +403,8 @@
   @media only screen and (max-width: 767px) {
     #edit-firstcontainer .webform-flex--1 {
       width: 100%;
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 0px;
+      padding-right: 0px;
     }
     #edit-actions {
       padding-left: 10px;

@@ -9611,3 +9611,11 @@ hr {
 .am_insights-featured-swiper .swiper-button-prev::after {
     font-size: 20px;
 }
+
+@media (max-width:767px) {
+    .am_modal-close{
+        top: -0.5rem;
+        right: -0.5rem;
+    }    
+}
+

@@ -20,6 +20,7 @@
   background-color: #fff;
   border: 1px solid #d0efff;
   transition: 0.3s ease-in-out;
+  text-decoration: none;
 }
 #press-inside-page .am_featured-insights .content .left_section .box:hover {
   background-color: #0085ca;
@@ -155,4 +156,9 @@
   margin-right: 12px;
   position: relative;
   z-index: 2;
+}
+@media (max-width: 993px) {
+  #press-inside-page .am_featured-insights .header {
+    align-items: flex-start;
+  }
 }/*# sourceMappingURL=press-inside-page.css.map */

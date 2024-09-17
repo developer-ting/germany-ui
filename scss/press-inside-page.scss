@@ -20,6 +20,7 @@
           background-color: #fff;
           border: 1px solid #d0efff;
           transition: 0.3s ease-in-out;
+          text-decoration: none;
           &:hover {
             background-color: #0085ca;
             color: #fff;
@@ -154,6 +155,11 @@
             }
           }
         }
+      }
+    }
+    .header {
+      @media (max-width: 993px) {
+        align-items: flex-start;
       }
     }
   }

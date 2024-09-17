@@ -1,9 +1,21 @@
+@media (max-width: 993px) {
+  #our-culture-page .am_employee-benefits .content ul {
+    grid-template-columns: repeat(2, calc(50% - 0.5rem));
+    gap: 20px;
+  }
+}
 #our-culture-page .am_employee-benefits .content .item .item-image {
   height: 16rem;
 }
 #our-culture-page .am_employee-benefits .content .item .item-content h3 {
   margin-bottom: 10px;
   font-weight: bold;
+}
+@media (max-width: 993px) {
+  #our-culture-page .am_employee-benefits .header {
+    align-items: flex-start;
+    gap: 20px;
+  }
 }
 #our-culture-page .event-calendar-sec .item .item-image {
   height: 22rem !important;

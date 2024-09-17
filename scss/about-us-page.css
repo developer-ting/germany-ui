@@ -95,4 +95,19 @@
   height: 1px;
   position: absolute;
   bottom: 5rem;
+}
+@media (max-width: 1200px) {
+  #about-us-page .am_image-cards .am_secondary-intro-content .container {
+    padding: 0px;
+  }
+}
+@media (max-width: 993px) {
+  #about-us-page .am_image-cards .am_secondary-intro-content .sidebar {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 767px) {
+  #about-us-page .am_intro-banner {
+    padding: 50px 0px;
+  }
 }/*# sourceMappingURL=about-us-page.css.map */

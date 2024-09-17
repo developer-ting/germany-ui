@@ -1,12 +1,23 @@
 #insights-page .am_insights-featured .item-content {
   position: relative;
 }
+@media (max-width: 767px) {
+  #insights-page .am_insights-featured .item-content {
+    padding: 1rem;
+  }
+}
 #insights-page .am_insights-featured .item-content .cta {
   position: absolute;
   bottom: 5%;
   width: 90%;
   border-top: 2px solid #ddd;
   padding-top: 30px;
+}
+@media (max-width: 1200px) {
+  #insights-page .am_insights-featured .item-content .cta {
+    position: relative;
+    margin-top: 30px;
+  }
 }
 #insights-page .insights-lists-sec .insight-item {
   overflow: hidden;

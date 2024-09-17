@@ -91,5 +91,22 @@
         bottom: 5rem;
       }
     }
+    .am_secondary-intro-content {
+      .container {
+        @media (max-width: 1200px) {
+          padding: 0px;
+        }
+      }
+      .sidebar {
+        @media (max-width: 993px) {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+  .am_intro-banner {
+    @media (max-width: 767px) {
+      padding: 50px 0px;
+    }
   }
 }

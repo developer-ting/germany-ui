@@ -3,6 +3,12 @@
 #our-culture-page {
   .am_employee-benefits {
     .content {
+      ul {
+        @media (max-width: 993px) {
+          grid-template-columns: repeat(2, calc(100% / 2 - 0.5rem));
+          gap: 20px;
+        }
+      }
       .item {
         .item-image {
           height: 16rem;
@@ -13,6 +19,12 @@
             font-weight: bold;
           }
         }
+      }
+    }
+    .header {
+      @media (max-width: 993px) {
+        align-items: flex-start;
+        gap: 20px;
       }
     }
   }

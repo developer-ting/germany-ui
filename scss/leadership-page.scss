@@ -1,0 +1,87 @@
+@import "variables"; //import this on each scss page you create
+
+#leadership-page {
+  .am_leadership-modal {
+    .modal-header {
+      padding: 1.875rem 2rem 0;
+      @media (max-width: 993px) {
+        padding: 1.875rem 2rem 0;
+        gap: 30px;
+      }
+      @media (max-width: 767px) {
+        padding: 1.875rem 1rem 0;
+        gap: 30px;
+        align-items: flex-start;
+      }
+      .modal-header-image {
+        width: 16.25rem;
+        height: 16.25rem;
+        @media (max-width: 993px) {
+          overflow: visible;
+        }
+        @media (max-width: 767px) {
+          width: 100%;
+          height: 100%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .modal-header-info {
+        @media (max-width: 767px) {
+          padding-top: 0px;
+          .modal-location {
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .modal-social {
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+    .modal-content {
+      padding: 0 2rem 1rem;
+      p {
+        &:nth-last-child(1) {
+          margin-bottom: 0px;
+        }
+      }
+      @media (max-width: 767px) {
+        padding: 0 1rem 1rem;
+      }
+    }
+    .modal-footer {
+      margin: 0 2rem;
+      gap: 0;
+      justify-content: space-between;
+      @media (max-width: 993px) {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .modal-articles {
+        width: 38%;
+        @media (max-width: 993px) {
+          width: 100%;
+          border: 0px;
+        }
+      }
+      .modal-insights {
+        width: 58%;
+        @media (max-width: 993px) {
+          width: 100%;
+        }
+        .am_modal-swiper {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+      @media (max-width: 767px) {
+        margin: 0 1rem;
+
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
