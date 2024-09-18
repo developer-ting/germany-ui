@@ -9612,6 +9612,15 @@ hr {
     font-size: 20px;
 }
 
+.am_modal-close {
+    background: #fff;
+    border: 1px solid #3E87BC;    
+}
+.am_modal-close span {
+    background: #3E87BC;   
+    transform: rotate(45deg);
+}
+
 @media (max-width:767px) {
     .am_modal-close{
         top: -0.5rem;

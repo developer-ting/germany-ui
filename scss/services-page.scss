@@ -121,6 +121,125 @@
     .feature-info {
       @media (max-width: 767px) {
         text-align: left;
+        .am_button {
+          align-self: flex-start;
+        }
+        .am_featured-experts {
+          .container {
+            padding: 0;
+          }
+        }
+      }
+      .box_btn {
+        padding: 20px 50px;
+        background-color: #00244a;
+        border: 1px solid #68869a;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 767px) {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 15px;
+        }
+        h2 {
+          font-size: 31px;
+          color: #fff;
+          text-transform: uppercase;
+          font-family: "helvetica_neue_lt_std45_light";
+          @media screen and (max-width: 992px) {
+            font-size: 26px;
+          }
+          @media (min-width: 768px) and (max-width: 992px) {
+            font-size: 25px;
+          }
+          @media (min-width: 993px) and (max-width: 1200px) {
+            font-size: 22px;
+          }
+        }
+        .read_more {
+          .btn_section .btn:hover:after {
+            width: 100%;
+            color: #fff !important;
+          }
+          .btn_section {
+            margin-top: 10px;
+          }
+
+          .btn_section .btn {
+            padding: 0 12px 0 0;
+            text-decoration: none;
+            font-family: "Helvetica Neue LT Std 55 Roman";
+            font-size: 16px;
+            letter-spacing: 0.7px;
+            line-height: 1.875rem;
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            color: #fff;
+            flex-grow: 0;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            &:hover {
+              color: #fff;
+            }
+            @media screen and (max-width: 767px) {
+              font-size: 14px;
+            }
+            @media (min-width: 768px) and (max-width: 992px) {
+              font-size: 13px;
+            }
+            @media (min-width: 993px) and (max-width: 1200px) {
+              font-size: 11px;
+            }
+          }
+
+          .btn_section .btn span {
+            top: 2px;
+            position: relative;
+            z-index: 2;
+            height: 34px;
+            margin-top: 2px;
+            &:hover {
+              color: #fff;
+            }
+          }
+
+          .btn_section .btn:after {
+            content: "";
+            width: 34px;
+            height: 36px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+            background: #0085ca;
+            z-index: 1;
+            transition: all 0.3s ease;
+          }
+
+          .btn_section .btn:before {
+            content: "";
+            width: 34px;
+            height: 34px;
+            background: url(../assets/btn-arrow.svg) no-repeat 0 0;
+            display: inline-flex;
+            margin-right: 12px;
+            position: relative;
+            z-index: 2;
+          }
+        }
+      }
+    }
+    .features-list {
+      padding-left: 1rem;
+      min-width: 30%;
+      &::before {
+        left: 0;
+      }
+      .indicator {
+        left: 0;
       }
     }
   }

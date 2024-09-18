@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.019" height="56" viewBox="0 0 48.019 56">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2235" data-name="Rectangle 2235" width="48.019" height="56" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="inegrity-icon" transform="translate(2 2)">
+    <g id="Group_144295" data-name="Group 144295" transform="translate(-2 -2)" clip-path="url(#clip-path)">
+      <path id="Path_42031" data-name="Path 42031" d="M22.477,50.756a2.159,2.159,0,0,1-1.54,0C-.045,42.725.28,25.64.568,10.526Q.579,9.946.59,9.38A1.661,1.661,0,0,1,2.132,7.757,32.384,32.384,0,0,0,20.364.963a2.179,2.179,0,0,1,2.687,0A32.247,32.247,0,0,0,40.837,7.721a2.193,2.193,0,0,1,2,2.147q.006.326.012.657C43.136,25.639,43.461,42.725,22.477,50.756Z" transform="translate(2.301 2.301)" fill="none" stroke="#f9c20a" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_42032" data-name="Path 42032" d="M15.953,35.838a1.518,1.518,0,0,1-1.083,0C.117,30.191.345,18.178.548,7.55q.008-.408.015-.806A1.168,1.168,0,0,1,1.647,5.6,22.772,22.772,0,0,0,14.467.826a1.532,1.532,0,0,1,1.889,0A22.675,22.675,0,0,0,28.863,5.578a1.542,1.542,0,0,1,1.406,1.509q0,.229.009.462C30.48,18.177,30.708,30.191,15.953,35.838Z" transform="translate(8.597 9.781)" fill="none" stroke="#f9c20a" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_42033" data-name="Path 42033" d="M38.02,34.975l4.327,4.447.585-.572L51.3,30.667" transform="translate(-20.652 -7.045)" fill="none" stroke="#f9c20a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

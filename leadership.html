@@ -413,8 +413,8 @@
         <div class="am_intro am_intro--left">
             <div class="container">
                 <div class="am_intro__content">
-                    <h3>Our Germany Leadership</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
+                    <h3 class="text_xxl font_47_light">Our Germany Leadership</h3>
+                    <p class="text_lg font_55_roman">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
                 </div>
             </div>
         </div>    
@@ -453,8 +453,8 @@
                         <a href="#" @click.prevent="handleProfile(item.id)">
                             <img :src="`https://stage.alvarezandmarsal.com${item.image_background}`" :alt="item.name" />
                             <p>
-                                <span>{{item.name}}</span>
-                                <span>{{item.professional_title}}, {{item.region}}</span>
+                                <span class="text_sm font_65_medium">{{item.name}}</span>
+                                <span class="text_sm font_45_light">{{item.professional_title}}, <br/>{{item.region}}</span>
                             </p>
                         </a>
                     </div>
@@ -469,8 +469,8 @@
                         </div>
                         <div class="modal-header-info">
                             <div class="modal-title">
-                                <h3>{{modalData.name}}</h3>
-                                <p>{{modalData.professional_title}} {{modalData.region}}</p>
+                                <h3 class="text_xl font_65_medium">{{modalData.name}}</h3>
+                                <p class="text_lg font_45_light">{{modalData.professional_title}} {{modalData.region}}</p>
                             </div>
                             <div class="modal-location">
                                 <span>
@@ -508,7 +508,8 @@
                                 </a>
                             </div>
                             <div class="modal-expertise">
-                                {{modalData.primary_expertise}}
+                                <h4 class="text_lg font_57">Expertise</h4>
+                                <p>{{modalData.primary_expertise}}</p>
                             </div>
                         </div>
                     </div>
@@ -516,14 +517,15 @@
                     <div v-if="modalData.insights && modalData.insights.length > 0" class="modal-footer">
                         <div class="modal-articles">
                             <h3>Latest article from {{ modalData.name }}</h3>
-                            <a :href="modalData.global_path" class="am_button"><span>View all</span></a>
+                            <a :href="modalData.global_path" class="am_button cta"><span>View all</span></a>
                         </div>
                         <div class="modal-insights">
                             <div class="swiper am_modal-swiper">
                                 <div class="swiper-wrapper">
                                     <div v-for="(insights, index) in modalData.insights" :key="`insights-${index}`" class="item swiper-slide">
                                         <h3>{{insights.title}}</h3>
-                                        <a :href="insights.view_node" class="am_button"><span>Read more</span></a>
+                                        <p class="date text_xs font_65_medium">September 15, 2023</p>
+                                        <a :href="insights.view_node" class="am_button cta"><span>Read more</span></a>
                                     </div>
                                 </div>
                                 <div class="swiper-button-prev"></div>

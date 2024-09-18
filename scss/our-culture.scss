@@ -1,6 +1,13 @@
 @import "variables"; //import this on each scss page you create
 
 #our-culture-page {
+  .am_key-highlights {
+    .header {
+      h4 {
+        margin-bottom: 1rem;
+      }
+    }
+  }
   .am_employee-benefits {
     .content {
       ul {
@@ -22,9 +29,20 @@
       }
     }
     .header {
-      @media (max-width: 993px) {
+      h4 {
+        margin-bottom: 1rem;
+      }
+      @media (max-width: 1200px) {
+        flex-direction: column;
         align-items: flex-start;
         gap: 20px;
+      }
+    }
+  }
+  .am_resource-groups {
+    .header {
+      h4 {
+        margin-bottom: 1rem;
       }
     }
   }
@@ -64,6 +82,25 @@
     }
   }
   .social-media-sec {
+    .cta {
+      .main_span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .icon_span {
+        line-height: 0;
+      }
+    }
+    .am_button {
+      &:hover {
+        .icon_span {
+          img {
+            filter: brightness(10);
+          }
+        }
+      }
+    }
     .item {
       .item-image {
         height: auto !important;

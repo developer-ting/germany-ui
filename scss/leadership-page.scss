@@ -43,8 +43,20 @@
     .modal-content {
       padding: 0 2rem 1rem;
       p {
+        &:nth-child(1) {
+          color: #0085ca;
+          font-size: 26px;
+          font-family: var(--font_77_bold);
+          @media (max-width: 767px) {
+            font-size: 18px;
+          }
+        }
         &:nth-last-child(1) {
           margin-bottom: 0px;
+        }
+        @media (max-width: 767px) {
+          font-size: 16px;
+          margin-bottom: 1rem;
         }
       }
       @media (max-width: 767px) {
@@ -82,6 +94,25 @@
         display: flex;
         flex-direction: column;
       }
+    }
+  }
+  .modal-social {
+    margin-bottom: 0px;
+  }
+  .modal-expertise {
+    text-decoration: none;
+    h4 {
+      color: #0085ca;
+    }
+    p,
+    span {
+      text-decoration: underline;
+    }
+  }
+  .modal-insights {
+    .date {
+      margin-bottom: 1rem;
+      color: #002749;
     }
   }
 }
