@@ -5,8 +5,8 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Helvetica_Neue_LT Std_67_Medium_Condensed";
-  src: url("../fonts/Helvetica_Neue_LT_Std_67_Medium_Condensed.otf") format("opentype");
+  font-family: "Helvetica_Neue_LT_Std_67_Medium_Condensed_Oblique";
+  src: url("../fonts/Helvetica_Neue_LT_Std_67_Medium_Condensed_Oblique.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -42,7 +42,7 @@
 }
 :root {
   --font_77_bold: "Helvetica_Neue_LT_Std_77_Bold_Condensed";
-  --font_67_medium: "Helvetica_Neue_LT_Std_67_Medium_Condensed";
+  --font_67_medium: "Helvetica_Neue_LT_Std_67_Medium_Condensed_Oblique";
   --font_65_medium: "Helvetica_Neue_LT_Std_65_Medium";
   --font_57: "Helvetica_Neue_LT_Std_57_Condensed";
   --font_55_roman: "Helvetica_Neue_LT_Std_55_Roman";
@@ -173,6 +173,11 @@
     position: relative;
     margin-top: 30px;
   }
+}
+#insights-page .am_insights-featured .am_insights-featured-swiper .swiper-slide .item-image > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: auto;
 }
 #insights-page .insights-lists-sec .insight-item {
   overflow: hidden;

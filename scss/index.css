@@ -5,8 +5,8 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Helvetica_Neue_LT Std_67_Medium_Condensed";
-  src: url("../fonts/Helvetica_Neue_LT_Std_67_Medium_Condensed.otf") format("opentype");
+  font-family: "Helvetica_Neue_LT_Std_67_Medium_Condensed_Oblique";
+  src: url("../fonts/Helvetica_Neue_LT_Std_67_Medium_Condensed_Oblique.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -42,7 +42,7 @@
 }
 :root {
   --font_77_bold: "Helvetica_Neue_LT_Std_77_Bold_Condensed";
-  --font_67_medium: "Helvetica_Neue_LT_Std_67_Medium_Condensed";
+  --font_67_medium: "Helvetica_Neue_LT_Std_67_Medium_Condensed_Oblique";
   --font_65_medium: "Helvetica_Neue_LT_Std_65_Medium";
   --font_57: "Helvetica_Neue_LT_Std_57_Condensed";
   --font_55_roman: "Helvetica_Neue_LT_Std_55_Roman";
@@ -177,6 +177,12 @@
 #index_page .am_features-highlights .features-list {
   padding-left: 1rem;
   min-width: 30%;
+  margin-top: 0px;
+}
+@media (max-width: 1200px) {
+  #index_page .am_features-highlights .features-list {
+    margin-top: 2rem;
+  }
 }
 #index_page .am_features-highlights .features-list::before {
   left: 0;

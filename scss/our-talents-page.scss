@@ -17,6 +17,22 @@
         @media (max-width: 993px) {
           gap: 20px;
         }
+        .item-content {
+          h3 {
+            margin: 0px;
+            @media (max-width: 1200px) {
+              margin: 10px 0px;
+            }
+            @media (max-width: 993px) {
+              margin: 20px 0px;
+            }
+            span {
+              &:nth-child(1) {
+                margin-bottom: 8px;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -36,6 +52,15 @@
     .sidebar {
       @media (max-width: 993px) {
         justify-content: flex-start;
+      }
+    }
+  }
+  .am_stats-content {
+    ul {
+      li {
+        p {
+          margin-top: 1.2rem;
+        }
       }
     }
   }

@@ -415,9 +415,9 @@
                 <div class="container">
                     <div class="primary-content">
                         <div class="content">
-                                <h4 class="subtitle">Overview</h4>
-                            <h2 class="title">Like what you do, and Love who you do it with</h2>
-                            <div class="description">Our history of service and innovation is a story about building communication between communities and individuals. We believe in the power of diverse teaming to solve complex problems, create value and drive change for our clients. We are committed to fostering a culture of inclusion guided by our core values. We encourage our people to live our values daily and to embrace enriching and diverse experiences with clients and colleagues.</div>
+                                <h4 class="subtitle text_sm font_65_medium">Overview</h4>
+                            <h2 class="title text_xxl font_47_light">Like what you do, and Love who you do it with</h2>
+                            <div class="description text_lg font_55_roman">Our history of service and innovation is a story about building communication between communities and individuals. We believe in the power of diverse teaming to solve complex problems, create value and drive change for our clients. We are committed to fostering a culture of inclusion guided by our core values. We encourage our people to live our values daily and to embrace enriching and diverse experiences with clients and colleagues.</div>
                     </div>
                         <div class="media" data-id="4EfspKSidqE">
                                 <div class="media-container" ref="videoPlayerRef"></div>
@@ -434,8 +434,8 @@
                 <div class="am_secondary-intro-content am_secondary-intro-content--cta"  >
                     <div class="container">
                         <div class="content">
-                            <h4 class="subtitle">A&amp;M Germany in Numbers</h4>
-                            <h2 class="title">A&amp;M Germany in Numbers</h2>
+                            <h4 class="subtitle text_sm font_65_medium">A&amp;M Germany in Numbers</h4>
+                            <h2 class="title text_xxl font_47_light">A&amp;M Germany in Numbers</h2>
                         </div>
                         <div class="sidebar">
                             <!-- <div class="cta">
@@ -447,20 +447,20 @@
                 <div class="am_stats-content">
                     <ul>
                         <li>
-                            <h3>450+</h3>
-                            <p>Senior industry experts, operators and digital leaders.</p>
+                            <h3 class="text_xxl font_77_bold">100+</h3>
+                            <p class="text_lg font_55_roman">Nationalities Represented</p>
                         </li>
                         <li>
-                            <h3>500+</h3>
-                            <p>Senior industry experts, operators and digital leaders.</p>
+                            <h3 class="text_xxl font_77_bold">100+</h3>
+                            <p class="text_lg font_55_roman">Languages Spoken</p>
                         </li>
                         <li>
-                            <h3>300+</h3>
-                            <p>Senior industry experts, operators and digital leaders.</p>
+                            <h3 class="text_xxl font_77_bold">100+</h3>
+                            <p class="text_lg font_55_roman">Disciplines/Backgrounds</p>
                         </li>
                         <li>
-                            <h3>$21 +</h3>
-                            <p>Senior industry experts, operators and digital leaders.</p>
+                            <h3 class="text_xxl font_77_bold">90%</h3>
+                            <p class="text_lg font_55_roman">Employee Engagement</p>
                         </li>
                     </ul>
                 </div>
@@ -470,8 +470,8 @@
             <div class="container">
                 <div class="header">
                     <div class="headline">
-                        <h4>Employee’s stories</h4>
-                        <h2>Lorem ipsum dolor sit amet consectetur adipisc elit sed do eiusmod tempor</h2>
+                        <h4 class="text_sm font_65_medium">Employee’s stories</h4>
+                        <h2 class="text_xxl font_47_light">Lorem ipsum dolor sit amet consectetur adipisc elit sed do eiusmod tempor</h2>
                     </div>
                 </div>
                 <div class="content">
@@ -482,13 +482,13 @@
                                     <img :src="story.list.image" :alt="story.list.title" :title="story.list.title" />
                                 </div>
                                 <div class="item-content">
-                                    <p v-html="story.list.description"></p>
+                                    <p class="text_sm font_55_roman" v-html="story.list.description"></p>
                                     <h3>
-                                        <span>{{story.list.title}}</span>
-                                        <span>{{story.list.designation}}</span>
+                                        <span class="text_sm font_65_medium">{{story.list.title}}</span>
+                                        <span class="text_sm font_45_light">{{story.list.designation}}</span>
                                     </h3>
                                     <div class="cta-row">
-                                        <a href="#" @click.prevent="handleInitiativeModal(story, index)" class="am_button"><span>Read more</span></a>
+                                        <a href="#" @click.prevent="handleInitiativeModal(story, index)" class="am_button cta"><span>Read more</span></a>
                                     </div>
                                     
                                 </div>
@@ -512,12 +512,12 @@
                     </div>
                     <div class="modal-title">
                         <h3>
-                            <span>{{modalData.title}}</span>
-                            <span>{{modalData.designation}}</span>
+                            <span class="text_xl font_65_medium">{{modalData.title}}</span>
+                            <span class="text_lg font_45_light">{{modalData.designation}}</span>
                         </h3>
                     </div>
                     <div class="modal-content" v-html="modalData.content"></div>
-                    <div class="modal-footer">
+                    <!-- <div class="modal-footer">
                         <h4>Up Next</h4>
                         <div class="swiper am_modal-swiper">
                             <div class="swiper-wrapper">
@@ -533,7 +533,7 @@
                             <div class="swiper-button-next"></div>
                             <div class="swiper-scrollbar"></div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </am-modal>
         </div>

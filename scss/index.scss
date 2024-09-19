@@ -26,6 +26,10 @@
     .features-list {
       padding-left: 1rem;
       min-width: 30%;
+      margin-top: 0px;
+      @media (max-width: 1200px) {
+        margin-top: 2rem;
+      }
       &::before {
         left: 0;
       }

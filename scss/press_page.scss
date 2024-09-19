@@ -2,7 +2,7 @@
 
 .press_page {
   .box {
-    width: 31%;
+    // width: 31%;
     padding: 40px;
     background-color: #fff;
     border: 1px solid #d0efff;
@@ -16,16 +16,19 @@
       .post {
         color: #fff !important;
       }
+      .btn_section .btn:before {
+        background: url(../assets/white-hover-cta.svg) no-repeat 0 0 !important;
+      }
     }
     @media screen and (max-width: 767px) {
       width: 100%;
       padding: 30px;
     }
     @media (min-width: 768px) and (max-width: 992px) {
-      width: 48%;
+      // width: 48%;
     }
     @media (min-width: 993px) and (max-width: 1200px) {
-      width: 47%;
+      // width: 47%;
       padding: 30px 20px;
     }
     h5 {
@@ -92,7 +95,7 @@
         display: inline-flex;
         align-items: center;
         position: relative;
-        color: #0085ca;
+        // color: #0085ca;
         flex-grow: 0;
         flex-shrink: 0;
         transition: all 0.3s ease;
@@ -124,7 +127,7 @@
         top: 0;
         left: 0;
         color: #fff;
-        background: #0085ca;
+        // background: #0085ca;
         z-index: 1;
         transition: all 0.3s ease;
       }

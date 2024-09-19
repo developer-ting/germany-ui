@@ -19,6 +19,10 @@
         }
       }
     }
+    .am_insights-featured-swiper .swiper-slide .item-image > img {
+      object-fit: cover;
+      aspect-ratio: auto;
+    }
   }
   .insights-lists-sec {
     .insight-item {
