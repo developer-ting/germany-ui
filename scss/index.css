@@ -151,6 +151,7 @@
 .cta span {
   font-size: 14px !important;
   font-family: var(--font_65_medium) !important;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 993px) {
@@ -268,7 +269,6 @@
   font-family: "helvetica_neue_lt_std45_light";
 }
 #index_page .am_press-cards .left_section .box p span {
-  font-weight: 900;
   letter-spacing: 1px;
 }
 #index_page .am_press-cards .left_section .box p.para_section {

@@ -151,6 +151,7 @@
 .cta span {
   font-size: 14px !important;
   font-family: var(--font_65_medium) !important;
+  letter-spacing: 1px;
 }
 
 #insights-page .am_insights-featured .item-content {

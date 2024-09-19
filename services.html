@@ -446,7 +446,7 @@
                 <div class="container">
                     <div class="primary-content">
                         <div class="content">
-                            <h4 class="subtitle text_sm font_65_medium">Overview</h4>
+                            <h4 class="subtitle text_sm font_65_medium sub_sec">Overview</h4>
                             <h2 class="title text_xxl font_47_light">Lean, fast-paced and entrepreneurial.</h2>
                             <div class="description text_lg font_55_roman">
                                 We’re here when you need an adviser, hands-on leader or a team of professionals to get you to the next level.
@@ -466,7 +466,7 @@
         <div class="am_features-highlights am_features-highlights--alternate" >
             <div class="container">
                 <div class="header">
-                        <h4 class="subtitle text_sm font_65_medium">Services</h4>
+                        <h4 class="subtitle text_sm font_65_medium sub_sec">Services</h4>
                     <h3 class="title text_xxl font_47_light">Lorem ipsum dolor sit amet, consetetur</h3>
                 </div>
                 <!-- <div class="features-navigation">
@@ -930,11 +930,11 @@
                                                         </div>
                                                         <div class="modal-header-info">
                                                             <div class="modal-title">
-                                                                <h3>{{modalData.name}}</h3>
-                                                                <p>{{modalData.professional_title}} {{modalData.region}}</p>
+                                                                <h3 class="text_xl font_65_medium">{{modalData.name}}</h3>
+                                                                <p class="text_lg font_45_light">{{modalData.professional_title}} {{modalData.region}}</p>
                                                             </div>
                                                             <div class="modal-location">
-                                                                <span>
+                                                                <span class="text_sm font_55_roman">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                                         <g id="Group_142909" data-name="Group 142909" transform="translate(-600 -280)">
                                                                             <rect id="Rectangle_1857" data-name="Rectangle 1857" width="16" height="16" transform="translate(600 280)" fill="none"/>
@@ -943,7 +943,7 @@
                                                                     </svg>
                                                                     {{modalData.city}}
                                                                 </span>
-                                                                <span>
+                                                                <span class="text_sm font_55_roman">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                                         <g id="Group_142911" data-name="Group 142911" transform="translate(-621 -278)">
                                                                             <g id="Group_142910" data-name="Group 142910" transform="translate(21 -2)">
@@ -976,15 +976,16 @@
                                                     <div class="modal-content" v-html="modalData.body"></div>
                                                     <div v-if="modalData.insights && modalData.insights.length > 0" class="modal-footer">
                                                         <div class="modal-articles">
-                                                            <h3>Latest article from {{ modalData.name }}</h3>
-                                                            <a :href="modalData.global_path" class="am_button"><span>View all</span></a>
+                                                            <h3 class="text_xml font_77_bold">Latest article from {{ modalData.name }}</h3>
+                                                            <a :href="modalData.global_path" class="am_button cta"><span>View all</span></a>
                                                         </div>
                                                         <div class="modal-insights">
                                                             <div class="swiper am_modal-swiper">
                                                                 <div class="swiper-wrapper">
                                                                     <div v-for="(insights, index) in modalData.insights" :key="`insights-${index}`" class="item swiper-slide">
-                                                                        <h3>{{insights.title}}</h3>
-                                                                        <a :href="insights.view_node" class="am_button"><span>Read more</span></a>
+                                                                        <h3 class="text_lsg font_77_bold">{{insights.title}}</h3>
+                                                                        <p class="date text_xs font_65_medium">September 15, 2023</p>
+                                                                        <a :href="insights.view_node" class="am_button cta"><span>Read more</span></a>
                                                                     </div>
                                                                 </div>
                                                                 <div class="swiper-button-prev"></div>
@@ -7197,13 +7198,13 @@
                 </div>
             </div>
         </div>
-        <div class="am_image-cards">
+        <div class="am_image-cards case_studies_sec">
             <div class="container">
                 <div class="am_image-cards-header">
                     <div class="am_secondary-intro-content am_secondary-intro-content--cta">
                         <div class="container">
                             <div class="content">
-                                <h4 class="subtitle text_sm font_65_medium">Case Studies</h4>
+                                <h4 class="subtitle text_sm font_65_medium sub_sec">Case Studies</h4>
                                 <h2 class="title text_xxl font_47_light">Learn About A&M Methods And Successful Stories</h2>
                             </div>
                             <div class="sidebar">
@@ -7355,7 +7356,7 @@
         <div class="am_contact-form" id="contact-page">
             <div class="container">
                 <div class="form-container">
-                    <h2 class="text_xxl font_47_light">Reach out to us</h2>
+                    <h2 class="text_xxl font_47_light">Reach Out To Us</h2>
                     <div class="external-form">
                         <form class="webform-submission-form webform-submission-add-form webform-submission-contact-form webform-submission-contact-add-form webform-submission-contact-node-4-form webform-submission-contact-node-4-add-form js-webform-details-toggle webform-details-toggle" data-drupal-selector="webform-submission-contact-node-4-add-form" action="/contact-us" method="post" id="webform-submission-contact-node-4-add-form" accept-charset="UTF-8" data-once="form-updated webform-details-toggle" data-drupal-form-fields="edit-first-name,edit-last-name,edit-email,edit-country-of-residency,edit-company,edit-phone,edit-title,edit-description,edit-privacy-notice,edit-submit">
           

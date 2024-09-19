@@ -44,6 +44,7 @@
           }
         }
       }
+
       .industries_sec {
         margin: 0px;
         .swiper-wrapper {
@@ -95,7 +96,7 @@
                 span {
                   color: #fff;
                   &:nth-child(1) {
-                    font-size: 1rem;
+                    font-weight: normal;
                   }
                 }
               }
@@ -235,6 +236,10 @@
     .features-list {
       padding-left: 1rem;
       min-width: 30%;
+      margin-top: 0px;
+      @media (max-width: 1200px) {
+        margin-top: 2rem;
+      }
       &::before {
         left: 0;
       }
@@ -307,6 +312,10 @@
           width: 100%;
           border: 0px;
         }
+        h3 {
+          color: #002749;
+          // margin-bottom: 1rem;
+        }
       }
       .modal-insights {
         width: 58%;
@@ -317,12 +326,23 @@
           width: 100%;
           max-width: 100%;
         }
+        .date {
+          color: #002749;
+        }
       }
       @media (max-width: 767px) {
         margin: 0 1rem;
 
         display: flex;
         flex-direction: column;
+      }
+    }
+  }
+  .case_studies_sec {
+    .content,
+    .sidebar {
+      @media (min-width: 1201px) {
+        width: 50%;
       }
     }
   }

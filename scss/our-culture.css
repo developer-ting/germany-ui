@@ -151,6 +151,7 @@
 .cta span {
   font-size: 14px !important;
   font-family: var(--font_65_medium) !important;
+  letter-spacing: 1px;
 }
 
 #our-culture-page .am_key-highlights .header h4 {
@@ -219,6 +220,11 @@
 }
 #our-culture-page .social-media-sec .am_button:hover .icon_span img {
   filter: brightness(10);
+}
+@media (max-width: 767px) {
+  #our-culture-page .social-media-sec .am_button .social_id_span {
+    font-size: 9px !important;
+  }
 }
 #our-culture-page .social-media-sec .item .item-image {
   height: auto !important;
