@@ -266,4 +266,15 @@
   #about-us-page .am_intro-banner {
     padding: 50px 0px;
   }
+}
+@media (max-width: 767px) {
+  #about-us-page .am_history-content .event {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    left: auto;
+    top: 14rem;
+    max-width: 95%;
+    margin: 0 auto;
+    white-space: break-spaces;
+  }
 }/*# sourceMappingURL=about-us-page.css.map */
