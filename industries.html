@@ -10,41 +10,59 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css" />
 
 	
 	<link rel="stylesheet" href="css/am-styles.css">
 	<link rel="stylesheet" href="scss/services-page.css">
     <link rel="stylesheet" href="scss/contact-page.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 	
 	<link rel="shortcut icon" href="/assets/favicon.ico">
 	<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 	<!-- Place favicon.ico in the root directory -->
     <style>
-   #swipeSlide   .swiper-container {
-      width: 100%;
-      height: auto;
-      margin-left: auto;
-      margin-right: auto;
-    }
- #swipeSlide   .swiper-slide {
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-.item a{
-    text-decoration: none;
-}
+        .swiper-container{
+            padding-bottom: 60px;
+        } 
+        .swiper-container-horizontal .swiper-scrollbar {
+            bottom: 21px;
+            width: 90%;
+            left: 0;
+            height: 2px;
+            background: rgba(0, 133, 202, 0.2);
+        }
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+            background-image: none;
+        }
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+            background-image: none;
+        }
+        .swiper-button-next, .swiper-rtl .swiper-button-prev{
+            right: 0;
+            top: auto;
+            bottom: 0;
+            color: #0085ca;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after{
+            font-size: 20px;
+        }
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+            left: auto;
+            right: 30px;
+            top: auto;
+            bottom: 0;
+            color: #0085ca;
+        }
+       
+        .am_image-cards-content .swiper-container .swiper-scrollbar-drag {
+            height: 5px;
+            top: -2px;
+            background: #0085ca;
+        }
+        .item a{
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -522,192 +540,141 @@
 
                                         <div class="am_image-cards industries_sec">
                                             <div class="am_image-cards-header">
-                                                <h2 class="title">Industries We Work In 1</h2>
+                                                <h2 class="title">Industries We Work In</h2>
                                             </div>
                                             <div class="am_image-cards-content" id="swipeSlide">
                                                  <!-- Swiper -->
-  <div class="swiper-container swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="item">
-            <a href="#" class="row-flex">
-                <div class="item-image">
-                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-                </div>
-                <div class="item-title">
-                    <h4>Financial Services & Insurance</h4>
-                </div>
-                <!-- <div class="btn-plus">
-                    <img src="assets/ico-plus.svg" alt="arrow">
-                </div> -->
-            </a>
-        </div>
-      </div>
-      <div class="swiper-slide"><div class="item">
-        <a href="#" class="row-flex">
-            <div class="item-image">
-                <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-            </div>
-            <div class="item-title">
-                <h4>Financial Services & Insurance</h4>
-            </div>
-            <!-- <div class="btn-plus">
-                <img src="assets/ico-plus.svg" alt="arrow">
-            </div> -->
-        </a>
-    </div></div>
-      <div class="swiper-slide">
-        <div class="item">
-        <a href="#" class="row-flex">
-            <div class="item-image">
-                <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-            </div>
-            <div class="item-title">
-                <h4>Financial Services & Insurance</h4>
-            </div>
-            <!-- <div class="btn-plus">
-                <img src="assets/ico-plus.svg" alt="arrow">
-            </div> -->
-        </a>
-    </div>
-</div>
-      <div class="swiper-slide">
-        <div class="item">
-            <a href="#" class="row-flex">
-                <div class="item-image">
-                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-                </div>
-                <div class="item-title">
-                    <h4>Financial Services & Insurance</h4>
-                </div>
-                <!-- <div class="btn-plus">
-                    <img src="assets/ico-plus.svg" alt="arrow">
-                </div> -->
-            </a>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="item">
-            <a href="#" class="row-flex">
-                <div class="item-image">
-                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-                </div>
-                <div class="item-title">
-                    <h4>Financial Services & Insurance</h4>
-                </div>
-                <!-- <div class="btn-plus">
-                    <img src="assets/ico-plus.svg" alt="arrow">
-                </div> -->
-            </a>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="item">
-            <a href="#" class="row-flex">
-                <div class="item-image">
-                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-                </div>
-                <div class="item-title">
-                    <h4>Financial Services & Insurance</h4>
-                </div>
-                <!-- <div class="btn-plus">
-                    <img src="assets/ico-plus.svg" alt="arrow">
-                </div> -->
-            </a>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="item">
-            <a href="#" class="row-flex">
-                <div class="item-image">
-                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-                </div>
-                <div class="item-title">
-                    <h4>Financial Services & Insurance</h4>
-                </div>
-                <!-- <div class="btn-plus">
-                    <img src="assets/ico-plus.svg" alt="arrow">
-                </div> -->
-            </a>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="item">
-            <a href="#" class="row-flex">
-                <div class="item-image">
-                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-                </div>
-                <div class="item-title">
-                    <h4>Financial Services & Insurance</h4>
-                </div>
-                <!-- <div class="btn-plus">
-                    <img src="assets/ico-plus.svg" alt="arrow">
-                </div> -->
-            </a>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="item">
-            <a href="#" class="row-flex">
-                <div class="item-image">
-                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-                </div>
-                <div class="item-title">
-                    <h4>Financial Services & Insurance</h4>
-                </div>
-                <!-- <div class="btn-plus">
-                    <img src="assets/ico-plus.svg" alt="arrow">
-                </div> -->
-            </a>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="item">
-            <a href="#" class="row-flex">
-                <div class="item-image">
-                    <img src="assets/services/financial.jpg" alt="financial" title="financial" />
-                </div>
-                <div class="item-title">
-                    <h4>Financial Services & Insurance</h4>
-                </div>
-                <!-- <div class="btn-plus">
-                    <img src="assets/ico-plus.svg" alt="arrow">
-                </div> -->
-            </a>
-        </div>
-      </div>
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-button-prev"></div>
-                                                    <div class="swiper-button-next"></div>
-                                                    <div class="swiper-scrollbar"></div>
-  </div>
-                                               
-                                                <!-- <div class="swiper am_image-cards-swiper mySwiperNew">
+                                                 <div class="swiper-container swiper">
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
-                                                            <h1>Rupesh 1</h1>
+                                                            <div class="item">
+                                                                <a href="#" class="row-flex">
+                                                                    <div class="item-image">
+                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                                                                    </div>
+                                                                    <div class="item-title">
+                                                                        <h4>Financial Services & Insurance</h4>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                         <div class="swiper-slide">
-                                                            <h1>Rupesh 2</h1>
+                                                            <div class="item">
+                                                                <a href="#" class="row-flex">
+                                                                    <div class="item-image">
+                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                                                                    </div>
+                                                                    <div class="item-title">
+                                                                        <h4>Financial Services & Insurance</h4>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                         <div class="swiper-slide">
-                                                            <h1>Rupesh 3</h1>
+                                                            <div class="item">
+                                                                <a href="#" class="row-flex">
+                                                                    <div class="item-image">
+                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                                                                    </div>
+                                                                    <div class="item-title">
+                                                                        <h4>Financial Services & Insurance</h4>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                         <div class="swiper-slide">
-                                                            <h1>Rupesh 4</h1>
+                                                            <div class="item">
+                                                                <a href="#" class="row-flex">
+                                                                    <div class="item-image">
+                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                                                                    </div>
+                                                                    <div class="item-title">
+                                                                        <h4>Financial Services & Insurance</h4>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                         <div class="swiper-slide">
-                                                            <h1>Rupesh 5</h1>
+                                                            <div class="item">
+                                                                <a href="#" class="row-flex">
+                                                                    <div class="item-image">
+                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                                                                    </div>
+                                                                    <div class="item-title">
+                                                                        <h4>Financial Services & Insurance</h4>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                         <div class="swiper-slide">
-                                                            <h1>Rupesh 6</h1>
+                                                            <div class="item">
+                                                                <a href="#" class="row-flex">
+                                                                    <div class="item-image">
+                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                                                                    </div>
+                                                                    <div class="item-title">
+                                                                        <h4>Financial Services & Insurance</h4>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
                                                         </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="item">
+                                                                <a href="#" class="row-flex">
+                                                                    <div class="item-image">
+                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                                                                    </div>
+                                                                    <div class="item-title">
+                                                                        <h4>Financial Services & Insurance</h4>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="item">
+                                                                <a href="#" class="row-flex">
+                                                                    <div class="item-image">
+                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                                                                    </div>
+                                                                    <div class="item-title">
+                                                                        <h4>Financial Services & Insurance</h4>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="item">
+                                                                <a href="#" class="row-flex">
+                                                                    <div class="item-image">
+                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                                                                    </div>
+                                                                    <div class="item-title">
+                                                                        <h4>Financial Services & Insurance</h4>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="item">
+                                                                <a href="#" class="row-flex">
+                                                                    <div class="item-image">
+                                                                        <img src="assets/services/financial.jpg" alt="financial" title="financial" />
+                                                                    </div>
+                                                                    <div class="item-title">
+                                                                        <h4>Financial Services & Insurance</h4>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- Repeat swiper-slide for more items -->
                                                     </div>
+                                                
+                                                    <!-- Add Pagination -->
                                                     <div class="swiper-button-prev"></div>
                                                     <div class="swiper-button-next"></div>
                                                     <div class="swiper-scrollbar"></div>
-                                                </div> -->
+                                                </div>
                                             </div>
                                         </div>
 
@@ -6731,20 +6698,32 @@
     </div>
 </div>
 <script src="js/am.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script> -->
-<!-- <script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+<script>
     var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
-      slidesPerColumn: 2,
-   //slidesPerColumnFill: "row",
-   slidesPerGroup: 6,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+        slidesPerView: 2,           // Display 2 slides per view
+        slidesPerColumn: 2,         // Display 2 slides per column
+        slidesPerGroup: 1,          // Navigate by one slide (per column) at a time
+        spaceBetween: 30,           // Spacing between slides
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            767: {  // Mobile screen size (767px and below)
+                slidesPerColumn: 2,  // 1 slide per column on mobile
+                slidesPerView: 1,    // 1 slide per view on mobile
+            },
+        },
     });
- 
-  </script> -->
+</script>
 </body>
 </html>
