@@ -154,6 +154,10 @@
   letter-spacing: 1px;
 }
 
+#index_page {
+  /* Desktop Styles */
+  /* Mobile Styles */
+}
 @media (max-width: 993px) {
   #index_page .am_hero-slider-v2-swiper .swiper-slide .item {
     height: 46vh;
@@ -182,7 +186,7 @@
 }
 @media (max-width: 1200px) {
   #index_page .am_features-highlights .features-list {
-    margin-top: 2rem;
+    display: none;
   }
 }
 #index_page .am_features-highlights .features-list::before {
@@ -379,5 +383,72 @@
 @media (max-width: 993px) {
   #index_page .am_image-cards .am_secondary-intro-content .sidebar {
     justify-content: flex-start;
+  }
+}
+#index_page .features-content-item.features-content-item--show {
+  display: block !important;
+}
+#index_page .features-content .features-content-item {
+  display: none; /* Hide all content initially */
+  transition: 0.4s ease-in-out;
+}
+#index_page .features-content .features-content-item .accordion-content {
+  display: flex;
+}
+#index_page .features-content .features-content-item .accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 20px;
+  background: #bcbcbc;
+  color: #000;
+  text-align: left;
+}
+#index_page .features-content .features-content-item .accordion-header h3 {
+  margin: 0;
+}
+#index_page .features-content .features-content-item .accordion-header span img {
+  width: 30px;
+  height: 30px;
+}
+@media (max-width: 767px) {
+  #index_page .features-content .features-content-item .accordion-header span img {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (min-width: 1201px) {
+  #index_page .features-content .features-content-item .accordion-header {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  #index_page .features-content .features-content-item .accordion-header {
+    padding: 15px;
+  }
+}
+#index_page .features-content .features-content-item.active {
+  display: block; /* Show the active tab content */
+}
+@media (max-width: 1200px) {
+  #index_page .features-content .features-content-item {
+    display: block; /* Hide all items initially */
+    border-top: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+  #index_page .features-content .features-content-item .accordion-content {
+    display: none;
+    padding: 15px;
+  }
+  #index_page .features-content .features-content-item .accordion-content.active {
+    display: block; /* Show content when active */
+  }
+  #index_page .features-content .features-content-item .accordion-content .feature-info {
+    text-align: left;
+  }
+  #index_page .features-content .features-content-item .accordion-content .feature-info .am_button {
+    align-self: flex-start;
   }
 }/*# sourceMappingURL=index.css.map */

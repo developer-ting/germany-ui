@@ -28,8 +28,9 @@
       min-width: 30%;
       margin-top: 0px;
       @media (max-width: 1200px) {
-        margin-top: 2rem;
+        display: none;
       }
+
       &::before {
         left: 0;
       }
@@ -228,6 +229,72 @@
       .sidebar {
         @media (max-width: 993px) {
           justify-content: flex-start;
+        }
+      }
+    }
+  }
+
+  /* Desktop Styles */
+  .features-content-item.features-content-item--show {
+    display: block !important;
+  }
+  .features-content .features-content-item {
+    display: none; /* Hide all content initially */
+    transition: 0.4s ease-in-out;
+    .accordion-content {
+      display: flex;
+    }
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 20px;
+      background: #bcbcbc;
+      color: #000;
+      text-align: left;
+      h3 {
+        margin: 0;
+      }
+      span {
+        img {
+          width: 30px;
+          height: 30px;
+          @media (max-width: 767px) {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      @media (min-width: 1201px) {
+        display: none;
+      }
+      @media (max-width: 767px) {
+        padding: 15px;
+      }
+    }
+    &.active {
+      display: block; /* Show the active tab content */
+    }
+  }
+  /* Mobile Styles */
+  @media (max-width: 1200px) {
+    .features-content .features-content-item {
+      display: block; /* Hide all items initially */
+      border-top: 1px solid #ddd;
+      margin-bottom: 20px;
+      padding-top: 20px;
+      .accordion-content {
+        display: none;
+        padding: 15px;
+        &.active {
+          display: block; /* Show content when active */
+        }
+        .feature-info {
+          text-align: left;
+          .am_button {
+            align-self: flex-start;
+          }
         }
       }
     }
