@@ -480,24 +480,95 @@
       display: block; /* Show the active tab content */
     }
   }
-  /* Mobile Styles */
-  @media (max-width: 1200px) {
-    .features-content .features-content-item {
-      display: block; /* Hide all items initially */
-      margin-bottom: 20px;
-      .accordion-content {
-        display: none;
-        padding: 15px;
-        &.active {
-          display: block; /* Show content when active */
-        }
-        .feature-info {
-          text-align: left;
-          .am_button {
-            align-self: flex-start;
-          }
-        }
-      }
-    }
+ /* Desktop Styles */
+.features-content-item.features-content-item--show {
+  display: block !important;
+}
+
+.features-content .features-content-item {
+  display: none; /* Hide all content initially */
+  transition: 0.4s ease-in-out;
+
+  .accordion-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
   }
+
+  .accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 20px;
+      background-color: rgba(0, 133, 202, 13%);
+      color: #d0e5ec;
+      text-align: left;
+      transition: 0.4s ease-in-out;
+      position: relative;
+
+      h3 {
+          margin: 0;
+      }
+
+      .icon-plus {
+          position: absolute;
+          top: 50%;
+          right: 3%;
+          background-image: url(../assets/white-plus-icon.svg);
+          transform: translateY(-50%);
+          width: 30px;
+          height: 30px;
+          background-size: cover;
+      }
+
+      &.min-icon {
+          color: #f9c20a;
+          .icon-plus {
+              background-image: url(../assets/white-minus-icon.svg);
+          }
+      }
+  }
+
+  &.active {
+      display: block; /* Show the active tab content */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 1200px) {
+  .features-content .features-content-item {
+      display: block; /* Show content for mobile */
+      margin-bottom: 20px;
+
+      .accordion-content {
+          display: none;
+          padding: 15px;
+
+          &.active {
+              display: block; /* Show content when active */
+          }
+
+          .feature-info {
+              text-align: left;
+
+              .am_button {
+                  align-self: flex-start;
+              }
+          }
+      }
+  }
+
+  .swiper-container {
+      display: block !important;
+      width: 100%;
+      height: auto;
+  }
+
+  .swiper-slide {
+      display: flex;
+      justify-content: center;
+  }
+}
+
 }

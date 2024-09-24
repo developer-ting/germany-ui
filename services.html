@@ -491,7 +491,7 @@
                                         <h3 class="text_lg font_67_medium">Turnaround and Restructuring</h3>
                                         <div class="icon-plus"></div>
                                     </div>
-                                    <div class="accordion-content">
+                                    <div class="accordion-content active">
                                         <div class="feature-image">
                                             <img src="assets/restructuring-feature-visual.jpg" alt="Interim and Crisis Management" title="Interim and Crisis Management" />
                                         </div>
@@ -5418,14 +5418,16 @@
             if (!isActive) {
                 content.classList.add('active');
                 header.classList.add('min-icon');
+
+                // Reinitialize swiper for the current tab when content is visible
+                const tabId = item.id; // Get the current tab ID
+                initializeSwiper(tabId); // Reinitialize swiper for this accordion content
             }
         });
     });
 });
 
-</script>
-<script>
-    var swiperInstances = {};
+var swiperInstances = {};
 
 function initializeSwiper(tabId) {
     if (swiperInstances[tabId]) {
@@ -5435,7 +5437,7 @@ function initializeSwiper(tabId) {
         // Initialize a new Swiper instance for this tab
         swiperInstances[tabId] = new Swiper('#' + tabId + ' .swiper-container', {
             slidesPerView: 2,           // Display 2 slides per view
-            slidesPerColumn: 2,            // Adjust as per the number of slides you want to show
+            slidesPerColumn: 2,         // Adjust as per the number of slides you want to show
             slidesPerGroup: 1,          // Navigate by one slide at a time
             spaceBetween: 30,           // Spacing between slides
             navigation: {
