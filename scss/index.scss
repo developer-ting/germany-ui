@@ -18,15 +18,26 @@
   }
   .am_features-highlights {
     margin-bottom: 5rem;
+    .features {
+      gap: 0px;
+    }
     .features-content-item {
       .am_button {
         margin-top: 2rem;
       }
+      .feature-info {
+        @media (min-width: 1201px) {
+          width: 60%;
+        }
+      }
     }
     .features-list {
       padding-left: 1rem;
-      min-width: 30%;
+      min-width: 25%;
       margin-top: 0px;
+      ul {
+        gap: 1.5rem;
+      }
       @media (max-width: 1200px) {
         display: none;
       }

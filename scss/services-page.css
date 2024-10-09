@@ -156,6 +156,7 @@
 
 #services-page {
   /* Desktop Styles */
+  /* Desktop Styles */
   /* Mobile Styles */
 }
 #services-page .am_image-cards .item-content .btm-row {
@@ -452,6 +453,9 @@
 #services-page .am_features-highlights .features-list .indicator {
   left: 0;
 }
+#services-page .am_features-highlights .features-list ul {
+  gap: 1.5rem;
+}
 #services-page .am_featured-experts-modal .modal-header {
   padding: 1.875rem 2rem 0;
 }
@@ -613,7 +617,7 @@
 }
 @media (min-width: 1201px) {
   #services-page .features-content .features-content-item .accordion-header {
-    display: none;
+    display: none !important;
   }
 }
 @media (max-width: 767px) {
@@ -630,9 +634,55 @@
 #services-page .features-content .features-content-item.active {
   display: block; /* Show the active tab content */
 }
+#services-page .features-content-item.features-content-item--show {
+  display: block !important;
+}
+#services-page .features-content .features-content-item {
+  display: none; /* Hide all content initially */
+  transition: 0.4s ease-in-out;
+}
+#services-page .features-content .features-content-item .accordion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#services-page .features-content .features-content-item .accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 20px;
+  background-color: rgba(0, 133, 202, 0.13);
+  color: #d0e5ec;
+  text-align: left;
+  transition: 0.4s ease-in-out;
+  position: relative;
+}
+#services-page .features-content .features-content-item .accordion-header h3 {
+  margin: 0;
+}
+#services-page .features-content .features-content-item .accordion-header .icon-plus {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  background-image: url(../assets/white-plus-icon.svg);
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+}
+#services-page .features-content .features-content-item .accordion-header.min-icon {
+  color: #f9c20a;
+}
+#services-page .features-content .features-content-item .accordion-header.min-icon .icon-plus {
+  background-image: url(../assets/white-minus-icon.svg);
+}
+#services-page .features-content .features-content-item.active {
+  display: block; /* Show the active tab content */
+}
 @media (max-width: 1200px) {
   #services-page .features-content .features-content-item {
-    display: block; /* Hide all items initially */
+    display: block; /* Show content for mobile */
     margin-bottom: 20px;
   }
   #services-page .features-content .features-content-item .accordion-content {
@@ -647,5 +697,14 @@
   }
   #services-page .features-content .features-content-item .accordion-content .feature-info .am_button {
     align-self: flex-start;
+  }
+  #services-page .swiper-container {
+    display: block !important;
+    width: 100%;
+    height: auto;
+  }
+  #services-page .swiper-slide {
+    display: flex;
+    justify-content: center;
   }
 }/*# sourceMappingURL=services-page.css.map */
