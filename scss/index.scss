@@ -27,16 +27,21 @@
       }
       .feature-info {
         @media (min-width: 1201px) {
-          width: 60%;
+          width: 44%;
         }
       }
     }
     .features-list {
       padding-left: 1rem;
-      min-width: 25%;
+      min-width: 28%;
       margin-top: 0px;
       ul {
-        gap: 1.5rem;
+        gap: 1rem;
+        li {
+          a {
+            font-size: 23px !important;
+          }
+        }
       }
       @media (max-width: 1200px) {
         display: none;
@@ -268,6 +273,10 @@
       position: relative;
       h3 {
         margin: 0;
+        font-size: 23px !important;
+        @media (max-width: 767px) {
+          font-size: 16px !important;
+        }
       }
       .icon-plus {
         position: absolute;

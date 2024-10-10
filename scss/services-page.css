@@ -438,7 +438,7 @@
 }
 #services-page .am_features-highlights .features-list {
   padding-left: 1rem;
-  min-width: 30%;
+  min-width: 28%;
   margin-top: 0px;
 }
 @media (max-width: 1200px) {
@@ -454,7 +454,10 @@
   left: 0;
 }
 #services-page .am_features-highlights .features-list ul {
-  gap: 1.5rem;
+  gap: 1rem;
+}
+#services-page .am_features-highlights .features-list ul li a {
+  font-size: 23px !important;
 }
 #services-page .am_featured-experts-modal .modal-header {
   padding: 1.875rem 2rem 0;
@@ -598,6 +601,12 @@
 }
 #services-page .features-content .features-content-item .accordion-header h3 {
   margin: 0;
+  font-size: 23px !important;
+}
+@media (max-width: 767px) {
+  #services-page .features-content .features-content-item .accordion-header h3 {
+    font-size: 16px !important;
+  }
 }
 #services-page .features-content .features-content-item .accordion-header .icon-plus {
   position: absolute;
