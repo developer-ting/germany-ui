@@ -182,6 +182,22 @@
 }
 #index_page .am_features-highlights .am_image-cards-header .am_secondary-intro-content .content .title {
   color: #fff;
+  width: 55%;
+}
+@media (max-width: 1300px) {
+  #index_page .am_features-highlights .am_image-cards-header .am_secondary-intro-content .content .title {
+    width: 62%;
+  }
+}
+@media (max-width: 1200px) {
+  #index_page .am_features-highlights .am_image-cards-header .am_secondary-intro-content .content .title {
+    width: 70%;
+  }
+}
+@media (max-width: 767px) {
+  #index_page .am_features-highlights .am_image-cards-header .am_secondary-intro-content .content .title {
+    width: 100%;
+  }
 }
 @media (max-width: 993px) {
   #index_page .am_features-highlights .am_image-cards-header .am_secondary-intro-content .sidebar {
