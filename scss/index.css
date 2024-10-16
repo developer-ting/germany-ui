@@ -182,8 +182,18 @@
 #index_page .am_features-highlights .am_image-cards-header .am_secondary-intro-content .content .title {
   color: #fff;
 }
+@media (max-width: 993px) {
+  #index_page .am_features-highlights .am_image-cards-header .am_secondary-intro-content .sidebar {
+    justify-content: flex-start;
+  }
+}
 #index_page .am_features-highlights .am_image-cards-header .am_secondary-intro-content .sidebar .am_button {
   color: #fff;
+}
+@media (max-width: 1200px) {
+  #index_page .am_features-highlights .am_image-cards-header .container {
+    padding: 0;
+  }
 }
 #index_page .am_features-highlights .features {
   gap: 0px;

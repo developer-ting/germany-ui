@@ -27,9 +27,17 @@
           }
         }
         .sidebar {
+          @media (max-width: 993px) {
+            justify-content: flex-start;
+          }
           .am_button {
             color: #fff;
           }
+        }
+      }
+      .container {
+        @media (max-width: 1200px) {
+          padding: 0;
         }
       }
     }
