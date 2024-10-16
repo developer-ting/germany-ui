@@ -18,6 +18,21 @@
   }
   .am_features-highlights {
     margin-bottom: 5rem;
+    .am_image-cards-header {
+      .am_secondary-intro-content {
+        background-color: transparent;
+        .content {
+          .title {
+            color: #fff;
+          }
+        }
+        .sidebar {
+          .am_button {
+            color: #fff;
+          }
+        }
+      }
+    }
     .features {
       gap: 0px;
     }

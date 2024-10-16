@@ -176,6 +176,15 @@
 #index_page .am_features-highlights {
   margin-bottom: 5rem;
 }
+#index_page .am_features-highlights .am_image-cards-header .am_secondary-intro-content {
+  background-color: transparent;
+}
+#index_page .am_features-highlights .am_image-cards-header .am_secondary-intro-content .content .title {
+  color: #fff;
+}
+#index_page .am_features-highlights .am_image-cards-header .am_secondary-intro-content .sidebar .am_button {
+  color: #fff;
+}
 #index_page .am_features-highlights .features {
   gap: 0px;
 }
