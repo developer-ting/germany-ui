@@ -9632,3 +9632,14 @@ hr {
     letter-spacing: 1px;
   }
 
+  .header_lang_select {
+    text-transform: uppercase;
+    padding: 2px 5px;
+    letter-spacing: 1px;
+    border: 1px solid #D0E5EC;
+  }
+
+  .press_profile_img{
+    width: 60px;
+    height: 73px;
+  }
