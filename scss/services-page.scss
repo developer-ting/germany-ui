@@ -125,10 +125,10 @@
                 }
                 .item-title {
                   color: #fff;
-                  width: 55%;
+                  width: 60%;
                   @media (max-width: 1200px) {
                     .text_lg {
-                      font-size: 16px !important;
+                      font-size: 14px !important;
                     }
                   }
                 }
@@ -577,9 +577,9 @@
       height: auto;
     }
 
-    .swiper-slide {
-      display: flex;
-      justify-content: center;
-    }
+    // .swiper-slide {
+    //   display: flex;
+    //   justify-content: center;
+    // }
   }
 }

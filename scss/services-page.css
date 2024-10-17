@@ -278,11 +278,11 @@
 }
 #services-page .am_features-highlights .features-content .industries_sec .swiper-wrapper .swiper-slide .item .row-flex .item-title {
   color: #fff;
-  width: 55%;
+  width: 60%;
 }
 @media (max-width: 1200px) {
   #services-page .am_features-highlights .features-content .industries_sec .swiper-wrapper .swiper-slide .item .row-flex .item-title .text_lg {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 }
 #services-page .am_features-highlights .features-content .industries_sec .swiper-wrapper .swiper-slide .item .row-flex .btn-plus {
@@ -711,9 +711,5 @@
     display: block !important;
     width: 100%;
     height: auto;
-  }
-  #services-page .swiper-slide {
-    display: flex;
-    justify-content: center;
   }
 }/*# sourceMappingURL=services-page.css.map */
