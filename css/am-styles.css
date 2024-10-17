@@ -9643,3 +9643,20 @@ hr {
     width: 60px;
     height: 73px;
   }
+
+  .press_short_para{
+    padding-bottom: 0px !important;
+    min-height: 90px;
+    display: -webkit-box;
+    max-width: 100%;
+    margin: 0 auto 20px;
+    -webkit-line-clamp: 3;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  @media(max-width:767px){
+    .press_short_para{min-height: auto;}
+  }
