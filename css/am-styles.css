@@ -9658,7 +9658,7 @@ hr {
     text-overflow: ellipsis;
   }
   @media(max-width:767px){
-    .press_short_para{min-height: auto;}
+    .press_short_para{min-height: 72px;}
   }
 
   /* Website Scrollbar starts */
