@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Screenshot Example</title>
+    <style>
+        #container {
+            padding: 30px;
+            font-family: 'Verdana', Lucida;
+        }
+        .img_section {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: #ccc;
+            overflow: hidden;
+        }
+        .img-responsive {
+            position: absolute;
+            width: 100%; /* Adjust size as needed */
+            height: 100%;
+            top: 0;
+            left: 0;
+            cursor: pointer; /* Indicates clickable images */
+        }
+        a {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            text-align: center;
+            background-color: #777;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="img_section" id="screenshotArea">
+            <img src="img/awards_1.jpg" id="image1" class="img-responsive" alt="Awards 1" crossOrigin="anonymous" >
+            <img src="img/awards_1.jpg" id="image2" class="img-responsive" alt="Awards 2" crossOrigin="anonymous" >
+        </div>
+        <a id="lnkDownload" href="#">Download Screenshot</a>
+    </div>
+
+    <!-- Load html2canvas.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        document.getElementById('lnkDownload').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+
+            // Use html2canvas to take a screenshot of the specified area
+            html2canvas(document.getElementById('screenshotArea')).then(function(canvas) {
+                // Create a link to download the image
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL('image/png');
+                link.download = 'screenshot.png';
+                link.click();
+            });
+        });
+    </script>
+</body>
+</html>
