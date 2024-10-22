@@ -6,6 +6,7 @@
 }
 :root {
     --swiper-theme-color: #007aff;
+    --topOfLine: 0%;
 }
 :host {
     position: relative;
@@ -2664,7 +2665,8 @@ hr {
     height: 100%;
     display: block;
     position: absolute;
-    top: 0;
+    /* top: 0; */
+    top: var(--topOfLine);
     left: 0;
     background: rgba(46, 184, 255, 0.125);
     border-radius: 0.25rem;
@@ -2753,7 +2755,7 @@ hr {
     .am_features-highlights .container .features-content-item .feature-info {
         text-align: left;
         width: 100%;
-        justify-content: flex-start;
+        /* justify-content: flex-start; */
     }
 }
 .am_features-highlights .container .features-content-item .feature-info p {
