@@ -1,6 +1,11 @@
 @import "variables"; //import this on each scss page you create
 
+
+.am_resource-groups-modal-navigation a {
+  background-color: transparent;
+}
 #our-culture-page {
+  
   .am_key-highlights {
     .header {
       h4 {
