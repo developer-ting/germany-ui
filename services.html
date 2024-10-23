@@ -1079,7 +1079,7 @@
                                                 </div>
                                                 ${item.people.map((popItem,popInd) => {
                                                     return `
-                                                    <am-modal :state="modalState" @modalclose="handleModalClose" class="amModel${ind}${popInd}">
+                                                    <am-modal :state="modalState" @modalclose="handleModalClose" class="model amModel${ind}${popInd}">
                                                         <div class="am_featured-experts-modal">
                                                             <div class="modal-header">
                                                                 <div class="modal-header-image">
@@ -1195,6 +1195,7 @@
             const accordionItems = document.querySelectorAll('.features-content .features-content-item');
             const firstAccordionContent = accordionItems[0]?.querySelector('.accordion-content');
             const allExperts = document.querySelectorAll(".expertsSwiper");
+            const allPopup = document.querySelectorAll(".model");
             
             [...allExperts].map(item3 => {
                 item3.addEventListener("click", function(){
@@ -1202,12 +1203,11 @@
                     const expertId = Number(this.dataset.expertid);
 
                     const selectedExpert = json[tabId].people[expertId];
-                    const selectedExpertPopup = document.querySelector(`.amModel${tabId}${expertId}`)
-                    console.log(selectedExpertPopup);
-                    const popName = document.querySelector(".popupName");
-                    const popPosition = document.querySelector(".position");
-                    popName.innerHTML = selectedExpert.name
-                    console.log()
+                    const selectedExpertPopup = document.querySelector(`.amModel${tabId}${expertId}`);
+                    [...allPopup].map((popItem2) => {
+                        popItem2.classList.remove("active");
+                    });
+                    selectedExpertPopup.classList.add("active");
                 })
             })
 
