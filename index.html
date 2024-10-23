@@ -1010,13 +1010,47 @@
 
 </script>
 
+<!-- Lottie Animation on tab click starts -->
 <script>
-    let player = document.querySelector("lottie-player");
-    let play = document.querySelector(".tab-button");
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.features-content-item');
 
-    play.onclick = function () {
-        player.play();
-    };
+    // Remove 'active' class from all tab content items and stop autoplay for Lottie
+    function hideAllTabs() {
+        tabContents.forEach(content => {
+            content.classList.remove('features-content-item--show');
+            const lottiePlayer = content.querySelector('lottie-player');
+            if (lottiePlayer) {
+                lottiePlayer.stop(); // Stop the Lottie animation
+            }
+        });
+    }
+
+    // Activate the selected tab content and play the Lottie animation
+    function activateTab(tabNumber) {
+        const activeTab = document.getElementById(`animation${tabNumber}`);
+        activeTab.classList.add('features-content-item--show');
+        const lottiePlayer = activeTab.querySelector('lottie-player');
+        if (lottiePlayer) {
+            lottiePlayer.play(); // Play the Lottie animation
+        }
+    }
+
+    // Add click event listeners to each tab
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            const tabNumber = this.getAttribute('data-tab');
+            hideAllTabs(); // Hide all tabs
+            activateTab(tabNumber); // Activate the selected tab
+        });
+    });
+
+    // Optionally, activate the first tab by default
+    hideAllTabs();
+    activateTab(1); // Activate the first tab on page load
+});
 </script>
 </body>
 </html>

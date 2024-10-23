@@ -303,12 +303,14 @@
       padding-left: 1rem;
       min-width: 28%;
       margin-top: 0px;
+      --topOfLine: 0%;
       @media (max-width: 1200px) {
         margin-top: 2rem;
         display: none;
       }
       &::before {
         left: 0;
+        top: var(--topOfLine);
       }
       .indicator {
         left: 0;
