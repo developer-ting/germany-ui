@@ -7307,7 +7307,7 @@ hr {
     height: 18px;
     background: #00dbef;
 }
-.am_modal {
+.am_modal, .model {
     display: none;
     position: fixed;
     width: 100%;
@@ -7315,6 +7315,15 @@ hr {
     top: 0;
     left: 0;
     z-index: 1000;
+}
+.model.active{
+    display: block;
+}
+.model .am_modal-content{
+    z-index: 2;
+}
+.model .am_modal-overlay{
+   position: fixed;
 }
 .am_modal-overlay {
     position: absolute;

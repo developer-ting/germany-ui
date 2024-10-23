@@ -1080,6 +1080,9 @@
                                                 ${item.people.map((popItem,popInd) => {
                                                     return `
                                                     <am-modal :state="modalState" @modalclose="handleModalClose" class="model amModel${ind}${popInd}">
+                                                        <div class="am_modal-container">
+                                                            <div class="am_modal-content">
+                                                                <div class="am_modal-close"><span></span><span></span></div>
                                                         <div class="am_featured-experts-modal">
                                                             <div class="modal-header">
                                                                 <div class="modal-header-image">
@@ -1171,6 +1174,10 @@
                                                                 </div>
                                                             </div>
                                                             <div class="modal-content">${popItem.body}</div>
+                                                        
+                                                            </div>
+                                                        </div>
+                                                        <div class="am_modal-overlay"></div>
                                                         </div>
                                                     </am-modal>`
                                                 }).join('')}
@@ -1196,6 +1203,16 @@
             const firstAccordionContent = accordionItems[0]?.querySelector('.accordion-content');
             const allExperts = document.querySelectorAll(".expertsSwiper");
             const allPopup = document.querySelectorAll(".model");
+            const allClosePop = document.querySelectorAll(".am_modal-close");
+
+            [...allClosePop].map((closeItem) => {
+                closeItem.addEventListener("click", function(){
+                    [...allPopup].map((popItem2) => {
+                        popItem2.classList.remove("active");
+                    });
+                });
+               
+            });
             
             [...allExperts].map(item3 => {
                 item3.addEventListener("click", function(){
