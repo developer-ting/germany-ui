@@ -1040,9 +1040,12 @@
                                                         </div>
 
                                                         <!-- Add Pagination -->
-                                                        <div class="swiper-button-prev"></div>
+                                                        ${item.industries.length > 4 && 
+                                                        `<div class="swiper-button-prev"></div>
                                                         <div class="swiper-button-next"></div>
-                                                        <div class="swiper-scrollbar"></div>
+                                                        <div class="swiper-scrollbar"></div>`
+                                                        }
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -1071,9 +1074,12 @@
                                                                         </div>`
                                                                     }).join('')}
                                                             </div>
-                                                            <div class="swiper-button-prev"></div>
+                                                            ${item.people.length > 4 && 
+                                                            `<div class="swiper-button-prev"></div>
                                                             <div class="swiper-button-next"></div>
-                                                            <div class="swiper-scrollbar"></div>
+                                                            <div class="swiper-scrollbar"></div>`
+                                                            }
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1482,6 +1488,9 @@
                 const li = document.createElement('li');
                 const a = document.createElement('a');
                 li.addEventListener("click", changeTab)
+                if(ind === 0){
+                    li.className = "active";
+                }
                 a.className = "text_lg font_57";
                 a.href = `#tab${ind+1}`;
                 li.setAttribute("data-feature", ind);
