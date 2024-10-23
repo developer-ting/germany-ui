@@ -1017,7 +1017,7 @@
                                                 </div>
                                                 <div class="am_image-cards-content" id="swipeSlide">
                                                     <!-- Swiper -->
-                                                    <div class="swiper-container industriesSwiper${ind} swiper">
+                                                    <div class="swiper-container industriesSwiper industriesSwiper${ind} swiper">
                                                         <div class="swiper-wrapper swiper-slider-industries">
                                                             ${item.industries.map((item2,ind2) => {
                                                                 return `
@@ -1040,12 +1040,9 @@
                                                         </div>
 
                                                         <!-- Add Pagination -->
-                                                        ${item.industries.length > 4 && 
-                                                        `<div class="swiper-button-prev"></div>
-                                                        <div class="swiper-button-next"></div>
-                                                        <div class="swiper-scrollbar"></div>`
-                                                        }
-                                                        
+                                                       <div class="industriesNav swiper-button-prev"></div>
+                                                        <div class="industriesNav swiper-button-next"></div>
+                                                        <div class="industriesNav swiper-scrollbar"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1074,10 +1071,10 @@
                                                                         </div>`
                                                                     }).join('')}
                                                             </div>
-                                                            ${item.people.length > 4 && 
+                                                            ${item.people.length > 4 ? 
                                                             `<div class="swiper-button-prev"></div>
                                                             <div class="swiper-button-next"></div>
-                                                            <div class="swiper-scrollbar"></div>`
+                                                            <div class="swiper-scrollbar"></div>` : ""
                                                             }
                                                             
                                                         </div>
@@ -1197,9 +1194,10 @@
                                                                                     </div>
                                                                                 `).join('')}
                                                                             </div>
-                                                                            <div class="swiper-button-prev"></div>
+                                                                            ${popItem.insights.length > 1 ? `<div class="swiper-button-prev"></div>
                                                                             <div class="swiper-button-next"></div>
-                                                                            <div class="swiper-scrollbar"></div>
+                                                                            <div class="swiper-scrollbar"></div>` : ""}
+                                                                            
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1224,9 +1222,10 @@
                                     </div>
                 `;
                 tabsContentContainer.appendChild(tabContent);
-                initializeSwiper();
-
+                
             })
+
+            initializeSwiper();
 
             const accordionItems = document.querySelectorAll('.features-content .features-content-item');
             const firstAccordionContent = accordionItems[0]?.querySelector('.accordion-content');
@@ -1310,7 +1309,7 @@
 
                         // Reinitialize swiper for the current tab when content is visible
                         const tabId = item.id; // Get the current tab ID
-                        initializeSwiper(tabId); // Reinitialize swiper for this accordion content
+                        initializeSwiper(); // Reinitialize swiper for this accordion content
                     }
                 });
             });
@@ -1349,7 +1348,7 @@
                         spaceBetween: 16,
                         breakpoints: {
                             768: {
-                            slidesPerView: 3,
+                            slidesPerView: 1,
                             },
                             1024: {
                             slidesPerView: 4,
@@ -1362,34 +1361,33 @@
                         scrollbar: {
                             el: ".swiper-scrollbar",
                         },
-                            });
-                   
+                    });
                 })
             }
 
-            function onTabClick(tabId) {
-                // Hide all tab contents
-                document.querySelectorAll('.features-content-item').forEach(tab => {
-                    tab.classList.remove('active');
-                });
+            // function onTabClick(tabId) {
+            //     // Hide all tab contents
+            //     document.querySelectorAll('.features-content-item').forEach(tab => {
+            //         tab.classList.remove('active');
+            //     });
 
-                // Show the active tab content
-                document.getElementById(tabId).classList.add('active');
+            //     // Show the active tab content
+            //     document.getElementById(tabId).classList.add('active');
 
-                // Initialize Swiper for the active tab
-                initializeSwiper(tabId);
-            }
+            //     // Initialize Swiper for the active tab
+            //     initializeSwiper(tabId);
+            // }
 
-            // Add click event listener to each tab link
-            document.querySelectorAll('.features-list li').forEach(tabLink => {
-                tabLink.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    let tabId = this.getAttribute('href').replace('#', ''); // Extract tab ID
-                    onTabClick(tabId);
-                });
-            });
+            // // Add click event listener to each tab link
+            // document.querySelectorAll('.features-list li').forEach(tabLink => {
+            //     tabLink.addEventListener('click', function (e) {
+            //         e.preventDefault();
+            //         let tabId = this.getAttribute('href').replace('#', ''); // Extract tab ID
+            //         onTabClick(tabId);
+            //     });
+            // });
 
-            // Initialize the first tab swiper
+            // // Initialize the first tab swiper
             // initializeSwiper('tab1');
         });
 
@@ -1452,9 +1450,35 @@
                   scrollbar: {
                     el: ".swiper-scrollbar",
                   },
+                });
+                json.map((mainItem, mainInd) => {
+                    const swiper3 = new Swiper(`.industriesSwiper${mainInd}`, {
+                        slidesPerView: 2,           // Display 2 slides per view
+                            slidesPerColumn: 2,         // Adjust as per the number of slides you want to show
+                            slidesPerGroup: 1,          // Navigate by one slide at a time
+                            spaceBetween: 30,           // Spacing between slides
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                            scrollbar: {
+                                el: '.swiper-scrollbar',
+                                hide: false,
+                            },
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
+                            breakpoints: {
+                                767: {
+                                    slidesPerView: 1,    // 1 slide per view on mobile
+                                    spaceBetween: 20,
+                                },
+                            },
                     });
-            
-                    
+                    swiper3.update();
+                })
+                
             }
 
             const devided = 100 / json.length;
@@ -1473,7 +1497,7 @@
                 initializeSwiper();
                 setTimeout(() => {
                     initializeSwiper()
-                }, 100);
+                }, 500);
                 
 
                 const activeContent = document.querySelectorAll(".features-content-item");
@@ -1481,7 +1505,28 @@
                     item2.classList.remove("active");
                 });
                 activeContent[selectedIndex].classList.add("active");
-                console.log()
+                const lengthOfIndustries = () => {
+                    if(window.innerWidth >= 800){
+                        return 4;
+                    };
+                    if(window.innerWidth >= 0){
+                        return 2;
+                    };
+                    return 2;
+                };
+                [...activeContent[selectedIndex].querySelectorAll(".industriesNav")].map((content) => {
+                    console.log(selectedData.industries )
+                    if(selectedData.industries.length <= lengthOfIndustries() ){
+                        console.log(content.style.opacity);
+                        content.style.visibility = "hidden";
+                    }else{
+                        content.style.visibility = "hidden";
+                        setTimeout(() => {
+                            content.style.visibility = "visible";
+                        }, 500);
+                    }
+                    
+                })
             }
 
             json.map((item,ind) => {
