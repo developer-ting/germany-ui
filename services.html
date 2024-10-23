@@ -1174,7 +1174,30 @@
                                                                 </div>
                                                             </div>
                                                             <div class="modal-content">${popItem.body}</div>
-                                                        
+                                                            ${popItem.insights && popItem.insights.length > 0 ? `
+    <div class="modal-footer">
+        <div class="modal-articles">
+            <h3 class="text_xml font_77_bold">Latest article from ${popItem.name}</h3>
+            <a href="${popItem.global_path}" class="am_button cta"><span>View all</span></a>
+        </div>
+        <div class="modal-insights">
+            <div class="swiper am_modal-swiper${ind}${popInd}">
+                <div class="swiper-wrapper">
+                    ${popItem.insights.map((inItem, inIndex) => `
+                        <div key="insights-${inIndex}" class="item swiper-slide">
+                            <h3 class="text_lsg font_77_bold">${inItem.title}</h3>
+                            <p class="date text_xs font_65_medium">September 15, 2023</p>
+                            <a href="${inItem.view_node}" class="am_button cta"><span>Read more</span></a>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+    </div>
+` : "test"}
                                                             </div>
                                                         </div>
                                                         <div class="am_modal-overlay"></div>
@@ -1306,6 +1329,26 @@
                             el: ".swiper-scrollbar",
                         },
                             });
+                    
+                    setTimeout(() => {
+                        mainItem.people.map((pep,pepInd) => {
+                        console.log(pep);
+                        pep.insights.map((insightItem) => {
+                            console.log(`.am_modal-swiper${mainInd}${pepInd}`);
+                                const swiper3 = new Swiper(`.am_modal-swiper${mainInd}${pepInd}`, {
+                                    direction: "horizontal",
+                                    slidesPerView: 1,
+                                    navigation: {
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
+                                    },
+                                    scrollbar: {
+                                        el: ".swiper-scrollbar",
+                                    },
+                                });
+                            });
+                    })}, 2000);
+                    
                 })
             }
 
@@ -1395,6 +1438,18 @@
                     el: ".swiper-scrollbar",
                   },
                     });
+            
+                    const swiper3 = new Swiper(`.am_modal-swiper`, {
+                                direction: "horizontal",
+                                slidesPerView: 1,
+                                navigation: {
+                                    nextEl: ".swiper-button-next",
+                                    prevEl: ".swiper-button-prev",
+                                },
+                                scrollbar: {
+                                    el: ".swiper-scrollbar",
+                                },
+                            });
             }
 
             const devided = 100 / json.length;
