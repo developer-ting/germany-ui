@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Screenshot Example</title>
+    <meta name="google-signin-client_id" content="915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com">
     <style>
         #container {
             padding: 30px;
@@ -56,8 +57,12 @@
         <a id="lnkDownload" href="#">Download</a>
     </div>
 
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
     <!-- Load html2canvas.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         document.getElementById('lnkDownload').addEventListener('click', function(e) {
             e.preventDefault(); // Prevent default anchor behavior
