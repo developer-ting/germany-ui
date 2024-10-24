@@ -41,14 +41,39 @@
         }
 
         function signOut() {
-            // Call the Google sign-out function/n
-            window.google.accounts.id.revoke('915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com', function() {
-                console.log('User signed out.');
-                document.querySelector('.g-signin2').style.display = 'block';
-                document.querySelector('.google_name').style.display = 'none';
-                document.getElementById('name').textContent = ''; // Clear the name
-            });
+    const auth2 = window.google.accounts.id;
+
+    // Check if the user is signed in before revoking
+    if (auth2) {
+        auth2.revoke('915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com', function() {
+            console.log('User signed out.');
+            const signinButton = document.querySelector('.g-signin2');
+            const googleNameDiv = document.querySelector('.google_name');
+            
+            if (signinButton) {
+                signinButton.style.display = 'block';
+            }
+            if (googleNameDiv) {
+                googleNameDiv.style.display = 'none';
+            }
+            document.getElementById('name').textContent = ''; // Clear the name
+        });
+    } else {
+        console.log('User is not signed in.');
+        // Handle the case where the user is not signed in
+        const signinButton = document.querySelector('.g-signin2');
+        const googleNameDiv = document.querySelector('.google_name');
+
+        if (signinButton) {
+            signinButton.style.display = 'block';
         }
+        if (googleNameDiv) {
+            googleNameDiv.style.display = 'none';
+        }
+        document.getElementById('name').textContent = ''; // Clear the name
+    }
+}
+
     </script>
     <style>
         body {
