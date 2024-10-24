@@ -48,6 +48,7 @@
         }
 
         function onSignIn(googleUser) {
+            alert('test')
             var profile = googleUser.getBasicProfile();
             $("#name").text(profile.getName());
             $(".google_name").css("display", "block");
