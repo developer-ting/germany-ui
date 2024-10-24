@@ -40,9 +40,9 @@
             return JSON.parse(jsonPayload);
         }
 
+    
         function signOut() {
     const auth2 = window.google.accounts.id;
-    document.querySelector('.K4efff').style.display = 'none';
 
     // Check if the user is signed in before revoking
     if (auth2) {
@@ -50,12 +50,16 @@
             console.log('User signed out.');
             const signinButton = document.querySelector('.g-signin2');
             const googleNameDiv = document.querySelector('.google_name');
+            const aaa = document.querySelector('.K4efff').style.display = 'none';
             
             if (signinButton) {
                 signinButton.style.display = 'block';
             }
             if (googleNameDiv) {
                 googleNameDiv.style.display = 'none';
+            }
+            if (aaa) {
+                aaa.style.display = 'none';
             }
             document.getElementById('name').textContent = ''; // Clear the name
         });
