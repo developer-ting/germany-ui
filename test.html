@@ -46,6 +46,9 @@
             color: white;
             text-decoration: none;
         }
+        .google_name{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -58,6 +61,10 @@
     </div>
 
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="google_name">
+        <p id="name"></p>
+        <button onclick="signOut();">Sign Out</button>
+    </div>
 
     <!-- Load html2canvas.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -76,6 +83,22 @@
                 link.click();
             });
         });
+
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            $("#name").text(profile.getName());
+            $(".google_name").css("display", "block");
+            $(".g-signin2").css("display", "none");
+        }
+
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+            console.log('User signed out.');
+            $(".g-signin2").css("display", "block");
+            $(".google_name").css("display", "none");
+            });
+        }
     </script>
 </body>
 </html>
