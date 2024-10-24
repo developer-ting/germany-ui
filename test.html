@@ -60,8 +60,10 @@
         <a id="lnkDownload" href="#">Download</a>
     </div>
 
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <div class="google_name" style="display:none;">
+      <!-- Google Sign-In button -->
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <!-- User information section -->
+    <div class="google_name">
         <p id="name"></p>
         <button onclick="signOut();">Sign Out</button>
     </div>
@@ -84,24 +86,46 @@
             });
         });
 
-       // On successful sign-in
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
-            document.getElementById('name').textContent = profile.getName();  // Update the name
-            document.querySelector('.google_name').style.display = 'block';  // Show name and sign-out button
-            document.querySelector('.g-signin2').style.display = 'none';  // Hide sign-in button
+            document.getElementById('name').textContent = 'Hello, ' + profile.getName();
+            document.querySelector('.google_name').style.display = 'block';
+            document.querySelector('.g-signin2').style.display = 'none';
         }
 
-        // On sign-out
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function () {
                 console.log('User signed out.');
-                document.querySelector('.g-signin2').style.display = 'block';  // Show sign-in button
-                document.querySelector('.google_name').style.display = 'none';  // Hide name and sign-out button
+                document.querySelector('.google_name').style.display = 'none';
+                document.querySelector('.g-signin2').style.display = 'block';
             });
         }
 
+    </script>
+      <!-- Workaround for window.closed in case of COOP issues -->
+      <script>
+        let popup;
+
+        // Open a popup and check if it closes
+        function openPopup(authUrl) {
+            popup = window.open(authUrl, "authPopup", "width=500,height=600");
+
+            // Interval to check if popup is closed
+            const checkPopupClosed = setInterval(function() {
+                if (popup.closed) {
+                    clearInterval(checkPopupClosed);
+                    console.log("Popup closed");
+                    // Additional logic when the popup is closed
+                    document.getElementById('name').textContent = "You signed in!";
+                    document.querySelector('.google_name').style.display = 'block';
+                }
+            }, 500);  // Check every 500ms
+        }
+
+        // Example usage: Open a Google Sign-In popup manually
+        // Uncomment and modify this to test with an actual Google OAuth URL
+        // openPopup('https://accounts.google.com/o/oauth2/auth');
     </script>
 </body>
 </html>
