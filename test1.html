@@ -39,46 +39,40 @@
 
             return JSON.parse(jsonPayload);
         }
+
         function signOut() {
-            const auth2 = window.google.accounts.id;
+    const auth2 = window.google.accounts.id;
 
-            if (auth2) {
-                auth2.revoke('915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com', function() {
-                    console.log('User signed out.');
-                    const signinButton = document.querySelector('.g-signin2');
-                    const googleNameDiv = document.querySelector('.google_name');
-                    const nameElement = document.getElementById('name');
-
-                    // Clear email and name from the display
-                    if (nameElement) {
-                        nameElement.textContent = ''; // Clear the name and email
-                    }
-
-                    if (signinButton) {
-                        signinButton.style.display = 'block';
-                    }
-
-                    if (googleNameDiv) {
-                        googleNameDiv.style.display = 'none';
-                    }
-                });
-            } else {
-                console.log('User is not signed in.');
-                const signinButton = document.querySelector('.g-signin2');
-                const googleNameDiv = document.querySelector('.google_name');
-
-                if (signinButton) {
-                    signinButton.style.display = 'block';
-                }
-                if (googleNameDiv) {
-                    googleNameDiv.style.display = 'none';
-                }
+    // Check if the user is signed in before revoking
+    if (auth2) {
+        auth2.revoke('915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com', function() {
+            console.log('User signed out.');
+            const signinButton = document.querySelector('.g-signin2');
+            const googleNameDiv = document.querySelector('.google_name');
+            
+            if (signinButton) {
+                signinButton.style.display = 'block';
             }
-        }
+            if (googleNameDiv) {
+                googleNameDiv.style.display = 'none';
+            }
+            document.getElementById('name').textContent = ''; // Clear the name
+        });
+    } else {
+        console.log('User is not signed in.');
+        // Handle the case where the user is not signed in
+        const signinButton = document.querySelector('.g-signin2');
+        const googleNameDiv = document.querySelector('.google_name');
 
-        // Attach event listener to the sign-out button
-        document.getElementById("signOutButton").addEventListener("click", signOut);
-    
+        if (signinButton) {
+            signinButton.style.display = 'block';
+        }
+        if (googleNameDiv) {
+            googleNameDiv.style.display = 'none';
+        }
+        document.getElementById('name').textContent = ''; // Clear the name
+    }
+}
 
     </script>
     <style>
@@ -95,11 +89,11 @@
 </head>
 <body onload="onLoad()">
 
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div id="buttonDiv"></div> <!-- Container for the Google Sign-In button -->
     
     <div class="google_name">
         <p id="name"></p>
-        <button id="signOutButton">Sign Out</button>
+        <button onclick="signOut();">Sign Out</button>
     </div>
 
 </body>
