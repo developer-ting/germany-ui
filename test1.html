@@ -40,15 +40,45 @@
             return JSON.parse(jsonPayload);
         }
 
-        function signOut() {
-    const auth2 = window.google.accounts.id;
+        document.addEventListener('DOMContentLoaded', function() {
+    // Your sign out function can be placed here
+    function signOut() {
+        const auth2 = window.google.accounts.id;
 
-    // Check if the user is signed in before revoking
-    if (auth2) {
-        auth2.revoke('915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com', function() {
-            console.log('User signed out.');
+        // Check if the user is signed in before revoking
+        if (auth2) {
+            auth2.revoke('YOUR_CLIENT_ID.apps.googleusercontent.com', function() {
+                console.log('User signed out.');
+                
+                // Safely access elements
+                const signinButton = document.querySelector('.g-signin2');
+                const googleNameDiv = document.querySelector('.google_name');
+                const nameElement = document.getElementById('name');
+                
+                if (signinButton) {
+                    signinButton.style.display = 'block';
+                } else {
+                    console.error('.g-signin2 element not found.');
+                }
+                
+                if (googleNameDiv) {
+                    googleNameDiv.style.display = 'none';
+                } else {
+                    console.error('.google_name element not found.');
+                }
+                
+                if (nameElement) {
+                    nameElement.textContent = ''; // Clear the name
+                } else {
+                    console.error('#name element not found.');
+                }
+            });
+        } else {
+            console.log('User is not signed in.');
+            // Handle the case where the user is not signed in
             const signinButton = document.querySelector('.g-signin2');
             const googleNameDiv = document.querySelector('.google_name');
+            const nameElement = document.getElementById('name');
             
             if (signinButton) {
                 signinButton.style.display = 'block';
@@ -56,25 +86,16 @@
             if (googleNameDiv) {
                 googleNameDiv.style.display = 'none';
             }
-            document.getElementById('name').textContent = ''; // Clear the name
-        });
-    } else {
-        console.log('User is not signed in.');
-        // Handle the case where the user is not signed in
-        const signinButton = document.querySelector('.g-signin2');
-        const googleNameDiv = document.querySelector('.google_name');
-
-        if (signinButton) {
-            signinButton.style.display = 'block';
+            if (nameElement) {
+                nameElement.textContent = ''; // Clear the name
+            }
         }
-        if (googleNameDiv) {
-            googleNameDiv.style.display = 'none';
-        }
-        document.getElementById('name').textContent = ''; // Clear the name
     }
-}
 
-    </script>
+    // Call your signOut function on button click
+    document.querySelector('button').addEventListener('click', signOut);
+});
+</script>
     <style>
         body {
             font-family: Arial, sans-serif;
