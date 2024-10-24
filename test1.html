@@ -1,132 +1,75 @@
-<!doctype html>
-<html class="no-js" lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Screenshot Example</title>
-    <meta name="google-signin-client_id" content="915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com">
+    <title>Google Sign-In with New Libraries</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        function onLoad() {
+            // Initialize the Google Identity Services client
+            window.google.accounts.id.initialize({
+                client_id: '915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com', // Replace with your client ID
+                callback: handleCredentialResponse
+            });
+
+            // Render the Google Sign-In button
+            window.google.accounts.id.renderButton(
+                document.getElementById('buttonDiv'),
+                { theme: 'outline', size: 'large' }  // customization attributes
+            );
+
+            // Optional: Enable automatic sign-in
+            // window.google.accounts.id.prompt(); // Uncomment to enable
+        }
+
+        function handleCredentialResponse(response) {
+            // This function is called when the user successfully signs in
+            const user = parseJwt(response.credential);
+            document.getElementById('name').textContent = user.name;
+            document.querySelector('.google_name').style.display = 'block';
+            document.querySelector('.g-signin2').style.display = 'none';
+        }
+
+        function parseJwt(token) {
+            const base64Url = token.split('.')[1];
+            const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            const jsonPayload = decodeURIComponent(atob(base64).split('').map(c =>
+                '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+
+            return JSON.parse(jsonPayload);
+        }
+
+        function signOut() {
+            // Call the Google sign-out function
+            window.google.accounts.id.revoke('915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com', function() {
+                console.log('User signed out.');
+                document.querySelector('.g-signin2').style.display = 'block';
+                document.querySelector('.google_name').style.display = 'none';
+                document.getElementById('name').textContent = ''; // Clear the name
+            });
+        }
+    </script>
     <style>
-        #container {
-            padding: 30px;
-            font-family: 'Verdana', Lucida;
-        }
-        .img_section {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            background-color: #ccc;
-            overflow: hidden;
-        }
-        .img-responsive {
-            position: absolute;
-            width: 100%; /* Adjust size as needed */
-            height: 100%;
-            cursor: pointer; /* Indicates clickable images */
-        }
-        #image1{
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 50%;
-            z-index: 1;
-        }
-        #image2{
-            right: 0;
-            bottom: 0;
-            width: 50%;
-            height: 50%;
-            z-index: 2;
-        }
-        a {
-            display: block;
-            margin-top: 10px;
-            padding: 10px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
             text-align: center;
-            background-color: #777;
-            color: white;
-            text-decoration: none;
         }
-        .google_name{
+        .google_name {
             display: none;
         }
     </style>
 </head>
-<body>
-    <div id="container">
-        <div class="img_section" id="screenshotArea">
-            <img src="assets/visual-life-at-am.jpg" id="image1" class="img-responsive" alt="Awards 1" crossOrigin="anonymous" >
-            <img src="assets/case-studies-02.jpg" id="image2" class="img-responsive" alt="Awards 2" crossOrigin="anonymous" >
-        </div>
-        <a id="lnkDownload" href="#">Download</a>
-    </div>
+<body onload="onLoad()">
 
-      <!-- Google Sign-In button -->
-      <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <!-- User information section -->
+    <div id="buttonDiv"></div> <!-- Container for the Google Sign-In button -->
+    
     <div class="google_name">
         <p id="name"></p>
         <button onclick="signOut();">Sign Out</button>
     </div>
 
-    <!-- Load html2canvas.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        document.getElementById('lnkDownload').addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent default anchor behavior
-
-            // Use html2canvas to take a screenshot of the specified area
-            html2canvas(document.getElementById('screenshotArea')).then(function(canvas) {
-                // Create a link to download the image
-                const link = document.createElement('a');
-                link.href = canvas.toDataURL('image/png');
-                link.download = 'screenshot.png';
-                link.click();
-            });
-        });
-
-        function onSignIn(googleUser) {
-            var profile = googleUser.getBasicProfile();
-            document.getElementById('name').textContent = 'Hello, ' + profile.getName();
-            document.querySelector('.google_name').style.display = 'block';
-            document.querySelector('.g-signin2').style.display = 'none';
-            console.log('User signed In.');
-        }
-
-        function signOut() {
-            var auth2 = gapi.auth2.getAuthInstance();
-            auth2.signOut().then(function () {
-                console.log('User signed out.');
-                document.querySelector('.google_name').style.display = 'none';
-                document.querySelector('.g-signin2').style.display = 'block';
-            });
-        }
-
-    </script>
-      <!-- Workaround for window.closed in case of COOP issues -->
-      <script>
-        let popup;
-
-        // Open a popup and check if it closes
-        function openPopup(authUrl) {
-            popup = window.open(authUrl, "authPopup", "width=500,height=600");
-
-            // Interval to check if popup is closed
-            const checkPopupClosed = setInterval(function() {
-                if (popup.closed) {
-                    clearInterval(checkPopupClosed);
-                    console.log("Popup closed");
-                    // Additional logic when the popup is closed
-                    document.getElementById('name').textContent = "You signed in!";
-                    document.querySelector('.google_name').style.display = 'block';
-                }
-            }, 500);  // Check every 500ms
-        }
-
-        // Example usage: Open a Google Sign-In popup manually
-        // Uncomment and modify this to test with an actual Google OAuth URL
-        // openPopup('https://accounts.google.com/o/oauth2/auth');
-    </script>
 </body>
 </html>
