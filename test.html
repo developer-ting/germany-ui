@@ -61,7 +61,7 @@
     </div>
 
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <div class="google_name">
+    <div class="google_name" style="display:none;">
         <p id="name"></p>
         <button onclick="signOut();">Sign Out</button>
     </div>
@@ -84,21 +84,24 @@
             });
         });
 
+       // On successful sign-in
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
-            $("#name").text(profile.getName());
-            $(".google_name").css("display", "block");
-            $(".g-signin2").css("display", "none");
+            document.getElementById('name').textContent = profile.getName();  // Update the name
+            document.querySelector('.google_name').style.display = 'block';  // Show name and sign-out button
+            document.querySelector('.g-signin2').style.display = 'none';  // Hide sign-in button
         }
 
+        // On sign-out
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function () {
-            console.log('User signed out.');
-            $(".g-signin2").css("display", "block");
-            $(".google_name").css("display", "none");
+                console.log('User signed out.');
+                document.querySelector('.g-signin2').style.display = 'block';  // Show sign-in button
+                document.querySelector('.google_name').style.display = 'none';  // Hide name and sign-out button
             });
         }
+
     </script>
 </body>
 </html>
