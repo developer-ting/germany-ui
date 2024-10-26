@@ -124,68 +124,51 @@
     </div> -->
     <section class="popup">
         <div class="popup__content">
-          <section class="popup">
-            <div class="popup__content">
-                <div id="buttonDiv"></div> 
-                
-                <div class="google_name">
-                  <p id="name"></p>
-                  <button onclick="signOut();">Sign Out</button>
-                </div>
+          <div class="close">
+            <div id="buttonDiv"></div> 
+            <div class="google_name">
+              <p id="name"></p>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-$(document).ready(function() {
-  // Show popup initially and prevent body scroll
+    $(document).ready(function() {
+  // Show popup on page load
   $(".popup").fadeIn(500);
-  $("body").css({
-    "height": "100vh",
-    "overflow": "hidden"
-  });
 
-  // Initialize Google Sign-In button
+  // Initialize Google Sign-In
   google.accounts.id.initialize({
-    client_id: "915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com",  // Replace with your Google Client ID
+    client_id: "915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com", // Replace with your Google Client ID
     callback: handleCredentialResponse
   });
   google.accounts.id.renderButton(
     document.getElementById("buttonDiv"),
-    { theme: "outline", size: "large" } // Customize button style if needed
+    { theme: "outline", size: "large" }
   );
 
-  // Google Sign-In callback
+  // Google Sign-In callback to handle login response
   function handleCredentialResponse(response) {
-    const data = jwt_decode(response.credential); // Decode the response token
+    const data = jwt_decode(response.credential); // Decode JWT to get user data
     const userName = data.name; // Get user's name
 
-    // Set name in #name element
+    // Set the user's name in the popup
     $("#name").text(userName);
 
-    // Hide popup and reset body scrolling
+    // Hide the popup if userName exists
     if (userName) {
       $(".popup").fadeOut(500);
-      $("body").css({
-        "height": "",
-        "overflow": ""
-      });
     }
   }
 
-  // Sign out function (optional)
-  window.signOut = function() {
-    google.accounts.id.disableAutoSelect();
-    $("#name").text(""); // Clear the name on sign out
-    $(".popup").fadeIn(500); // Show popup again if user signs out
-    $("body").css({
-      "height": "100vh",
-      "overflow": "hidden"
-    });
-  };
+  // Close button to manually close the popup
+//   $(".close").click(function() {
+//     $(".popup").fadeOut(500);
+//   });
 });
-
 
 </script>
 </html>
