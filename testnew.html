@@ -354,19 +354,24 @@ footer.burger-footer {
   }
 
 
-  .overlay{
+  .overlay {
     position: relative;
     padding: 20px 0;
-  }
-  .overlay::after{
-      content: '';
-      width: 100%;
-      left: 0;
-      top: 0;
-      height: 100%;
-      position: absolute;
-      background-color: #00000091;
-    }
+}
+
+.overlay::after {
+    content: '';
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    background-color: #00000091;
+}
+
+.no-overlay::after {
+    content: none; /* Hide the overlay after background */
+}
 
     .google_sign_in{
       top: 50%;
@@ -529,17 +534,34 @@ footer.burger-footer {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
+  // Show popup on page load and set body height and overflow
   $(".popup").fadeIn(500);
-  function checkNameAndHidePopup() {
+  $("body").css({
+    "height": "100vh",
+    "overflow": "hidden"
+  });
+
+  // Function to check if #name has content and then hide overlay and reset body
+  function checkNameAndRemoveOverlay() {
     if ($("#name").text().trim() !== "") {
-      $(".popup").fadeOut(500);
+      $(".popup").fadeOut(500); // Hide popup
+      $(".overlay").addClass("no-overlay"); // Remove overlay after background
+      $("body").css({
+        "height": "",
+        "overflow": ""
+      });
     }
   }
-  checkNameAndHidePopup();
 
-  const observer = new MutationObserver(checkNameAndHidePopup);
+  // Initial check on page load (if name is already there)
+  checkNameAndRemoveOverlay();
+
+  // Monitor changes to #name for dynamic updates
+  const observer = new MutationObserver(checkNameAndRemoveOverlay);
   observer.observe(document.getElementById("name"), { childList: true, characterData: true, subtree: true });
 });
+
+
 
 
 $(document).ready(function(){
