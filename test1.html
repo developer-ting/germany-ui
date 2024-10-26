@@ -8,39 +8,20 @@
     <script>
         
         function onLoad() {
-            // Initialize the Google Identity Services client
             window.google.accounts.id.initialize({
-                client_id: '915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com', // Replace with your client ID
+                client_id: '915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com',
                 callback: handleCredentialResponse
             });
 
-            // Render the Google Sign-In button
+            
             window.google.accounts.id.renderButton(
                 document.getElementById('buttonDiv'),
-                { theme: 'outline', size: 'large' }  // customization attributes
+                { theme: 'outline', size: 'large' }  
             );
 
-            // Optional: Enable automatic sign-in
-            // window.google.accounts.id.prompt(); // Uncomment to enable
-
-            // Select the iframe element
-            const iframe = document.getElementById('gsi_229496_728732');
-
-            // Ensure the iframe content is accessible (same-origin)
-            iframe.onload = function () {
-            // Access the iframe's document
-            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-            
-            // Select the element with the .K4efff class
-            const k4efffElement = iframeDoc.querySelector('.K4efff');
-            
-            // Perform any action with the selected element
-            console.log(k4efffElement.textContent); // Example: Log the text content
-            }
         }
 
         function handleCredentialResponse(response) {
-            // This function is called when the user successfully signs in
             const user = parseJwt(response.credential);
             document.getElementById('name').textContent = user.name;
             document.querySelector('.google_name').style.display = 'block';
@@ -60,7 +41,7 @@
         function signOut() {
     const auth2 = window.google.accounts.id;
 
-    // Check if the user is signed in before revoking
+   
     if (auth2) {
         auth2.revoke('915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com', function() {
             console.log('User signed out.');
@@ -73,11 +54,10 @@
             if (googleNameDiv) {
                 googleNameDiv.style.display = 'none';
             }
-            document.getElementById('name').textContent = ''; // Clear the name
+            document.getElementById('name').textContent = ''; 
         });
     } else {
         console.log('User is not signed in.');
-        // Handle the case where the user is not signed in
         const signinButton = document.querySelector('.g-signin2');
         const googleNameDiv = document.querySelector('.google_name');
 
@@ -87,7 +67,7 @@
         if (googleNameDiv) {
             googleNameDiv.style.display = 'none';
         }
-        document.getElementById('name').textContent = ''; // Clear the name
+        document.getElementById('name').textContent = ''; 
     }
 }
 
@@ -106,7 +86,7 @@
 </head>
 <body onload="onLoad()">
 
-    <div id="buttonDiv"></div> <!-- Container for the Google Sign-In button -->
+    <div id="buttonDiv"></div> 
     
     <div class="google_name">
         <p id="name"></p>
