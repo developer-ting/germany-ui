@@ -146,12 +146,26 @@ $(document).ready(function() {
     "overflow": "hidden"
   });
 
-  // Function to set data in #name and hide popup
-  function setNameData(data) {
-    $("#name").text(data);
+  // Initialize Google Sign-In button
+  google.accounts.id.initialize({
+    client_id: "915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com",  // Replace with your Google Client ID
+    callback: handleCredentialResponse
+  });
+  google.accounts.id.renderButton(
+    document.getElementById("buttonDiv"),
+    { theme: "outline", size: "large" } // Customize button style if needed
+  );
 
-    // Hide popup and reset body scrolling once data is set
-    if ($("#name").text().trim() !== "") {
+  // Google Sign-In callback
+  function handleCredentialResponse(response) {
+    const data = jwt_decode(response.credential); // Decode the response token
+    const userName = data.name; // Get user's name
+
+    // Set name in #name element
+    $("#name").text(userName);
+
+    // Hide popup and reset body scrolling
+    if (userName) {
       $(".popup").fadeOut(500);
       $("body").css({
         "height": "",
@@ -160,9 +174,18 @@ $(document).ready(function() {
     }
   }
 
-  // Example of setting the name data
-  setNameData("Your Name"); // Replace "Your Name" with actual data
+  // Sign out function (optional)
+  window.signOut = function() {
+    google.accounts.id.disableAutoSelect();
+    $("#name").text(""); // Clear the name on sign out
+    $(".popup").fadeIn(500); // Show popup again if user signs out
+    $("body").css({
+      "height": "100vh",
+      "overflow": "hidden"
+    });
+  };
 });
+
 
 </script>
 </html>
