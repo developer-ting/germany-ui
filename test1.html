@@ -6,6 +6,20 @@
     <title>Google Sign-In with New Libraries</title>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
+        // Select the iframe element
+            const iframe = document.getElementById('gsi_229496_728732');
+
+            // Ensure the iframe content is accessible (same-origin)
+            iframe.onload = function () {
+            // Access the iframe's document
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            
+            // Select the element with the .K4efff class
+            const k4efffElement = iframeDoc.querySelector('.K4efff');
+            
+            // Perform any action with the selected element
+            console.log(k4efffElement.textContent); // Example: Log the text content
+            }
         function onLoad() {
             // Initialize the Google Identity Services client
             window.google.accounts.id.initialize({
