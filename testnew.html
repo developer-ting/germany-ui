@@ -1,0 +1,552 @@
+<!doctype html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Burger King</title>
+    <meta name="description" content="">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/fav-icon.png" />
+    <meta property="og:url" content="www.a3mediacom.in" />
+    <link rel="canonical" href="" />
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+    <meta charset="UTF-8">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        
+      function onLoad() {
+          window.google.accounts.id.initialize({
+              client_id: '915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com', 
+              callback: handleCredentialResponse
+          });
+
+          
+          window.google.accounts.id.renderButton(
+              document.getElementById('buttonDiv'),
+              { theme: 'outline', size: 'large' }  
+          );
+
+      }
+
+      function handleCredentialResponse(response) {
+          const user = parseJwt(response.credential);
+          document.getElementById('name').textContent = user.name;
+          document.querySelector('.google_name').style.display = 'block';
+          document.querySelector('.g-signin2').style.display = 'none';
+      }
+
+      function parseJwt(token) {
+          const base64Url = token.split('.')[1];
+          const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+          const jsonPayload = decodeURIComponent(atob(base64).split('').map(c =>
+              '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+
+          return JSON.parse(jsonPayload);
+      }
+
+  
+      function signOut() {
+  const auth2 = window.google.accounts.id;
+
+ 
+  if (auth2) {
+      auth2.revoke('915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com', function() {
+          console.log('User signed out.');
+          const signinButton = document.querySelector('.g-signin2');
+          const googleNameDiv = document.querySelector('.google_name');
+          
+          if (signinButton) {
+              signinButton.style.display = 'block';
+          }
+          if (googleNameDiv) {
+              googleNameDiv.style.display = 'none';
+          }
+          document.getElementById('name').textContent = ''; 
+      });
+  } else {
+      console.log('User is not signed in.');
+      const signinButton = document.querySelector('.g-signin2');
+      const googleNameDiv = document.querySelector('.google_name');
+
+      if (signinButton) {
+          signinButton.style.display = 'block';
+      }
+      if (googleNameDiv) {
+          googleNameDiv.style.display = 'none';
+      }
+      document.getElementById('name').textContent = ''; 
+  }
+}
+
+  </script>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 20px;
+          text-align: center;
+      }
+      .google_name {
+          display: none;
+      }
+  </style>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  @font-face {
+    font-family: 'Flame';
+    src: url('./assests/fonts/FlameBold.woff2') format('woff2'),
+        url('./assests/fonts/FlameBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Flame Regular";
+    src: url('./assests/fonts/FlameRegular.woff2') format('woff2'),
+        url('./assests/fonts/FlameRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.mobile-view{
+    display:none;
+  }
+  #slider {
+	overflow: hidden;
+  position: relative;
+}
+
+@keyframes slider {
+	0% { left: 0; }
+	30% { left: 0; }
+	33% { left: -100%; }
+	63% { left: -100%; }
+	66% { left: -200%; }
+	95% { left: -200%; }
+	100% { left: 0; }
+}
+#slider figure {
+	width:300%;
+	position: relative;
+	animation: 10s slider infinite;
+}
+
+#slider figure img {
+	width: 33.333333333%;
+	height : 100%;
+	float: left;
+}
+  .desktop-view {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-text {
+    font-size: 40px;
+    font-family: 'Flame';
+    color: black;
+    font-weight: bold;
+}
+.desktop-text p {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 12px;
+}
+.design {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.main-banner img{
+  width:100%;
+  display: flex;
+}
+.bk-section-image img {
+    width: 85%;
+    height: 100px;
+    object-fit: contain;
+    margin-top: -15px;
+}
+
+.bk-section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+.bk-section-item {
+    width: 32%;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+}
+
+.bk-section-image {
+    text-align: center;
+}
+
+.bk-veg-icon {
+    position: absolute;
+    bottom: 40px;
+    left: 5px;
+}
+
+.bk-veg-icon img {
+    width: 15px;
+}
+
+.bk-section-title {
+    background: #f8b318;
+    text-align: center;
+    padding: 5px 0px;
+    height: 30px;
+    width: 100%;
+    display: table;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+section.bk-section-wrapper {
+    background: #f1e6d2;
+    padding: 30px 0px;
+}
+
+.bk-section-title h3 {
+    font-size: 10px;
+    line-height: 1.2;
+    color: #551e0e;
+    padding: 0 10px;
+    height: 100%;
+    font-family: "Flame Regular";
+    font-weight: 500;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.bk-section-heading h1 {
+    font-size: 18px;
+    line-height: normal;
+    text-transform: uppercase;
+    color: #551e0e;
+    font-weight: bold;
+    font-family: "Flame";
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bk-section-heading p {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #551e0e;
+    font-family: "Flame Regular";
+    text-align: center;
+}
+
+.bk-section-heading {
+    padding: 0px 2px;
+    padding-top: 0px;
+    padding-bottom: 35px;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+.bk-section-item.active {
+    background: #f8b31880;
+}
+.bk-section-btn a::after {
+    position: absolute;
+    content: '';
+    background-image: url(images/right-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    right: 13%;
+    top: 36%;
+}
+footer.burger-footer p {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #551e0e;
+    font-family: "Flame Regular";
+    text-align: center;
+    
+}
+
+footer.burger-footer {
+    background: #f1e6d2;
+}
+.burger-footer-content {
+    border-top: 1px solid #551e0e;
+    padding: 15px 0px;
+}
+.bk-section-btn a {
+    position: relative;
+    padding: 10px 40px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f1e6d2;
+    font-weight: bold;
+    font-family: "Flame Regular";
+    text-align: center;
+    border: none;
+    background: #ec3225;
+    border: none;
+    border-radius: 12px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.bk-section-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+@media screen and (max-width: 767px) {
+  .desktop-view{
+    display:none;
+  }
+  .mobile-view{
+    display:block;
+  }
+}
+
+.popup {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  text-align: center;
+  
+}
+.popup__content {
+    width: 80%;
+    overflow:auto;
+    padding: 15px;
+    background: white;
+    color: black;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+   
+  }
+
+
+  .overlay{
+    position: relative;
+    padding: 20px 0;
+  }
+  .overlay::after{
+      content: '';
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 100%;
+      position: absolute;
+      background-color: #00000091;
+    }
+
+    .google_sign_in{
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      position: absolute;
+      transform: translate(-50%, 50%);
+    }
+</style>
+</head>
+<body class="main" onload="onLoad()">
+  <p id="name"></p>
+    <!-- <section class="popup">
+        <div class="popup__content">
+          <div class="close">
+            
+          </div>
+        </div>
+      </section> -->
+  
+  <div class="desktop-view">
+    <div class="desktop-text">
+      Ops! This site can't be open in Big Screen
+      <p>Please Visit In Mobile</p>
+    </div>
+  </div>
+  <div class="mobile-view">
+    <div id="slider">
+      <figure>
+          <img src="images/main-banner-burger-king.jpg">
+          <img src="images/main-banner-burger-king.jpg">
+          <img src="images/main-banner-burger-king.jpg">
+      </figure>
+  </div>
+    <section class="bk-section-wrapper">
+      <div class="container">
+        <div class="bk-section-heading">
+          <h1>Generate your own creation</h1>
+          <p>Choose your Burger King product</p>
+        </div>
+        <form action="" class="overlay">
+          <div class="google_sign_in">
+            <div id="buttonDiv"></div> 
+            <div class="google_name">
+              
+            </div>
+          </div>
+        <div class="bk-section-content">
+
+          <div class="bk-section-item">
+            <input type="hidden" id="fries" name="fries" value="Fries">
+            <div class="bk-section-image">
+              <img src="images/fries.png">
+            </div>
+            <div class="bk-section-title">
+              <h3>Fries</h3>
+            </div>
+            <div class="bk-veg-icon">
+              <img src="images/veg-icon.png">
+            </div>
+          </div>
+
+          <div class="bk-section-item">
+            <input type="hidden" id="veg-whopper" name="veg-whopper" value="Veg Whopper">
+            <div class="bk-section-image">
+              <img src="images/burger-medium.png">
+            </div>
+            <div class="bk-section-title">
+              <h3>Veg Whopper</h3>
+            </div>
+            <div class="bk-veg-icon">
+              <img src="images/veg-icon.png">
+            </div>
+          </div>
+
+          <div class="bk-section-item">
+            <input type="hidden" id="berry-blast-thick-shake" name="berry-blast-thick-shake" value="Berry Blast Thick Shake">
+            <div class="bk-section-image">
+              <img src="images/thick-shake-berry.png">
+            </div>
+            <div class="bk-section-title">
+              <h3>Berry Blast Thick Shake</h3>
+            </div>
+            <div class="bk-veg-icon">
+              <img src="images/veg-icon.png">
+            </div>
+          </div>
+
+          <div class="bk-section-item">
+            <input type="hidden" id="cookie-crunch-sundae" name="cookie-crunch-sundae" value="Cookie Crunch Sundae">
+            <div class="bk-section-image">
+              <img src="images/sundae.png">
+            </div>
+            <div class="bk-section-title">
+              <h3>Cookie Crunch Sundae</h3>
+            </div>
+            <div class="bk-veg-icon">
+              <img src="images/veg-icon.png">
+            </div>
+          </div>
+
+          <div class="bk-section-item">
+            <input type="hidden" id="paneer-royale-wrap" name="paneer-royale-wrap" value="Paneer Royale Wrap">
+            <div class="bk-section-image">
+              <img src="images/loaded-paneer-royal.png">
+            </div>
+            <div class="bk-section-title">
+              <h3>Paneer Royale Wrap</h3>
+            </div>
+            <div class="bk-veg-icon">
+              <img src="images/veg-icon.png">
+            </div>
+          </div>
+
+          
+
+          <div class="bk-section-item">
+            <input type="hidden" id="choco-lava-cake" name="choco-lava-cake" value="Choco Lava Cake">
+            <div class="bk-section-image">
+              <img src="images/mud-cup-1.png">
+            </div>
+            <div class="bk-section-title">
+              <h3>Choco Lava Cake</h3>
+            </div>
+            <div class="bk-veg-icon">
+              <img src="images/veg-icon.png">
+            </div>
+          </div>
+          
+          <div class="bk-section-item">
+            <input type="hidden" id="pizza-puff" name="pizza-puff" value="Pizza Puff">
+            <div class="bk-section-image">
+              <img src="images/pizza-puff-3.png">
+            </div>
+            <div class="bk-section-title">
+              <h3>Pizza Puff</h3>
+            </div>
+            <div class="bk-veg-icon">
+              <img src="images/veg-icon.png">
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="bk-section-btn">
+          <a type="submit" href="choose-you-patakha.html">Next</a>
+        </div>
+      </form>
+      </div>
+    </section>
+    <footer class="burger-footer">
+      <div class="container">
+        <div class="burger-footer-content">
+          <p>TM &° 2024 BURGER KING COMPANY LLC. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $(".popup").fadeIn(500);
+  function checkNameAndHidePopup() {
+    if ($("#name").text().trim() !== "") {
+      $(".popup").fadeOut(500);
+    }
+  }
+  checkNameAndHidePopup();
+
+  const observer = new MutationObserver(checkNameAndHidePopup);
+  observer.observe(document.getElementById("name"), { childList: true, characterData: true, subtree: true });
+});
+
+
+$(document).ready(function(){
+  $('.bk-section-item').click(function(){
+    $('.bk-section-item').removeClass("active");
+    $(this).addClass("active");
+});
+});
+</script>
+</html>
