@@ -141,14 +141,24 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-   $(document).ready(function() {
-  // Show popup on page load
+  $(document).ready(function() {
+  // Show popup on page load and apply body style
   $(".popup").fadeIn(500);
+  $("body").css({
+    "height": "100vh",
+    "overflow": "hidden"
+  });
 
   // Function to check if #name has content and hide popup
   function checkNameAndHidePopup() {
     if ($("#name").text().trim() !== "") {
-      $(".popup").fadeOut(500);
+      $(".popup").fadeOut(500, function() {
+        // Remove body style once popup is fully hidden
+        $("body").css({
+          "height": "",
+          "overflow": ""
+        });
+      });
     }
   }
 
@@ -158,6 +168,14 @@
   // Monitor changes to #name for dynamic updates
   const observer = new MutationObserver(checkNameAndHidePopup);
   observer.observe(document.getElementById("name"), { childList: true, characterData: true, subtree: true });
+});
+
+
+$(document).ready(function(){
+  $('.bk-section-item').click(function(){
+    $('.bk-section-item').removeClass("active");
+    $(this).addClass("active");
+});
 });
 
 
