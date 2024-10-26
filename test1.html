@@ -136,39 +136,25 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-    $(document).ready(function() {
+   $(document).ready(function() {
   // Show popup on page load
   $(".popup").fadeIn(500);
 
-  // Initialize Google Sign-In
-  google.accounts.id.initialize({
-    client_id: "915070006028-sa9ljog44uv0nt7s0he1acaa283viut9.apps.googleusercontent.com", // Replace with your Google Client ID
-    callback: handleCredentialResponse
-  });
-  google.accounts.id.renderButton(
-    document.getElementById("buttonDiv"),
-    { theme: "outline", size: "large" }
-  );
-
-  // Google Sign-In callback to handle login response
-  function handleCredentialResponse(response) {
-    const data = jwt_decode(response.credential); // Decode JWT to get user data
-    const userName = data.name; // Get user's name
-
-    // Set the user's name in the popup
-    $("#name").text(userName);
-
-    // Hide the popup if userName exists
-    if (userName) {
+  // Function to check if #name has content and hide popup
+  function checkNameAndHidePopup() {
+    if ($("#name").text().trim() !== "") {
       $(".popup").fadeOut(500);
     }
   }
 
-  // Close button to manually close the popup
-//   $(".close").click(function() {
-//     $(".popup").fadeOut(500);
-//   });
+  // Initial check on page load (if name is already there)
+  checkNameAndHidePopup();
+
+  // Monitor changes to #name for dynamic updates
+  const observer = new MutationObserver(checkNameAndHidePopup);
+  observer.observe(document.getElementById("name"), { childList: true, characterData: true, subtree: true });
 });
+
 
 </script>
 </html>
