@@ -82,7 +82,7 @@
         .google_name {
             display: none;
         }
-        
+
         .popup {
   width: 100%;
   height: 100%;
@@ -126,8 +126,6 @@
         <div class="popup__content">
           <section class="popup">
             <div class="popup__content">
-              <div class="close" style="display: none;">
-              </div> <!-- Hide close button initially -->
                 <div id="buttonDiv"></div> 
                 
                 <div class="google_name">
@@ -140,34 +138,31 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-
 $(document).ready(function() {
-  // Show popup and prevent body scroll
+  // Show popup initially and prevent body scroll
   $(".popup").fadeIn(500);
   $("body").css({
     "height": "100vh",
     "overflow": "hidden"
   });
 
-  // Function to set data in #name and show close button
+  // Function to set data in #name and hide popup
   function setNameData(data) {
     $("#name").text(data);
-    
-    // Show close button once data is set
-    $(".close").fadeIn(300);
+
+    // Hide popup and reset body scrolling once data is set
+    if ($("#name").text().trim() !== "") {
+      $(".popup").fadeOut(500);
+      $("body").css({
+        "height": "",
+        "overflow": ""
+      });
+    }
   }
 
   // Example of setting the name data
-  setNameData("Your Name"); // Call this function with actual data when ready
-  
-  // Close popup and reset body scrolling
-  $(".close").click(function() {
-    $(".popup").fadeOut(500);
-    $("body").css({
-      "height": "",
-      "overflow": ""
-    });
-  });
+  setNameData("Your Name"); // Replace "Your Name" with actual data
 });
+
 </script>
 </html>
