@@ -120,4 +120,12 @@
       white-space: break-spaces;
     }
   }
+  .am_history .swiper-pagination{
+    width: auto;
+    .swiper-pagination-bullet {
+      &:nth-last-child(1){
+        margin: 0px !important;
+      }
+    }
+  }
 }
