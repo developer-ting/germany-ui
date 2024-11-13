@@ -294,6 +294,7 @@
   font-family: "Helvetica Neue LT Std 55 Roman";
   font-size: 1.25rem;
   line-height: 1.875rem;
+  margin-bottom: 2rem;
 }
 @media (max-width: 767px) {
   .modal_sec .modal-content {
