@@ -4,49 +4,42 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Helvetica_Neue_LT_Std_67_Medium_Condensed_Oblique";
   src: url("../fonts/Helvetica_Neue_LT_Std_67_Medium_Condensed_Oblique.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Helvetica_Neue_LT_Std_65_Medium";
   src: url("../fonts/Helvetica_Neue_LT_Std_65_Medium.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Helvetica_Neue_LT_Std_57_Condensed";
   src: url("../fonts/Helvetica_Neue_LT_Std_57_Condensed.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Helvetica_Neue_LT_Std_55_Roman";
   src: url("../fonts/Helvetica_Neue_LT_Std_55_Roman.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Helvetica_Neue_LT_Std_47_Light_Condensed";
   src: url("../fonts/Helvetica_Neue_LT_Std_47_Light_Condensed.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Helvetica_Neue_LT_Std_45_Light";
   src: url("../fonts/Helvetica_Neue_LT_Std_45_Light.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 :root {
   --font_77_bold: "Helvetica_Neue_LT_Std_77_Bold_Condensed";
   --font_67_medium: "Helvetica_Neue_LT_Std_67_Medium_Condensed_Oblique";
@@ -87,9 +80,8 @@
 
 .text_xxl {
   font-size: 56px !important;
-  line-height: calc(61.6 / 56) !important;
+  line-height: 1.1 !important;
 }
-
 @media (max-width: 767px) {
   .text_xxl {
     font-size: 36px !important;
@@ -98,9 +90,8 @@
 
 .text_xl {
   font-size: 44px !important;
-  line-height: calc(54 / 44) !important;
+  line-height: 1.2272727273 !important;
 }
-
 @media (max-width: 767px) {
   .text_xl {
     font-size: 32px !important;
@@ -109,9 +100,8 @@
 
 .text_xml {
   font-size: 38px !important;
-  line-height: calc(41 / 38) !important;
+  line-height: 1.0789473684 !important;
 }
-
 @media (max-width: 767px) {
   .text_xml {
     font-size: 28px !important;
@@ -120,9 +110,8 @@
 
 .text_lsg {
   font-size: 26px !important;
-  line-height: calc(36 / 26) !important;
+  line-height: 1.3846153846 !important;
 }
-
 @media (max-width: 767px) {
   .text_lsg {
     font-size: 20px !important;
@@ -131,9 +120,8 @@
 
 .text_lg {
   font-size: 20px !important;
-  line-height: calc(30 / 20) !important;
+  line-height: 1.5 !important;
 }
-
 @media (max-width: 767px) {
   .text_lg {
     font-size: 16px !important;
@@ -142,9 +130,8 @@
 
 .text_sm {
   font-size: 16px !important;
-  line-height: calc(19 / 16) !important;
+  line-height: 1.1875 !important;
 }
-
 @media (max-width: 767px) {
   .text_sm {
     font-size: 14px !important;
@@ -153,12 +140,12 @@
 
 .text_xs {
   font-size: 14px !important;
-  line-height: calc(16 / 14) !important;
+  line-height: 1.1428571429 !important;
 }
 
 .text_xss {
   font-size: 12px !important;
-  line-height: calc(17 / 12) !important;
+  line-height: 1.4166666667 !important;
 }
 
 .cta span {
@@ -170,35 +157,28 @@
 #leadership-page .am_leadership-modal .modal-header {
   padding: 1.875rem 2rem 0;
 }
-
 @media (max-width: 993px) {
   #leadership-page .am_leadership-modal .modal-header {
     padding: 1.875rem 2rem 0;
     gap: 30px;
   }
 }
-
 @media (max-width: 767px) {
   #leadership-page .am_leadership-modal .modal-header {
     padding: 1.875rem 1rem 0;
     gap: 30px;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
 }
-
 #leadership-page .am_leadership-modal .modal-header .modal-header-image {
   width: 16.25rem;
   height: 16.25rem;
 }
-
 @media (max-width: 993px) {
   #leadership-page .am_leadership-modal .modal-header .modal-header-image {
     overflow: visible;
   }
 }
-
 @media (max-width: 767px) {
   #leadership-page .am_leadership-modal .modal-header .modal-header-image {
     width: 100%;
@@ -208,134 +188,98 @@
     width: 100%;
   }
 }
-
 @media (max-width: 767px) {
   #leadership-page .am_leadership-modal .modal-header .modal-header-info {
     padding-top: 0px;
   }
   #leadership-page .am_leadership-modal .modal-header .modal-header-info .modal-location {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    align-items: flex-start;
+    flex-direction: column;
   }
   #leadership-page .am_leadership-modal .modal-header .modal-header-info .modal-social {
     margin-bottom: 0px;
   }
 }
-
 #leadership-page .am_leadership-modal .modal-content {
   padding: 0 2rem 1rem;
 }
-
 #leadership-page .am_leadership-modal .modal-content p:nth-child(1) {
   color: #0085ca;
   font-size: 26px;
   font-family: var(--font_77_bold);
 }
-
 @media (max-width: 767px) {
   #leadership-page .am_leadership-modal .modal-content p:nth-child(1) {
     font-size: 18px;
   }
 }
-
 #leadership-page .am_leadership-modal .modal-content p:nth-last-child(1) {
   margin-bottom: 0px;
 }
-
 @media (max-width: 767px) {
   #leadership-page .am_leadership-modal .modal-content p {
     font-size: 16px;
     margin-bottom: 1rem;
   }
 }
-
 @media (max-width: 767px) {
   #leadership-page .am_leadership-modal .modal-content {
     padding: 0 1rem 1rem;
   }
 }
-
 #leadership-page .am_leadership-modal .modal-footer {
   margin: 0 2rem;
   gap: 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 @media (max-width: 993px) {
   #leadership-page .am_leadership-modal .modal-footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 30px;
   }
 }
-
 #leadership-page .am_leadership-modal .modal-footer .modal-articles {
   width: 38%;
 }
-
 @media (max-width: 993px) {
   #leadership-page .am_leadership-modal .modal-footer .modal-articles {
     width: 100%;
     border: 0px;
   }
 }
-
 #leadership-page .am_leadership-modal .modal-footer .modal-insights {
   width: 58%;
 }
-
 @media (max-width: 993px) {
   #leadership-page .am_leadership-modal .modal-footer .modal-insights {
     width: 100%;
   }
 }
-
 #leadership-page .am_leadership-modal .modal-footer .modal-insights .am_modal-swiper {
   width: 100%;
   max-width: 100%;
 }
-
 @media (max-width: 767px) {
   #leadership-page .am_leadership-modal .modal-footer {
     margin: 0 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 #leadership-page .modal-social {
   margin-bottom: 0px;
 }
-
 #leadership-page .modal-expertise {
   text-decoration: none;
 }
-
 #leadership-page .modal-expertise h4 {
   color: #0085ca;
 }
-
 #leadership-page .modal-expertise p,
 #leadership-page .modal-expertise span {
   text-decoration: underline;
 }
-
 #leadership-page .modal-insights .date {
   margin-bottom: 1rem;
   color: #002749;
-}
-/*# sourceMappingURL=leadership-page.css.map */
+}/*# sourceMappingURL=leadership-page.css.map */

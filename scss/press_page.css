@@ -4,49 +4,42 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Helvetica_Neue_LT_Std_67_Medium_Condensed_Oblique";
   src: url("../fonts/Helvetica_Neue_LT_Std_67_Medium_Condensed_Oblique.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Helvetica_Neue_LT_Std_65_Medium";
   src: url("../fonts/Helvetica_Neue_LT_Std_65_Medium.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Helvetica_Neue_LT_Std_57_Condensed";
   src: url("../fonts/Helvetica_Neue_LT_Std_57_Condensed.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Helvetica_Neue_LT_Std_55_Roman";
   src: url("../fonts/Helvetica_Neue_LT_Std_55_Roman.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Helvetica_Neue_LT_Std_47_Light_Condensed";
   src: url("../fonts/Helvetica_Neue_LT_Std_47_Light_Condensed.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Helvetica_Neue_LT_Std_45_Light";
   src: url("../fonts/Helvetica_Neue_LT_Std_45_Light.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 :root {
   --font_77_bold: "Helvetica_Neue_LT_Std_77_Bold_Condensed";
   --font_67_medium: "Helvetica_Neue_LT_Std_67_Medium_Condensed_Oblique";
@@ -87,9 +80,8 @@
 
 .text_xxl {
   font-size: 56px !important;
-  line-height: calc(61.6 / 56) !important;
+  line-height: 1.1 !important;
 }
-
 @media (max-width: 767px) {
   .text_xxl {
     font-size: 36px !important;
@@ -98,9 +90,8 @@
 
 .text_xl {
   font-size: 44px !important;
-  line-height: calc(54 / 44) !important;
+  line-height: 1.2272727273 !important;
 }
-
 @media (max-width: 767px) {
   .text_xl {
     font-size: 32px !important;
@@ -109,9 +100,8 @@
 
 .text_xml {
   font-size: 38px !important;
-  line-height: calc(41 / 38) !important;
+  line-height: 1.0789473684 !important;
 }
-
 @media (max-width: 767px) {
   .text_xml {
     font-size: 28px !important;
@@ -120,9 +110,8 @@
 
 .text_lsg {
   font-size: 26px !important;
-  line-height: calc(36 / 26) !important;
+  line-height: 1.3846153846 !important;
 }
-
 @media (max-width: 767px) {
   .text_lsg {
     font-size: 20px !important;
@@ -131,9 +120,8 @@
 
 .text_lg {
   font-size: 20px !important;
-  line-height: calc(30 / 20) !important;
+  line-height: 1.5 !important;
 }
-
 @media (max-width: 767px) {
   .text_lg {
     font-size: 16px !important;
@@ -142,9 +130,8 @@
 
 .text_sm {
   font-size: 16px !important;
-  line-height: calc(19 / 16) !important;
+  line-height: 1.1875 !important;
 }
-
 @media (max-width: 767px) {
   .text_sm {
     font-size: 14px !important;
@@ -153,12 +140,12 @@
 
 .text_xs {
   font-size: 14px !important;
-  line-height: calc(16 / 14) !important;
+  line-height: 1.1428571429 !important;
 }
 
 .text_xss {
   font-size: 12px !important;
-  line-height: calc(17 / 12) !important;
+  line-height: 1.4166666667 !important;
 }
 
 .cta span {
@@ -171,46 +158,38 @@
   padding: 40px;
   background-color: #fff;
   border: 1px solid #d0efff;
-  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-
 .press_page .box:hover {
   background-color: #0085ca;
   color: #fff;
 }
-
 .press_page .box:hover h5,
 .press_page .box:hover p,
 .press_page .box:hover span,
 .press_page .box:hover .post {
   color: #fff !important;
 }
-
 .press_page .box:hover .btn_section .btn:before {
   background: url(../assets/white-hover-cta.svg) no-repeat 0 0 !important;
 }
-
 @media screen and (max-width: 767px) {
   .press_page .box {
     width: 100%;
     padding: 30px;
   }
 }
-
 @media (min-width: 993px) and (max-width: 1200px) {
   .press_page .box {
     padding: 30px 20px;
   }
 }
-
 .press_page .box h5 {
   font-size: 16px;
   color: #8b8b8b;
   padding-bottom: 7px;
   letter-spacing: 0.5px;
 }
-
 .press_page .box p {
   font-size: 18px;
   color: #00244a;
@@ -218,33 +197,23 @@
   letter-spacing: 0.5px;
   font-family: "helvetica_neue_lt_std45_light";
 }
-
 .press_page .box p span {
   letter-spacing: 1px;
 }
-
 .press_page .box p.para_section {
   min-height: 170px;
 }
-
 .press_page .box p b {
   color: #0085ca;
 }
-
 .press_page .box .img_name {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-top: 15px;
 }
-
 .press_page .box .img_name .name {
   padding-left: 20px;
 }
-
 .press_page .box .img_name .name h6 {
   font-weight: 100;
   font-size: 16px;
@@ -253,58 +222,42 @@
   letter-spacing: 0.5px;
   font-family: "helvetica_neue_lt_std45_light";
 }
-
 .press_page .box .img_name .name h6 span {
   font-weight: 700;
 }
-
 .press_page .box .read_more {
   margin-top: 40px;
   border-top: 2px solid #f2f7f9;
 }
-
 .press_page .box .read_more .btn_section .btn:hover:after {
   width: 100%;
   color: #fff !important;
 }
-
 .press_page .box .read_more .btn_section {
   margin-top: 20px;
 }
-
 .press_page .box .read_more .btn_section .btn {
   padding: 0 12px 0 0;
   text-decoration: none;
   font-family: "Helvetica Neue LT Std 55 Roman";
   font-size: 1.25rem;
   line-height: 1.875rem;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-transition: all 0.3s ease;
+  flex-grow: 0;
+  flex-shrink: 0;
   transition: all 0.3s ease;
   text-transform: uppercase;
 }
-
 .press_page .box .read_more .btn_section .btn:hover {
   color: #fff;
 }
-
 @media screen and (max-width: 767px) {
   .press_page .box .read_more .btn_section .btn {
     font-size: 16px;
   }
 }
-
 .press_page .box .read_more .btn_section .btn span {
   top: 2px;
   position: relative;
@@ -312,11 +265,9 @@
   height: 34px;
   margin-top: 2px;
 }
-
 .press_page .box .read_more .btn_section .btn span:hover {
   color: #fff;
 }
-
 .press_page .box .read_more .btn_section .btn:after {
   content: "";
   width: 34px;
@@ -326,20 +277,15 @@
   left: 0;
   color: #fff;
   z-index: 1;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 .press_page .box .read_more .btn_section .btn:before {
   content: "";
   width: 34px;
   height: 34px;
   background: url(../assets/btn-arrow.svg) no-repeat 0 0;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   margin-right: 12px;
   position: relative;
   z-index: 2;
-}
-/*# sourceMappingURL=press_page.css.map */
+}/*# sourceMappingURL=press_page.css.map */
