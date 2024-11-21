@@ -1,8 +1,7 @@
 @import "variables"; //import this on each scss page you create
 
-
 #index_page {
-  .am_features-highlights .container .features-content-item .feature-info{
+  .am_features-highlights .container .features-content-item .feature-info {
     justify-content: center !important;
   }
   .am_hero-slider-v2-swiper .swiper-slide .item {
@@ -18,6 +17,58 @@
       padding: 0;
       margin-bottom: 5rem;
       min-height: auto;
+    }
+  }
+  .overview_sec {
+    .content {
+      width: 70%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  .infra_numbers_sec {
+    margin-bottom: 5rem;
+    .subtitle {
+      color: #2eb8ff;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .title {
+      margin-bottom: 1.875rem;
+    }
+    @media screen and (max-width: 767px) {
+      padding-bottom: 60px;
+    }
+    .number_box {
+      display: flex;
+      grid-gap: 20px;
+      justify-content: space-between;
+      margin-top: 20px;
+      @media screen and (max-width: 992px) {
+        flex-wrap: wrap;
+      }
+      .box {
+        padding: 35px 20px;
+        transition: all 0.5s;
+        background-color: #f4f6f8;
+        width: 25%;
+        @media (min-width: 768px) and (max-width: 992px) {
+          width: 48.5%;
+        }
+        &:hover {
+          background-color: #002749;
+          .section_title {
+            color: #f9c20a;
+          }
+          .para_section {
+            color: #fff;
+          }
+        }
+        .section_title {
+          font-weight: 600;
+          padding-bottom: 30px;
+        }
+      }
     }
   }
   .am_features-highlights {
