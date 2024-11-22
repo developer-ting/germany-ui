@@ -133,46 +133,6 @@
     padding: 0;
     margin-bottom: 5rem;
     min-height: auto; }
-  #index_page .overview_sec .content {
-    width: 70%;
-    margin: 0 auto;
-    text-align: center; }
-  #index_page .infra_numbers_sec {
-    margin-bottom: 5rem; }
-    #index_page .infra_numbers_sec .subtitle {
-      color: #2eb8ff;
-      text-transform: uppercase;
-      margin-bottom: 1rem; }
-    #index_page .infra_numbers_sec .title {
-      margin-bottom: 1.875rem; }
-    @media screen and (max-width: 767px) {
-      #index_page .infra_numbers_sec {
-        padding-bottom: 60px; } }
-    #index_page .infra_numbers_sec .number_box {
-      display: flex;
-      grid-gap: 20px;
-      justify-content: space-between;
-      margin-top: 20px; }
-      @media screen and (max-width: 992px) {
-        #index_page .infra_numbers_sec .number_box {
-          flex-wrap: wrap; } }
-      #index_page .infra_numbers_sec .number_box .box {
-        padding: 35px 20px;
-        transition: all 0.5s;
-        background-color: #f4f6f8;
-        width: 25%; }
-        @media (min-width: 768px) and (max-width: 992px) {
-          #index_page .infra_numbers_sec .number_box .box {
-            width: 48.5%; } }
-        #index_page .infra_numbers_sec .number_box .box:hover {
-          background-color: #002749; }
-          #index_page .infra_numbers_sec .number_box .box:hover .section_title {
-            color: #f9c20a; }
-          #index_page .infra_numbers_sec .number_box .box:hover .para_section {
-            color: #fff; }
-        #index_page .infra_numbers_sec .number_box .box .section_title {
-          font-weight: 600;
-          padding-bottom: 30px; }
   #index_page .am_features-highlights {
     margin-bottom: 5rem; }
     #index_page .am_features-highlights .am_image-cards-header .am_secondary-intro-content {
