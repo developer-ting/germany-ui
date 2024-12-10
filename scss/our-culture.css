@@ -230,8 +230,56 @@
     font-size: 9px !important;
   }
 }
+#our-culture-page .social-media-sec .item {
+  position: relative;
+  overflow: hidden;
+}
 #our-culture-page .social-media-sec .item .item-image {
   height: auto !important;
+}
+#our-culture-page .social-media-sec .item .social_title {
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  #our-culture-page .social-media-sec .item .social_title {
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+  }
+}
+#our-culture-page .social-media-sec .item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0%;
+  left: 0;
+  background-color: rgba(0, 39, 73, 0.9);
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  #our-culture-page .social-media-sec .item::before {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.4s ease-in-out;
+  }
+}
+#our-culture-page .social-media-sec .item:hover::before {
+  opacity: 1;
+  transform: translateY(0%);
+}
+#our-culture-page .social-media-sec .item:hover .social_title {
+  opacity: 1;
 }
 #our-culture-page .slider-diversity .slider {
   width: 100%;
