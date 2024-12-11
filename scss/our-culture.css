@@ -251,12 +251,6 @@
   align-items: center;
   justify-content: center;
 }
-@media (min-width: 768px) {
-  #our-culture-page .social-media-sec .item .social_title {
-    opacity: 0;
-    transition: 0.4s ease-in-out;
-  }
-}
 #our-culture-page .social-media-sec .item::before {
   content: "";
   position: absolute;
@@ -266,20 +260,6 @@
   left: 0;
   background-color: rgba(0, 39, 73, 0.9);
   z-index: 1;
-}
-@media (min-width: 768px) {
-  #our-culture-page .social-media-sec .item::before {
-    opacity: 0;
-    transform: translateY(100%);
-    transition: 0.4s ease-in-out;
-  }
-}
-#our-culture-page .social-media-sec .item:hover::before {
-  opacity: 1;
-  transform: translateY(0%);
-}
-#our-culture-page .social-media-sec .item:hover .social_title {
-  opacity: 1;
 }
 #our-culture-page .slider-diversity .slider {
   width: 100%;
