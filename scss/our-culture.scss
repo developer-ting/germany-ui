@@ -128,10 +128,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        // @media (min-width: 768px) {
-        //   opacity: 0;
-        //   transition: 0.4s ease-in-out;
-        // }
       }
       &::before {
         content: "";
@@ -142,21 +138,7 @@
         left: 0;
         background-color: rgba(0, 39, 73, 90%);
         z-index: 1;
-        // @media (min-width: 768px) {
-        //   opacity: 0;
-        //   transform: translateY(100%);
-        //   transition: 0.4s ease-in-out;
-        // }
       }
-      // &:hover {
-      //   &::before {
-      //     opacity: 1;
-      //     transform: translateY(0%);
-      //   }
-      //   .social_title {
-      //     opacity: 1;
-      //   }
-      // }
     }
   }
   .slider-diversity {
