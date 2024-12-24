@@ -1,6 +1,6 @@
 @import "variables"; //import this on each scss page you create
 
-#about-us-page {
+.germany_cmn_class {
   .am_primary-intro-content {
     position: relative;
     margin-bottom: 0px;
@@ -120,10 +120,10 @@
       white-space: break-spaces;
     }
   }
-  .am_history .swiper-pagination{
+  .am_history .swiper-pagination {
     width: auto;
     .swiper-pagination-bullet {
-      &:nth-last-child(1){
+      &:nth-last-child(1) {
         margin: 0px !important;
       }
     }

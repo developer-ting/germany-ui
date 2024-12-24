@@ -154,132 +154,132 @@
   letter-spacing: 1px;
 }
 
-#leadership-page .am_leadership-modal .modal-header {
+.germany_cmn_class .am_leadership-modal .modal-header {
   padding: 1.875rem 2rem 0;
 }
 @media (max-width: 993px) {
-  #leadership-page .am_leadership-modal .modal-header {
+  .germany_cmn_class .am_leadership-modal .modal-header {
     padding: 1.875rem 2rem 0;
     gap: 30px;
   }
 }
 @media (max-width: 767px) {
-  #leadership-page .am_leadership-modal .modal-header {
+  .germany_cmn_class .am_leadership-modal .modal-header {
     padding: 1.875rem 1rem 0;
     gap: 30px;
     align-items: flex-start;
   }
 }
-#leadership-page .am_leadership-modal .modal-header .modal-header-image {
+.germany_cmn_class .am_leadership-modal .modal-header .modal-header-image {
   width: 16.25rem;
   height: 16.25rem;
 }
 @media (max-width: 993px) {
-  #leadership-page .am_leadership-modal .modal-header .modal-header-image {
+  .germany_cmn_class .am_leadership-modal .modal-header .modal-header-image {
     overflow: visible;
   }
 }
 @media (max-width: 767px) {
-  #leadership-page .am_leadership-modal .modal-header .modal-header-image {
+  .germany_cmn_class .am_leadership-modal .modal-header .modal-header-image {
     width: 100%;
     height: 100%;
   }
-  #leadership-page .am_leadership-modal .modal-header .modal-header-image img {
+  .germany_cmn_class .am_leadership-modal .modal-header .modal-header-image img {
     width: 100%;
   }
 }
 @media (max-width: 767px) {
-  #leadership-page .am_leadership-modal .modal-header .modal-header-info {
+  .germany_cmn_class .am_leadership-modal .modal-header .modal-header-info {
     padding-top: 0px;
   }
-  #leadership-page .am_leadership-modal .modal-header .modal-header-info .modal-location {
+  .germany_cmn_class .am_leadership-modal .modal-header .modal-header-info .modal-location {
     align-items: flex-start;
     flex-direction: column;
   }
-  #leadership-page .am_leadership-modal .modal-header .modal-header-info .modal-social {
+  .germany_cmn_class .am_leadership-modal .modal-header .modal-header-info .modal-social {
     margin-bottom: 0px;
   }
 }
-#leadership-page .am_leadership-modal .modal-content {
+.germany_cmn_class .am_leadership-modal .modal-content {
   padding: 0 2rem 1rem;
 }
-#leadership-page .am_leadership-modal .modal-content p:nth-child(1) {
+.germany_cmn_class .am_leadership-modal .modal-content p:nth-child(1) {
   color: #0085ca;
   font-size: 26px;
   font-family: var(--font_77_bold);
 }
 @media (max-width: 767px) {
-  #leadership-page .am_leadership-modal .modal-content p:nth-child(1) {
+  .germany_cmn_class .am_leadership-modal .modal-content p:nth-child(1) {
     font-size: 18px;
   }
 }
-#leadership-page .am_leadership-modal .modal-content p:nth-last-child(1) {
+.germany_cmn_class .am_leadership-modal .modal-content p:nth-last-child(1) {
   margin-bottom: 0px;
 }
 @media (max-width: 767px) {
-  #leadership-page .am_leadership-modal .modal-content p {
+  .germany_cmn_class .am_leadership-modal .modal-content p {
     font-size: 16px;
     margin-bottom: 1rem;
   }
 }
 @media (max-width: 767px) {
-  #leadership-page .am_leadership-modal .modal-content {
+  .germany_cmn_class .am_leadership-modal .modal-content {
     padding: 0 1rem 1rem;
   }
 }
-#leadership-page .am_leadership-modal .modal-footer {
+.germany_cmn_class .am_leadership-modal .modal-footer {
   margin: 0 2rem;
   gap: 0;
   justify-content: space-between;
 }
 @media (max-width: 993px) {
-  #leadership-page .am_leadership-modal .modal-footer {
+  .germany_cmn_class .am_leadership-modal .modal-footer {
     flex-direction: column;
     gap: 30px;
   }
 }
-#leadership-page .am_leadership-modal .modal-footer .modal-articles {
+.germany_cmn_class .am_leadership-modal .modal-footer .modal-articles {
   width: 38%;
 }
 @media (max-width: 993px) {
-  #leadership-page .am_leadership-modal .modal-footer .modal-articles {
+  .germany_cmn_class .am_leadership-modal .modal-footer .modal-articles {
     width: 100%;
     border: 0px;
   }
 }
-#leadership-page .am_leadership-modal .modal-footer .modal-insights {
+.germany_cmn_class .am_leadership-modal .modal-footer .modal-insights {
   width: 58%;
 }
 @media (max-width: 993px) {
-  #leadership-page .am_leadership-modal .modal-footer .modal-insights {
+  .germany_cmn_class .am_leadership-modal .modal-footer .modal-insights {
     width: 100%;
   }
 }
-#leadership-page .am_leadership-modal .modal-footer .modal-insights .am_modal-swiper {
+.germany_cmn_class .am_leadership-modal .modal-footer .modal-insights .am_modal-swiper {
   width: 100%;
   max-width: 100%;
 }
 @media (max-width: 767px) {
-  #leadership-page .am_leadership-modal .modal-footer {
+  .germany_cmn_class .am_leadership-modal .modal-footer {
     margin: 0 1rem;
     display: flex;
     flex-direction: column;
   }
 }
-#leadership-page .modal-social {
+.germany_cmn_class .modal-social {
   margin-bottom: 0px;
 }
-#leadership-page .modal-expertise {
+.germany_cmn_class .modal-expertise {
   text-decoration: none;
 }
-#leadership-page .modal-expertise h4 {
+.germany_cmn_class .modal-expertise h4 {
   color: #0085ca;
 }
-#leadership-page .modal-expertise p,
-#leadership-page .modal-expertise span {
+.germany_cmn_class .modal-expertise p,
+.germany_cmn_class .modal-expertise span {
   text-decoration: underline;
 }
-#leadership-page .modal-insights .date {
+.germany_cmn_class .modal-insights .date {
   margin-bottom: 1rem;
   color: #002749;
 }/*# sourceMappingURL=leadership-page.css.map */

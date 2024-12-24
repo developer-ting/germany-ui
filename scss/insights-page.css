@@ -154,15 +154,15 @@
   letter-spacing: 1px;
 }
 
-#insights-page .am_insights-featured .item-content {
+.germany_cmn_class .am_insights-featured .item-content {
   position: relative;
 }
 @media (max-width: 767px) {
-  #insights-page .am_insights-featured .item-content {
+  .germany_cmn_class .am_insights-featured .item-content {
     padding: 1rem;
   }
 }
-#insights-page .am_insights-featured .item-content .cta {
+.germany_cmn_class .am_insights-featured .item-content .cta {
   position: absolute;
   bottom: 5%;
   width: 90%;
@@ -170,26 +170,26 @@
   padding-top: 30px;
 }
 @media (max-width: 1200px) {
-  #insights-page .am_insights-featured .item-content .cta {
+  .germany_cmn_class .am_insights-featured .item-content .cta {
     position: relative;
     margin-top: 30px;
   }
 }
-#insights-page .am_insights-featured .am_insights-featured-swiper .swiper-slide .item-image > img {
+.germany_cmn_class .am_insights-featured .am_insights-featured-swiper .swiper-slide .item-image > img {
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: auto;
 }
-#insights-page .insights-lists-sec .insight-item {
+.germany_cmn_class .insights-lists-sec .insight-item {
   overflow: hidden;
 }
-#insights-page .insights-lists-sec .insight-item .btm-row {
+.germany_cmn_class .insights-lists-sec .insight-item .btm-row {
   border-top: 2px solid #ddd;
   width: 90%;
   height: 1px;
   position: absolute;
   bottom: 5rem;
 }
-#insights-page .insights-lists-sec .item-image img {
+.germany_cmn_class .insights-lists-sec .item-image img {
   width: 100%;
 }/*# sourceMappingURL=insights-page.css.map */

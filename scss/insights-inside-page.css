@@ -154,30 +154,30 @@
   letter-spacing: 1px;
 }
 
-#insights-inside-page .am_featured-insights .content .item {
+.germany_cmn_class .am_featured-insights .content .item {
   overflow: hidden;
   padding: 0;
   height: 100%;
 }
-#insights-inside-page .am_featured-insights .content .item .item-image img {
+.germany_cmn_class .am_featured-insights .content .item .item-image img {
   width: 100%;
   transition: 0.3s ease-in-out;
 }
-#insights-inside-page .am_featured-insights .content .item:hover .item-image img {
+.germany_cmn_class .am_featured-insights .content .item:hover .item-image img {
   transform: scale(1.2);
 }
-#insights-inside-page .am_featured-insights .content .item .insight-item-content {
+.germany_cmn_class .am_featured-insights .content .item .insight-item-content {
   position: relative;
   background: #fff;
   padding: 1.5rem 1.25rem 2rem;
   min-height: 16rem;
 }
 @media (max-width: 1200px) {
-  #insights-inside-page .am_featured-insights .content .item .insight-item-content {
+  .germany_cmn_class .am_featured-insights .content .item .insight-item-content {
     min-height: 19rem;
   }
 }
-#insights-inside-page .am_featured-insights .content .item .btm-row {
+.germany_cmn_class .am_featured-insights .content .item .btm-row {
   border-top: 2px solid #ddd;
   width: 90%;
   height: 1px;
@@ -185,21 +185,21 @@
   bottom: 5rem;
 }
 @media (max-width: 993px) {
-  #insights-inside-page .am_featured-insights .header {
+  .germany_cmn_class .am_featured-insights .header {
     align-items: flex-start;
   }
 }
-#insights-inside-page .am_insight-article .article .content .related {
+.germany_cmn_class .am_insight-article .article .content .related {
   border-top: 1px solid rgba(0, 39, 73, 0.2);
   border-bottom: 1px solid rgba(0, 39, 73, 0.2);
   padding: 2.5rem 0rem;
   margin-top: 2rem;
 }
-#insights-inside-page .am_insight-article .article .sidebar .experts ul li {
+.germany_cmn_class .am_insight-article .article .sidebar .experts ul li {
   justify-content: space-between;
   cursor: pointer;
 }
-#insights-inside-page .am_insight-article .article .sidebar .experts ul li .content_item {
+.germany_cmn_class .am_insight-article .article .sidebar .experts ul li .content_item {
   display: flex;
   gap: 15px;
 }

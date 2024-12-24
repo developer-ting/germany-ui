@@ -154,11 +154,11 @@
   letter-spacing: 1px;
 }
 
-#about-us-page .am_primary-intro-content {
+.germany_cmn_class .am_primary-intro-content {
   position: relative;
   margin-bottom: 0px;
 }
-#about-us-page .am_primary-intro-content::after {
+.germany_cmn_class .am_primary-intro-content::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -168,84 +168,84 @@
   background-color: #002749;
 }
 @media (max-width: 767px) {
-  #about-us-page .am_primary-intro-content::after {
+  .germany_cmn_class .am_primary-intro-content::after {
     height: 20%;
   }
 }
-#about-us-page .am_primary-intro-content .primary-content .media {
+.germany_cmn_class .am_primary-intro-content .primary-content .media {
   z-index: 1;
 }
-#about-us-page .am_primary-intro-content .primary-content .content {
+.germany_cmn_class .am_primary-intro-content .primary-content .content {
   width: 100%;
 }
-#about-us-page .am_different {
+.germany_cmn_class .am_different {
   margin-bottom: 0px;
 }
-#about-us-page .am_different .row-flex {
+.germany_cmn_class .am_different .row-flex {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 @media (max-width: 993px) {
-  #about-us-page .am_different .row-flex {
+  .germany_cmn_class .am_different .row-flex {
     row-gap: 30px;
   }
 }
 @media (max-width: 993px) {
-  #about-us-page .am_different .row-flex {
+  .germany_cmn_class .am_different .row-flex {
     row-gap: 20px;
   }
 }
-#about-us-page .am_different .row-flex .item {
+.germany_cmn_class .am_different .row-flex .item {
   width: 24%;
   background-color: #fff;
   padding: 50px 50px;
   transition: 0.3s ease-in-out;
 }
 @media (max-width: 1200px) {
-  #about-us-page .am_different .row-flex .item {
+  .germany_cmn_class .am_different .row-flex .item {
     padding: 50px 30px;
   }
 }
 @media (max-width: 993px) {
-  #about-us-page .am_different .row-flex .item {
+  .germany_cmn_class .am_different .row-flex .item {
     width: 48%;
   }
 }
 @media (max-width: 767px) {
-  #about-us-page .am_different .row-flex .item {
+  .germany_cmn_class .am_different .row-flex .item {
     padding: 30px 15px;
   }
 }
-#about-us-page .am_different .row-flex .item:hover {
+.germany_cmn_class .am_different .row-flex .item:hover {
   background-color: #0085ca;
   color: #fff;
 }
-#about-us-page .am_different .row-flex .item .icon {
+.germany_cmn_class .am_different .row-flex .item .icon {
   margin-bottom: 1rem;
 }
-#about-us-page .am_different .row-flex .item p {
+.germany_cmn_class .am_different .row-flex .item p {
   font-size: 20px;
   font-weight: bold;
   width: 75%;
 }
 @media (max-width: 1200px) {
-  #about-us-page .am_different .row-flex .item p {
+  .germany_cmn_class .am_different .row-flex .item p {
     width: 100%;
   }
 }
 @media (max-width: 767px) {
-  #about-us-page .am_different .row-flex .item p {
+  .germany_cmn_class .am_different .row-flex .item p {
     font-size: 16px;
   }
 }
-#about-us-page .am_key-highlights .header {
+.germany_cmn_class .am_key-highlights .header {
   text-align: left;
 }
-#about-us-page .am_key-highlights .header h2 {
+.germany_cmn_class .am_key-highlights .header h2 {
   margin: 0px 0px 3rem;
 }
-#about-us-page .am_image-cards .item-content .btm-row {
+.germany_cmn_class .am_image-cards .item-content .btm-row {
   border-top: 2px solid #ddd;
   width: 90%;
   height: 1px;
@@ -253,22 +253,22 @@
   bottom: 5rem;
 }
 @media (max-width: 1200px) {
-  #about-us-page .am_image-cards .am_secondary-intro-content .container {
+  .germany_cmn_class .am_image-cards .am_secondary-intro-content .container {
     padding: 0px;
   }
 }
 @media (max-width: 993px) {
-  #about-us-page .am_image-cards .am_secondary-intro-content .sidebar {
+  .germany_cmn_class .am_image-cards .am_secondary-intro-content .sidebar {
     justify-content: flex-start;
   }
 }
 @media (max-width: 767px) {
-  #about-us-page .am_intro-banner {
+  .germany_cmn_class .am_intro-banner {
     padding: 50px 0px;
   }
 }
 @media (max-width: 767px) {
-  #about-us-page .am_history-content .event {
+  .germany_cmn_class .am_history-content .event {
     font-size: 1.2rem;
     line-height: 1.7rem;
     left: auto;
@@ -278,9 +278,9 @@
     white-space: break-spaces;
   }
 }
-#about-us-page .am_history .swiper-pagination {
+.germany_cmn_class .am_history .swiper-pagination {
   width: auto;
 }
-#about-us-page .am_history .swiper-pagination .swiper-pagination-bullet:nth-last-child(1) {
+.germany_cmn_class .am_history .swiper-pagination .swiper-pagination-bullet:nth-last-child(1) {
   margin: 0px !important;
 }/*# sourceMappingURL=about-us-page.css.map */

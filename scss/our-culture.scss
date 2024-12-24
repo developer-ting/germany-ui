@@ -3,7 +3,7 @@
 .am_resource-groups-modal-navigation a {
   background-color: transparent;
 }
-#our-culture-page {
+.germany_cmn_class {
   .am_key-highlights {
     .header {
       h4 {
@@ -143,13 +143,15 @@
   }
   .slider-diversity {
     .slider {
-      width: 100%;
-      padding: 0px;
-      .swiper-slide {
-        margin-right: 30px !important;
-        .item {
-          img {
-            width: 100%;
+      &.content {
+        width: 100%;
+        padding: 0px;
+        .swiper-slide {
+          margin-right: 30px !important;
+          .item {
+            img {
+              width: 100%;
+            }
           }
         }
       }

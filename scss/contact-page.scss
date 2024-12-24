@@ -1,7 +1,9 @@
 @import "variables"; //import this on each scss page you create
 
-#contact-page {
-  padding: 0 0 5rem;
+.germany_cmn_class {
+  .contact_content {
+    padding: 0 0 5rem;
+  }
   .form-container {
     border: 1px solid #d0e5ec;
     @media (max-width: 993px) {

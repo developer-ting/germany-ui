@@ -154,48 +154,48 @@
   letter-spacing: 1px;
 }
 
-#our-talents-page .am_employee-stories .header h4 {
+.germany_cmn_class .am_employee-stories .header h4 {
   margin-bottom: 1rem;
 }
-#our-talents-page .am_employee-stories .cta-row {
+.germany_cmn_class .am_employee-stories .cta-row {
   border-top: 1px solid #d0e5ec;
   width: 100%;
   padding-top: 20px;
 }
 @media (max-width: 993px) {
-  #our-talents-page .am_employee-stories .content .item {
+  .germany_cmn_class .am_employee-stories .content .item {
     gap: 20px;
   }
 }
-#our-talents-page .am_employee-stories .content .item .item-content h3 {
+.germany_cmn_class .am_employee-stories .content .item .item-content h3 {
   margin: 0px;
 }
 @media (max-width: 1200px) {
-  #our-talents-page .am_employee-stories .content .item .item-content h3 {
+  .germany_cmn_class .am_employee-stories .content .item .item-content h3 {
     margin: 10px 0px;
   }
 }
 @media (max-width: 993px) {
-  #our-talents-page .am_employee-stories .content .item .item-content h3 {
+  .germany_cmn_class .am_employee-stories .content .item .item-content h3 {
     margin: 20px 0px;
   }
 }
-#our-talents-page .am_employee-stories .content .item .item-content h3 span:nth-child(1) {
+.germany_cmn_class .am_employee-stories .content .item .item-content h3 span:nth-child(1) {
   margin-bottom: 8px;
 }
-#our-talents-page .am_employee-stories-modal .am_modal-swiper .swiper-scrollbar {
+.germany_cmn_class .am_employee-stories-modal .am_modal-swiper .swiper-scrollbar {
   bottom: -30px;
 }
 @media (max-width: 1200px) {
-  #our-talents-page .am_secondary-intro-content .container {
+  .germany_cmn_class .am_secondary-intro-content .container {
     padding: 0px;
   }
 }
 @media (max-width: 993px) {
-  #our-talents-page .am_secondary-intro-content .sidebar {
+  .germany_cmn_class .am_secondary-intro-content .sidebar {
     justify-content: flex-start;
   }
 }
-#our-talents-page .am_stats-content ul li p {
+.germany_cmn_class .am_stats-content ul li p {
   margin-top: 1.2rem;
 }/*# sourceMappingURL=our-talents-page.css.map */
