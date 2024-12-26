@@ -262,7 +262,7 @@
   z-index: 1;
 }
 .germany_cmn_class .slider-diversity .slider.content {
-  width: 100%;
+  width: 100% !important;
   padding: 0px;
 }
 .germany_cmn_class .slider-diversity .slider.content .swiper-slide {

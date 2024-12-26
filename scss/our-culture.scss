@@ -144,7 +144,7 @@
   .slider-diversity {
     .slider {
       &.content {
-        width: 100%;
+        width: 100% !important;
         padding: 0px;
         .swiper-slide {
           margin-right: 30px !important;
