@@ -1,7 +1,10 @@
 @import "variables"; //import this on each scss page you create
 
 .germany_cmn_class {
-  .am_features-highlights .container .features-content-item .feature-info {
+  .am_features-highlights.home_services_sec
+    .container
+    .features-content-item
+    .feature-info {
     justify-content: center !important;
   }
   .am_hero-slider-v2-swiper .swiper-slide .item {
@@ -19,7 +22,7 @@
       min-height: auto;
     }
   }
-  .am_features-highlights {
+  .am_features-highlights.home_services_sec {
     margin-bottom: 5rem;
     .am_image-cards-header {
       .am_secondary-intro-content {
@@ -463,10 +466,10 @@
   }
 
   /* Desktop Styles */
-  .features-content-item.features-content-item--show {
+  .home_services_sec .features-content-item.features-content-item--show {
     display: block !important;
   }
-  .features-content .features-content-item {
+  .home_services_sec .features-content .features-content-item {
     display: none; /* Hide all content initially */
     transition: 0.4s ease-in-out;
     .accordion-content {
@@ -523,7 +526,7 @@
   }
   /* Mobile Styles */
   @media (max-width: 1200px) {
-    .features-content .features-content-item {
+    .home_services_sec .features-content .features-content-item {
       display: block; /* Hide all items initially */
       margin-bottom: 20px;
       .accordion-content {
